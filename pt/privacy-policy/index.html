@@ -43,7 +43,7 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root { --gold: #C8922A; --gold-light: #F07820; --dark: #0a0a0a; }
-  body { background: var(--dark); color: #ccc; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.8; }
+  body { background: var(--dark); color: #ccc; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.8; overflow-x: hidden; }
 
   nav { background: rgba(8,8,8,0.98); border-bottom: 1px solid #1e1e1e; position: fixed; top: 0; left: 0; right: 0; z-index: 1000; height: calc(72px + env(safe-area-inset-top,0px)); padding: env(safe-area-inset-top,0px) 60px 0; display: flex; align-items: center; justify-content: space-between; }
   .nav-logo { display: flex; align-items: center; text-decoration: none; }
@@ -53,7 +53,7 @@
   .nav-links a { font-size: 13px; font-weight: 500; color: #ccc; text-decoration: none; transition: color .2s; white-space: nowrap; }
   .nav-links a:hover, .nav-links a:active { color: #fff; }
   .nav-links a.active { color: var(--gold-light); }
-  .btn-nav { background: var(--gold-light); color: #fff; border: none; padding: 11px 20px; font-weight: 800; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; border-radius: 6px; transition: background .2s, transform .2s; white-space: nowrap; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; line-height: 1; box-sizing: border-box !important; width: 176px !important; min-width: 176px !important; max-width: 176px !important; flex: none !important }
+  .btn-nav { background: var(--gold-light); color: #fff; border: none; padding: 11px 20px; font-weight: 800; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; border-radius: 6px; transition: background .2s, transform .2s; white-space: nowrap; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; line-height: 1; box-sizing: border-box !important; width: 176px !important; min-width: 176px !important; max-width: 176px !important; flex: none !important;min-height:44px;}
   .btn-nav:hover, .btn-nav:active { background: var(--gold); transform: translateY(-1px); }
   #lang-toggle { display: flex; align-items: center; gap: 6px; }
   .lang-sep { color: #333; font-size: 11px; }
@@ -67,21 +67,21 @@
   .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .mobile-menu { display: none; position: fixed; inset: 0; background: #080808; z-index: 199; flex-direction: column; justify-content: flex-start; padding: 100px 36px 36px; gap: 0; }
   .mobile-menu.open { display: flex; }
-  .mobile-menu a.mobile-link { font-size: 13px; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase; color: #444; text-decoration: none; padding: 20px 0; width: 100%; border-bottom: 1px solid #161616; transition: color .2s, border-color .2s; display: flex; align-items: center; justify-content: space-between; }
-  .mobile-menu a.mobile-link .mn { font-size: 10px; font-weight: 600; letter-spacing: 1px; color: #222; transition: color .2s; }
+  .mobile-menu a.mobile-link { font-size: 13px; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase; color: #999; text-decoration: none; padding: 20px 0; width: 100%; border-bottom: 1px solid #161616; transition: color .2s, border-color .2s; display: flex; align-items: center; justify-content: space-between; }
+  .mobile-menu a.mobile-link .mn { font-size: 10px; font-weight: 600; letter-spacing: 1px; color: #666; transition: color .2s; }
   .mobile-menu a.mobile-link:last-of-type { border-bottom: none; }
   .mobile-menu a.mobile-link:hover, .mobile-menu a.mobile-link:active { color: #fff; border-color: #2a2a2a; }
   .mobile-menu a.mobile-link:hover .mn, .mobile-menu a.mobile-link:active .mn { color: var(--gold-light); }
   .mobile-lang-toggle { display: flex; gap: 12px; margin-top: 28px; padding-top: 20px; border-top: 1px solid #161616; }
-  .mobile-menu .btn-nav { margin-top: 40px; width: 100%; justify-content: center; }
+  .mobile-menu .btn-nav { margin-top: 40px; width: 100%; justify-content: center;min-height:44px;}
 
   main { max-width: 780px; margin: 0 auto; padding: calc(72px + env(safe-area-inset-top,0px) + 40px) 32px 100px; }
   h1 { font-size: clamp(28px, 4vw, 42px); font-weight: 900; color: #fff; letter-spacing: -1.5px; margin-bottom: 8px; }
-  .updated { font-size: 13px; color: #555; margin-bottom: 56px; }
+  .updated { font-size: 13px; color: #999; margin-bottom: 56px; }
   h2 { font-size: 18px; font-weight: 800; color: #fff; margin: 48px 0 16px; }
-  p { font-size: 15px; color: #888; margin-bottom: 16px; }
+  p { font-size: 15px; color: #bbb; margin-bottom: 16px; }
   ul { padding-left: 20px; margin-bottom: 16px; }
-  li { font-size: 15px; color: #888; margin-bottom: 8px; }
+  li { font-size: 15px; color: #bbb; margin-bottom: 8px; }
   a { color: var(--gold); }
   strong { color: #ccc; }
 
@@ -90,13 +90,13 @@
   .footer-partners-logos { display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
   .footer-partners img { height: 50px; width: auto; background: #fff; padding: 8px 18px; border-radius: 10px; display: block; }
 
-  footer { border-top: 1px solid #1a1a1a; padding: 24px 60px; text-align: center; font-size: 13px; color: #555; }
+  footer { border-top: 1px solid #1a1a1a; padding: 24px 60px; text-align: center; font-size: 13px; color: #999; }
 
   @media (max-width: 768px) {
     nav { padding: env(safe-area-inset-top,0px) 20px 0; background: #080808; }
     .nav-links { display: none; }
     #lang-toggle { display: none; }
-    .btn-nav { display: none; }
+    .btn-nav { display: none;min-height:44px;}
     .hamburger { display: flex; }
     main { padding: calc(72px + env(safe-area-inset-top,0px)) 20px 80px; }
     footer { padding: 24px 20px; }
@@ -163,7 +163,7 @@
     <h1>Política de Privacidade</h1>
     <p class="updated">Última atualização: 28 de março de 2026</p>
 
-    <p><strong>A Makewell Comunicação</strong> respeita a sua privacidade e compromete-se a proteger os seus dados pessoais, em conformidade com a <strong>Lei Geral de Proteção de Dados brasileira (LGPD — Lei n.º 13.709/2018)</strong>.</p>
+    <p><strong>A Makewell Comunicação</strong> respeita a sua privacidade e compromete-se a proteger os seus dados pessoais, em conformidade com a <strong>Lei Geral de Proteção de Dados brasileira (LGPD — Lei n.º 13.709/2018)</strong> e, quando aplicável a residentes na União Europeia, com o <strong>Regulamento Geral sobre a Proteção de Dados (RGPD — Regulamento (UE) 2016/679)</strong>.</p>
 
     <h2>1. Quem somos</h2>
     <p>A Makewell Comunicação é uma agência de marketing digital sediada em Maceió (AL) e São Paulo (SP), Brasil, responsável pelo website <strong>makewell.com.br</strong>.</p>
@@ -196,13 +196,15 @@
       <li>Utilizar ferramentas de análise (por exemplo, Google Analytics) — sempre de forma anonimizada</li>
     </ul>
 
-    <h2>6. Os seus direitos (LGPD)</h2>
+    <h2>6. Os seus direitos (LGPD e RGPD)</h2>
     <p>Tem o direito de:</p>
     <ul>
       <li>Confirmar se tratamos os seus dados pessoais</li>
       <li>Aceder, corrigir ou eliminar os seus dados</li>
       <li>Revogar o consentimento a qualquer momento</li>
       <li>Solicitar a portabilidade dos dados</li>
+      <li>Opor-se ao tratamento ou solicitar a limitação do mesmo (residentes na UE, ao abrigo do RGPD)</li>
+      <li>Apresentar reclamação junto de uma autoridade de controlo — no Brasil, a Autoridade Nacional de Proteção de Dados (ANPD); em Portugal, a Comissão Nacional de Proteção de Dados (CNPD)</li>
     </ul>
     <p>Para exercer qualquer um destes direitos, contacte-nos através de <a href="mailto:contato@makewell.com.br">contato@makewell.com.br</a>.</p>
 
