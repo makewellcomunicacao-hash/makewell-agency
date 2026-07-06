@@ -8,6 +8,12 @@
 <meta name="author" content="Makewell Comunicação">
 <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
 <link rel="canonical" href="https://makewell.agency/es/privacy-policy/">
+<link rel="alternate" hreflang="pt-BR" href="https://makewell.com.br/politica-de-privacidade/">
+<link rel="alternate" hreflang="en" href="https://makewell.agency/en/privacy-policy/">
+<link rel="alternate" hreflang="es" href="https://makewell.agency/es/privacy-policy/">
+<link rel="alternate" hreflang="pt-PT" href="https://makewell.agency/pt/privacy-policy/">
+<link rel="alternate" hreflang="x-default" href="https://makewell.com.br/politica-de-privacidade/">
+<meta name="robots" content="index, follow">
 <meta name="theme-color" content="#F07820">
 
 <meta property="og:type" content="website">
@@ -220,6 +226,13 @@
     <p>&copy; 2026 Makewell Comunicação. Todos los derechos reservados. &middot; CNPJ: 27.238.877/0001-71</p>
   </footer>
 <script>
+  (function () {
+    var blocked = ['r', 'mod', 'uri', 'elementor_library', 'et_core_page_resource'];
+    var params = new URLSearchParams(window.location.search);
+    var dirty = blocked.some(function (p) { return params.has(p); });
+    if (dirty) { window.location.replace(window.location.pathname); }
+  })();
+
 (function(){
   var ham = document.getElementById('hamburger');
   var menu = document.getElementById('mobileMenu');

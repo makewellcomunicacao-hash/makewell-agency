@@ -31,6 +31,7 @@
 <meta property="og:image" content="https://makewell.agency/images/og-home-en.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Makewell services: branding, traffic and sales">
 <meta property="og:site_name" content="Makewell Communications">
 <meta property="og:locale" content="en_US">
 
@@ -379,6 +380,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script>
+  (function () {
+    var blocked = ['r', 'mod', 'uri', 'elementor_library', 'et_core_page_resource'];
+    var params = new URLSearchParams(window.location.search);
+    var dirty = blocked.some(function (p) { return params.has(p); });
+    if (dirty) { window.location.replace(window.location.pathname); }
+  })();
+
 (function(){
   function loadTrackers(){
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Case: Casa Hunter &amp; Casa dos Raros | Makewell Portugal</title>
-<meta name="description" content="Como a Makewell deu voz a 13 milhões de brasileiros com doenças raras: 4 anos de estratégia, 50 mil seguidores, série documental em streaming e impacto no Supremo Tribunal Federal.">
+<meta name="description" content="Como a Makewell ajudou a dar voz a 13 milhões de brasileiros com doenças raras: 4 anos de estratégia, série documental e impacto no Supremo Tribunal Federal.">
 <meta name="keywords" content="case de estudo makewell, casa hunter, casa dos raros, doenças raras, comunicação estratégica, agência de marketing para ongs, marketing de causa, documentário sobre doenças raras">
 <meta name="author" content="Makewell Comunicação">
 <meta name="robots" content="index, follow">
@@ -322,6 +322,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Meta Pixel (shim inline — external script deferred) -->
 <script>
+  (function () {
+    var blocked = ['r', 'mod', 'uri', 'elementor_library', 'et_core_page_resource'];
+    var params = new URLSearchParams(window.location.search);
+    var dirty = blocked.some(function (p) { return params.has(p); });
+    if (dirty) { window.location.replace(window.location.pathname); }
+  })();
+
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
