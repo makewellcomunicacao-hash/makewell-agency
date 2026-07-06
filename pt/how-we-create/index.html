@@ -113,7 +113,11 @@
 
   main { max-width: 1120px; margin: 0 auto; padding: calc(72px + env(safe-area-inset-top,0px) + 48px) 60px 120px; }
 
-  .kicker { display: inline-block; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-light); font-weight: 800; padding: 6px 14px; border: 1px solid var(--gold-light); border-radius: 999px; margin-bottom: 24px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #666; text-decoration: none; margin-bottom: 32px; transition: color .2s; }
+  .back-link:hover { color: var(--gold-light); }
+  .back-link svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  EOF
+echo saved.kicker { display: inline-block; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-light); font-weight: 800; padding: 6px 14px; border: 1px solid var(--gold-light); border-radius: 999px; margin-bottom: 24px; }
   h1.page-title { font-size: clamp(32px, 5vw, 54px); font-weight: 900; color: #fff; letter-spacing: -1.8px; line-height: 1.1; margin-bottom: 20px; }
   .page-lead { font-size: clamp(16px, 1.8vw, 20px); color: #aaa; margin-bottom: 64px; line-height: 1.6; max-width: 720px; }
 
@@ -270,6 +274,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main id="main-content">
   <article>
     <header>
+      <a href="/pt/framework/" class="back-link"><svg viewBox="0 0 24 24"><polyline points="15,18 9,12 15,6"/></svg>Framework</a>
       <span class="kicker">Pilar 02 · Conteúdo</span>
       <h1 class="page-title">Como criamos conteúdo que <span style="color:var(--gold-light)">converte</span></h1>
       <p class="page-lead">Esta página detalha o <strong>Pilar 02 (Conteúdo)</strong> do <a href="/pt/framework/">Framework Makewell</a>. Cada peça de conteúdo que produzimos nasce de um framework proprietário que cruza as maiores mentes da publicidade mundial com neuromarketing aplicado — é assim que separamos conteúdo comum de conteúdo que constrói marcas e gera resultados.</p>

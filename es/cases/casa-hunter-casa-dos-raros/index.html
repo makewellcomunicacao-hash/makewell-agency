@@ -123,7 +123,11 @@
 
   main { max-width: 1120px; margin: 0 auto; padding: calc(72px + env(safe-area-inset-top,0px) + 48px) 60px 120px; }
 
-  .case-kicker { display: inline-block; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-light); font-weight: 800; padding: 6px 14px; border: 1px solid var(--gold-light); border-radius: 999px; margin-bottom: 24px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #666; text-decoration: none; margin-bottom: 32px; transition: color .2s; }
+  .back-link:hover { color: var(--gold-light); }
+  .back-link svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  EOF
+echo saved.case-kicker { display: inline-block; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-light); font-weight: 800; padding: 6px 14px; border: 1px solid var(--gold-light); border-radius: 999px; margin-bottom: 24px; }
   h1.case-title { font-size: clamp(32px, 5vw, 54px); font-weight: 900; color: #fff; letter-spacing: -1.8px; line-height: 1.1; margin-bottom: 20px; }
   .case-lead { font-size: clamp(16px, 1.8vw, 20px); color: #aaa; margin-bottom: 64px; line-height: 1.6; max-width: 680px; }
 
@@ -248,6 +252,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main id="main-content">
   <article>
     <header>
+      <a href="/es/cases/" class="back-link"><svg viewBox="0 0 24 24"><polyline points="15,18 9,12 15,6"/></svg>Casos</a>
       <span class="case-kicker">Caso de Impacto</span>
       <h1 class="case-title">Cómo Makewell ayudó a darle voz a 13 millones de brasileños</h1>
       <p class="case-lead">Casa Hunter y Casa dos Raros — cuatro años de comunicación estratégica que trascendió lo digital, movilizó al país y marcó agenda en el Tribunal Supremo.</p>
