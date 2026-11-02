@@ -360,7 +360,10 @@ html:has(#mw-consent:not([hidden])) { scroll-padding-bottom: 220px; }
 .hscroll.hs-pinned { overflow: visible; scroll-snap-type: none; cursor: auto; }
 .hscroll.hs-pinned + .hs-nav { display: none; }
 .hs-pin { overflow: clip; }
-.sec.hs-pin { padding-block: 96px 40px; } /* fixa na tela: menos respiro para o título caber abaixo do cabeçalho */
+/* fixa na tela: ocupa a tela inteira (numa tela alta, o que sobrasse abaixo mostraria o fundo vazio durante o movimento),
+   com o conteúdo centralizado e menos respiro para o título caber abaixo do cabeçalho */
+.sec.hs-pin { min-height: 100vh; display: flex; align-items: center; padding-block: 96px 40px; }
+.sec.hs-pin > .wrap { width: 100%; }
 /* desktop: grupos curtos que cabem na tela (ex.: diferenciais) viram grade alinhada à largura do conteúdo e ao cabeçalho */
 @media (min-width: 900px) { .hscroll.slide-in { display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); overflow: visible; margin-right: 0; padding-right: 0; } .hscroll.slide-in > .card { flex: none; } }
 
@@ -646,7 +649,7 @@ html:has(#mw-consent:not([hidden])) { scroll-padding-bottom: 220px; }
   nums.forEach(function (d) { d.el.__mwNum = d; cio.observe(d.el); });
 })();
 </script>
-<script type="module" src="/assets/Page.astro_astro_type_script_index_0_lang.BJhCk4HD.js"></script>
+<script type="module" src="/assets/Page.astro_astro_type_script_index_0_lang.RGKLoB3N.js"></script>
 <script>(function(){const hs = ["Previous","Next","Pause motion","Resume motion"];
 
 // Carrossel .hscroll: avanço automático por padrão (6s com mouse, 8s no toque, para dar tempo de ler), com botão
