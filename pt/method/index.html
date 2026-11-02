@@ -342,7 +342,7 @@ p { text-wrap: pretty; }
 .hscroll > .card { flex: 0 0 min(400px, 82vw); scroll-snap-align: start; }
 .hscroll > * { scroll-snap-align: start; }
 @media (hover: hover) and (pointer: fine) { .hscroll { cursor: grab; } .hscroll.dragging { cursor: grabbing; scroll-snap-type: none; scroll-behavior: auto; user-select: none; } }
-.hs-nav { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+.hs-nav { display: flex; justify-content: flex-end; gap: 10px; margin-top: 32px; }
 .hs-nav[hidden] { display: none; }
 .hs-btn { width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--line); background: none; color: inherit; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; transition: border-color .2s, opacity .2s; }
 .hs-btn:hover:not([aria-disabled="true"]) { border-color: var(--accent); }
@@ -404,7 +404,7 @@ html:has(#mw-consent:not([hidden])) { scroll-padding-bottom: 220px; }
 .mw-typing { color: var(--paper-muted); font-style: italic; }
 .mw-chat-cta { align-self: flex-start; min-height: 44px; }
 .mw-chat-form { display: flex; gap: 8px; padding: 12px 12px 6px; border-top: 1px solid rgba(255,255,255,.08); }
-.mw-chat-form textarea { flex: 1; resize: none; min-height: 44px; max-height: 120px; padding: 11px 14px; border-radius: 14px; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.05); color: var(--paper); font: 15px/1.4 var(--font); }
+.mw-chat-form textarea { flex: 1; resize: none; min-height: 44px; max-height: 120px; padding: 11px 14px; border-radius: 14px; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.05); color: var(--paper); font: 16px/1.4 var(--font); } /* 16px: abaixo disso o Safari do iPhone dá zoom na página ao focar */
 .mw-chat-form textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 .mw-chat-send { width: 44px; height: 44px; flex: none; border: 0; border-radius: 50%; background: var(--accent); color: var(--on-accent); cursor: pointer; display: inline-flex; align-items: center; justify-content: center; }
 .mw-chat-wa { display: block; padding: 8px 18px 14px; font-size: 13px; color: var(--paper-muted); text-align: center; }
@@ -837,7 +837,8 @@ n.queue=[];}(window, document,'script',
   state.msgs.forEach(function (m) { if (m.who === 'cta') cta(m.text); else bubble(m.who, m.text); });
   function toggle(o) {
     box.hidden = !o; btn.setAttribute('aria-expanded', o); document.documentElement.classList.toggle('mw-chat-open', o);
-    if (o) { verify(); input.focus(); log.scrollTop = log.scrollHeight; } else btn.focus();
+    // no celular o teclado não abre sozinho (cobriria a saudação); com mouse, o campo já fica pronto para digitar
+    if (o) { verify(); if (matchMedia('(hover: hover)').matches) input.focus(); log.scrollTop = log.scrollHeight; } else btn.focus();
   }
   // anti-robô (Turnstile): a verificação roda numa página do endereço do chat, embutida aqui, e só carrega quando o chat
   // abre; o token vai junto com a primeira mensagem. Se a Cloudflare precisar de um clique, o quadro aparece
@@ -880,21 +881,45 @@ n.queue=[];}(window, document,'script',
     busy = true; input.value = ''; bubble('me', text); state.msgs.push({ who: 'me', text: text }); save();
     var dots = bubble('ai', box.dataset.tTyping); dots.classList.add('mw-typing');
     withToken(function () {
-    var body = { sid: state.sid, lang: box.dataset.lang, text: text, page: location.pathname, ts: state.sid ? '' : ts };
+    var body = { sid: state.sid, lang: box.dataset.lang, text: text, page: location.pathname, ts: state.sid ? '' : ts, stream: true };
     ts = '';
+    var live = null; // balão que recebe a resposta aos pedaços, enquanto a IA escreve
     fetch(box.dataset.endpoint, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) })
-      .then(function (r) { return r.json(); })
+      .then(function (r) {
+        // erros, limites e verificação voltam em JSON; a resposta da IA vem em linhas ({"d": pedaço} e, no fim, {"done": true})
+        if ((r.headers.get('content-type') || '').indexOf('ndjson') < 0 || !r.body) return r.json();
+        var reader = r.body.getReader(), dec = new TextDecoder(), buf = '', last = null;
+        return (function pump() {
+          return reader.read().then(function (x) {
+            if (x.value) buf += dec.decode(x.value, { stream: true });
+            for (var i; (i = buf.indexOf('\n')) >= 0;) {
+              var ln = buf.slice(0, i); buf = buf.slice(i + 1); if (!ln) continue;
+              var o = JSON.parse(ln);
+              if (o.d) {
+                if (!live) { dots.remove(); live = bubble('ai', ''); }
+                live.textContent = (live.textContent + o.d).replace(/^\s+/, ''); log.scrollTop = log.scrollHeight;
+              }
+              if (o.done) last = o;
+            }
+            if (!x.done) return pump();
+            if (!last) throw new Error('stream');
+            return last;
+          });
+        })();
+      })
       .then(function (d) {
         dots.remove(); if (d.sid) state.sid = d.sid;
         // a conversa não começou (token recusado, limite, erro): o token foi gasto, então recomeça a verificação
         if (d.error === 'verify') state.sid = ''; // conversa salva no navegador que já expirou no servidor
         if (!state.sid) { frame.removeAttribute('src'); verify(); }
         var reply = d.reply || (d.error ? box.dataset.tError : '');
-        if (reply) { bubble('ai', reply); state.msgs.push({ who: 'ai', text: reply }); }
+        // o texto final do servidor é o que vale (sem espaços sobrando e sem a linha interna do resumo)
+        if (reply) { if (live) live.textContent = reply; else bubble('ai', reply); state.msgs.push({ who: 'ai', text: reply }); }
+        else if (live) live.remove();
         if (d.whatsapp) { cta(d.whatsapp); state.msgs.push({ who: 'cta', text: d.whatsapp }); }
         save();
       })
-      .catch(function () { dots.remove(); bubble('ai', box.dataset.tError); cta(box.dataset.wa); if (!state.sid) { frame.removeAttribute('src'); verify(); } })
+      .catch(function () { dots.remove(); if (live) live.remove(); bubble('ai', box.dataset.tError); cta(box.dataset.wa); if (!state.sid) { frame.removeAttribute('src'); verify(); } })
       .finally(function () { busy = false; input.focus(); });
     });
   });
@@ -995,7 +1020,7 @@ n.queue=[];}(window, document,'script',
   nums.forEach(function (d) { d.el.__mwNum = d; cio.observe(d.el); });
 })();
 </script>
-<script type="module" src="/assets/Page.astro_astro_type_script_index_0_lang.RGKLoB3N.js"></script>
+<script type="module" src="/assets/Page.astro_astro_type_script_index_0_lang.gwu2NSQz.js"></script>
 <script>(function(){const hs = ["Anterior","Seguinte","Pausar movimento","Retomar movimento"];
 
 // Carrossel .hscroll: avanço automático por padrão (6s com mouse, 8s no toque, para dar tempo de ler), com botão
