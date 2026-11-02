@@ -245,12 +245,16 @@ a { color: inherit; }
 /* ── header / nav ── */
 /* o vidro fica num ::before: backdrop-filter no próprio header prenderia o menu mobile (position:fixed) dentro dele */
 .site-header { position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--warm-line); padding-top: env(safe-area-inset-top, 0px); transition: border-color .3s ease; }
-.site-header::before { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(14,13,11,.88); backdrop-filter: saturate(140%) blur(12px); -webkit-backdrop-filter: saturate(140%) blur(12px); }
+.site-header::before { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(14,13,11,.84); backdrop-filter: saturate(180%) blur(18px); -webkit-backdrop-filter: saturate(180%) blur(18px); }
+/* vidro: linha de luz na base do cabeçalho */
+.site-header::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 1px; pointer-events: none; background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.16) 30%, rgba(240,120,32,.4) 70%, rgba(255,255,255,0)); }
 .site-header > .wrap { position: relative; z-index: 2; }
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 76px; transition: min-height .3s ease; }
 .site-header.scrolled .nav { min-height: 62px; }
-.site-header.scrolled::before { background: rgba(14,13,11,.95); }
-.nav-logo img { height: 30px; width: auto; }
+.site-header.scrolled::before { background: rgba(14,13,11,.9); }
+.nav-logo img { height: 44px; width: auto; transition: height .3s ease; }
+.site-header.scrolled .nav-logo img { height: 38px; }
+@media (max-width: 600px) { .nav-logo img, .site-header.scrolled .nav-logo img { height: 38px; } }
 .nav-links { display: flex; gap: 28px; }
 .nav-links a { color: var(--paper-muted); text-decoration: none; font-size: 15px; padding-block: 12px; }
 .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--paper); }
@@ -258,7 +262,7 @@ a { color: inherit; }
 .btn-nav { min-height: 44px; padding: 0 20px; font-size: 14px; }
 .lang { position: relative; }
 .lang-trigger { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--warm-line); background: none; color: var(--paper); font: 700 12px var(--font); letter-spacing: .08em; cursor: pointer; }
-.lang-menu { position: absolute; right: 0; top: calc(100% + 8px); min-width: 140px; background: var(--warm-card); border: 1px solid var(--warm-line); border-radius: 14px; padding: 6px; display: none; box-shadow: 0 16px 40px rgba(0,0,0,.5); }
+.lang-menu { position: absolute; right: 0; top: calc(100% + 8px); min-width: 140px; background: rgba(23,21,18,.9); -webkit-backdrop-filter: blur(18px) saturate(170%); backdrop-filter: blur(18px) saturate(170%); border: 1px solid rgba(255,255,255,.1); border-radius: 14px; padding: 6px; display: none; box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 16px 40px rgba(0,0,0,.5); }
 .lang.open .lang-menu { display: block; }
 .lang-menu a, .lang-menu button { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 44px; padding: 0 12px; border-radius: 10px; border: 0; background: none; color: var(--paper); font: 600 14px var(--font); text-decoration: none; cursor: pointer; }
 .lang-menu a:hover, .lang-menu button:hover { background: var(--warm-line); }
@@ -279,7 +283,7 @@ a { color: inherit; }
 .site-footer { background: var(--warm); color: var(--paper-muted); border-top: 1px solid var(--warm-line); font-size: 14px; line-height: 1.6; }
 .foot-grid { display: grid; gap: 40px 32px; grid-template-columns: 1.2fr repeat(4, minmax(0, 1fr)); padding-block: 64px 40px; }
 @media (max-width: 1000px) { .foot-grid { grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); } }
-.foot-brand .logo { height: 34px; width: auto; }
+.foot-brand .logo { height: 44px; width: auto; }
 .foot-social { display: flex; gap: 8px; margin-top: 22px; }
 .foot-social a { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--warm-line); display: inline-flex; align-items: center; justify-content: center; color: var(--paper); transition: border-color .2s, color .2s; }
 .foot-social a:hover { border-color: var(--accent); color: var(--accent); }
@@ -299,9 +303,11 @@ a { color: inherit; }
 .mw-cookie-prefs { color: var(--paper-muted); }
 
 /* ── flutuantes: WhatsApp, voltar ao topo, barra de progresso ── */
-.wa-float { position: fixed; right: 20px; bottom: 20px; z-index: 900; width: 56px; height: 56px; border-radius: 50%; background: #25D366; color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(0,0,0,.35); transition: transform .2s ease; }
-.wa-float:hover { transform: scale(1.06); }
-.back-to-top { position: fixed; right: 26px; bottom: 88px; z-index: 900; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--warm-line); background: rgba(14,13,11,.9); color: var(--paper); cursor: pointer; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transform: translateY(8px); transition: opacity .3s, transform .3s; }
+.wa-float { position: fixed; right: 20px; bottom: 20px; z-index: 900; width: 56px; height: 56px; border-radius: 50%; background: var(--accent); color: var(--on-accent); display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(0,0,0,.35); transition: transform .2s ease, background-color .2s ease; animation: mw-wa-pulse 2.4s ease-out infinite; }
+.wa-float:hover { transform: scale(1.06); background: var(--accent-2); }
+/* pulso em anel laranja (identidade do site), o mesmo ritmo do botão de play */
+@keyframes mw-wa-pulse { 0% { box-shadow: 0 10px 30px rgba(0,0,0,.35), 0 0 0 0 rgba(240,120,32,.55); } 70%, 100% { box-shadow: 0 10px 30px rgba(0,0,0,.35), 0 0 0 18px rgba(240,120,32,0); } }
+.back-to-top { position: fixed; right: 26px; bottom: 88px; z-index: 900; width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,.1); background: rgba(20,18,16,.78); -webkit-backdrop-filter: blur(14px) saturate(170%); backdrop-filter: blur(14px) saturate(170%); box-shadow: inset 0 1px 0 rgba(255,255,255,.22), inset 0 0 0 1px rgba(255,255,255,.08), 0 10px 30px rgba(0,0,0,.3); color: var(--paper); cursor: pointer; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transform: translateY(8px); transition: opacity .3s, transform .3s; }
 .back-to-top.show { opacity: 1; pointer-events: auto; transform: none; }
 .scroll-progress { position: fixed; left: 0; top: 0; z-index: 1001; height: 3px; width: 100%; background: var(--accent); transform: scaleX(var(--p, 0)); transform-origin: 0 50%; pointer-events: none; }
 
@@ -338,10 +344,11 @@ a { color: inherit; }
 .js .rv.in { opacity: 1; transform: none; }
 /* títulos sobem um pouco mais (sem clip-path: área zero impedia o IntersectionObserver de disparar) */
 .js h2.rv { transform: translateY(44px); transition: opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1); }
-main > section:first-child.t-warm { position: relative; isolation: isolate; overflow: hidden; }
-main > section:first-child.t-warm::before { content: ""; position: absolute; z-index: -1; width: 70vmax; height: 70vmax; right: -25vmax; top: -30vmax; border-radius: 50%; background: radial-gradient(closest-side, rgba(240,120,32,.16), rgba(240,120,32,0)); animation: mw-glow 18s ease-in-out infinite alternate; pointer-events: none; }
+/* bloco do topo: seção direta, seção dentro do wrapper da página (home) ou header do article (sobre, case) */
+:is(main > section:first-child, main > div:first-child > section:first-child, main > article:first-child > header:first-child).t-warm { position: relative; isolation: isolate; overflow: hidden; }
+:is(main > section:first-child, main > div:first-child > section:first-child, main > article:first-child > header:first-child).t-warm::before { content: ""; position: absolute; z-index: -1; width: 70vmax; height: 70vmax; right: -25vmax; top: -30vmax; border-radius: 50%; background: radial-gradient(closest-side, rgba(240,120,32,.16), rgba(240,120,32,0)); animation: mw-glow 18s ease-in-out infinite alternate; pointer-events: none; }
 @keyframes mw-glow { 0% { transform: translate(0, 0) scale(1); } 50% { transform: translate(-12vmax, 10vmax) scale(1.15); } 100% { transform: translate(-4vmax, 18vmax) scale(.95); } }
-main > section:first-child h1 { animation: mw-rise .9s cubic-bezier(.2,.7,.2,1) both; }
+:is(main > section:first-child, main > div:first-child > section:first-child, main > article:first-child > header:first-child) h1 { animation: mw-rise .9s cubic-bezier(.2,.7,.2,1) both; }
 @keyframes mw-rise { from { transform: translateY(18px); } to { transform: none; } }
 .card { transition: transform .35s cubic-bezier(.2,.7,.2,1), border-color .35s ease, box-shadow .35s ease; }
 .card:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 18px 40px rgba(0,0,0,.10); }
@@ -353,22 +360,48 @@ main > section:first-child h1 { animation: mw-rise .9s cubic-bezier(.2,.7,.2,1) 
 @media (prefers-reduced-motion: reduce) {
   .js .rv, .js h2.rv { opacity: 1; transform: none; transition: none; }
   .scroll-progress { display: none; }
-  main > section:first-child.t-warm::before, main > section:first-child h1, .play { animation: none; }
+  :is(main > section:first-child, main > div:first-child > section:first-child, main > article:first-child > header:first-child).t-warm::before, :is(main > section:first-child, main > div:first-child > section:first-child, main > article:first-child > header:first-child) h1, .play { animation: none; }
   .card, .card:hover, .photo, .video-poster img, .reel .thumb img { transition: none; transform: none; }
+  .wa-float { animation: none; }
 }
 
 /* grades de 6 itens: 3 + 3 no desktop (com o site mais largo, o auto-fit faria 4 + 2) */
 @media (min-width: 900px) { .grid:has(> :nth-child(6):last-child) { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 /* títulos com quebra equilibrada; grades de 3 e 4 itens sem card órfão em larguras intermediárias */
 .h1, .h2, .h3, h1, h2, h3 { text-wrap: balance; }
-@media (min-width: 900px) { .grid:has(> :nth-child(3):last-child) { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-@media (min-width: 600px) and (max-width: 1099px) { .grid:has(> :nth-child(4):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 1100px) { .grid:has(> :nth-child(4):last-child) { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+/* vale também para as listas em grade das páginas (pilares, fases, números) que não usam .grid */
+@media (min-width: 700px) { :is(.grid, .fw-flow, .me-stats, .me-phases):has(> :nth-child(3):last-child) { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 600px) and (max-width: 1099px) { :is(.grid, .fw-flow, .me-stats, .me-phases):has(> :nth-child(4):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { :is(.grid, .fw-flow, .me-stats, .me-phases):has(> :nth-child(4):last-child) { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+/* parágrafos sem palavra sozinha na última linha */
+p { text-wrap: pretty; }
+/* celular: botões lado a lado viram uma coluna de mesma largura */
+@media (max-width: 600px) { .btns .btn { flex: 1 1 100%; } }
+/* o botão do WhatsApp não cobre o fim do rodapé (selo Kommo) */
+@media (min-width: 601px) and (max-width: 1520px) { .foot-bottom { padding-right: calc(var(--gutter) + 72px); } }
+@media (max-width: 600px) { .foot-bottom { padding-bottom: 96px; } }
 
 /* contraste AA: eyebrow laranja em fundo claro usa o laranja escuro */
 .t-light .eyebrow { color: #B4530F; }
 .t-light .card .num, .card p.eyebrow { color: #B4530F; }
 .t-warm .card p.eyebrow, .t-warm2 .card p.eyebrow { color: var(--accent); }
+
+/* GSAP: máscara das linhas dos títulos com folga para acentos e descendentes (g, p, ç) */
+.ln-mask { padding-block: .1em .14em; margin-bottom: -.24em; } /* margem só embaixo: negativas vizinhas se fundiriam */
+.ln-mask em, .ln-mask .accent { padding-bottom: 0; }
+@media (prefers-reduced-motion: reduce) { .ln-mask { padding: 0; margin: 0; } }
+
+/* "liquid glass": vidro com desfoque saturado, borda de luz em degradê e reflexo que segue o mouse (--mx/--my via JS).
+   Só onde há cor atrás para refratar (painel do topo e cases da home); raio e espaçamento vêm do próprio elemento */
+.glass { position: relative; isolation: isolate;
+  background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.025) 45%, rgba(255,255,255,.06));
+  -webkit-backdrop-filter: blur(16px) saturate(170%); backdrop-filter: blur(16px) saturate(170%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.25), inset 0 -1px 0 rgba(255,255,255,.05), 0 30px 80px rgba(0,0,0,.45); }
+.glass::before { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit; padding: 1px; pointer-events: none;
+  background: linear-gradient(140deg, rgba(255,255,255,.5), rgba(255,255,255,.04) 32%, rgba(240,120,32,.45) 72%, rgba(255,255,255,.18));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0); }
+.glass::after { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit; pointer-events: none;
+  background: radial-gradient(circle at var(--mx, 18%) var(--my, 0%), rgba(255,255,255,.14), rgba(255,255,255,0) 42%); transition: background-position .2s; }
 </style></head>
 <body>
 <script>
@@ -394,7 +427,7 @@ n.queue=[];}(window, document,'script',
   <div class="wrap">
     <nav id="nav" class="nav" aria-label="Menú principal">
       <a href="/es/" class="nav-logo" aria-label="Makewell Comunicação — inicio">
-        <img src="/images/logo-makewell-mi-branca.webp" alt="Makewell Comunicação" width="160" height="40" fetchpriority="high">
+        <img src="/images/logo-makewell-mi-branca.webp" alt="Makewell Comunicação" width="136" height="44" fetchpriority="high">
       </a>
       <div class="nav-links">
         <a href="/es/about/">Nosotros</a><a href="/es/services/">Servicios</a><a href="/es/framework/">Framework</a><a href="/es/method/">Método</a><a href="/es/cases/">Casos</a>
@@ -423,6 +456,25 @@ n.queue=[];}(window, document,'script',
 
   <!-- HERO -->
   <section class="t-warm hm-hero" aria-label="Agencia de marketing digital para negocios brasileños en España y Latinoamérica">
+    <!-- fundo: gráfico de resultado (barras crescendo, ROI subindo, CAC caindo); decorativo -->
+    <div class="hm-chart" aria-hidden="true">
+      <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" focusable="false">
+        <defs>
+          <linearGradient id="hmUp" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#F5A623"></stop><stop offset="1" stop-color="#F07820"></stop></linearGradient>
+          <linearGradient id="hmArea" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#F07820" stop-opacity=".28"></stop><stop offset="1" stop-color="#F07820" stop-opacity="0"></stop></linearGradient>
+          <linearGradient id="hmBar" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#F5A623" stop-opacity=".4"></stop><stop offset="1" stop-color="#F07820" stop-opacity="0"></stop></linearGradient>
+          <filter id="hmGlow" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="6"></feGaussianBlur></filter>
+        </defs>
+        <g class="grid"><line x1="0" x2="1440" y1="100" y2="100"></line><line x1="0" x2="1440" y1="200" y2="200"></line><line x1="0" x2="1440" y1="300" y2="300"></line><line x1="0" x2="1440" y1="400" y2="400"></line><line x1="0" x2="1440" y1="500" y2="500"></line><line x1="0" x2="1440" y1="600" y2="600"></line><line x1="0" x2="1440" y1="700" y2="700"></line><line x1="0" x2="1440" y1="800" y2="800"></line></g>
+        <g class="bars" fill="url(#hmBar)"><rect class="bar" style="--i:0" x="24" y="840" width="26" height="60" rx="3"></rect><rect class="bar" style="--i:1" x="84" y="799" width="26" height="101" rx="3"></rect><rect class="bar" style="--i:2" x="144" y="828" width="26" height="72" rx="3"></rect><rect class="bar" style="--i:3" x="204" y="767" width="26" height="133" rx="3"></rect><rect class="bar" style="--i:4" x="264" y="786" width="26" height="114" rx="3"></rect><rect class="bar" style="--i:5" x="324" y="805" width="26" height="95" rx="3"></rect><rect class="bar" style="--i:6" x="384" y="724" width="26" height="176" rx="3"></rect><rect class="bar" style="--i:7" x="444" y="743" width="26" height="157" rx="3"></rect><rect class="bar" style="--i:8" x="504" y="692" width="26" height="208" rx="3"></rect><rect class="bar" style="--i:9" x="564" y="741" width="26" height="159" rx="3"></rect><rect class="bar" style="--i:10" x="624" y="650" width="26" height="250" rx="3"></rect><rect class="bar" style="--i:11" x="684" y="679" width="26" height="221" rx="3"></rect><rect class="bar" style="--i:12" x="744" y="618" width="26" height="282" rx="3"></rect><rect class="bar" style="--i:13" x="804" y="667" width="26" height="233" rx="3"></rect><rect class="bar" style="--i:14" x="864" y="566" width="26" height="334" rx="3"></rect><rect class="bar" style="--i:15" x="924" y="605" width="26" height="295" rx="3"></rect><rect class="bar" style="--i:16" x="984" y="554" width="26" height="346" rx="3"></rect><rect class="bar" style="--i:17" x="1044" y="503" width="26" height="397" rx="3"></rect><rect class="bar" style="--i:18" x="1104" y="542" width="26" height="358" rx="3"></rect><rect class="bar" style="--i:19" x="1164" y="461" width="26" height="439" rx="3"></rect><rect class="bar" style="--i:20" x="1224" y="480" width="26" height="420" rx="3"></rect><rect class="bar" style="--i:21" x="1284" y="409" width="26" height="491" rx="3"></rect><rect class="bar" style="--i:22" x="1344" y="418" width="26" height="482" rx="3"></rect><rect class="bar" style="--i:23" x="1404" y="357" width="26" height="543" rx="3"></rect></g>
+        <path class="area" d="M0,900 L0,780 L120,752 L240,716 L360,730 L480,664 L600,634 L720,572 L840,590 L960,486 L1080,446 L1200,350 L1320,270 L1440,170 L1440,900 Z" fill="url(#hmArea)"></path>
+        <polyline class="ln dn" points="0,330 160,356 320,348 480,402 640,420 800,470 960,490 1120,548 1280,566 1440,618" pathLength="1"></polyline>
+        <polyline class="ln up glow" points="0,780 120,752 240,716 360,730 480,664 600,634 720,572 840,590 960,486 1080,446 1200,350 1320,270 1440,170" pathLength="1" filter="url(#hmGlow)"></polyline>
+        <polyline class="ln up" points="0,780 120,752 240,716 360,730 480,664 600,634 720,572 840,590 960,486 1080,446 1200,350 1320,270 1440,170" pathLength="1"></polyline>
+        <polyline class="comet" points="0,780 120,752 240,716 360,730 480,664 600,634 720,572 840,590 960,486 1080,446 1200,350 1320,270 1440,170" pathLength="1"></polyline>
+        <g class="dots"><circle class="dot" style="--i:4" cx="480" cy="664" r="5"></circle><circle class="dot" style="--i:6" cx="720" cy="572" r="5"></circle><circle class="dot" style="--i:8" cx="960" cy="486" r="5"></circle><circle class="dot" style="--i:10" cx="1200" cy="350" r="5"></circle><circle class="dot" style="--i:12" cx="1440" cy="170" r="5"></circle></g>
+      </svg>
+    </div>
     <div class="wrap">
       <div class="hm-hero-grid">
         <div class="hm-hero-main">
@@ -430,11 +482,11 @@ n.queue=[];}(window, document,'script',
           <h1 class="h1 hm-h1">Tu marca en la cima<br>con estrategia,<br> <em>rendimiento e inteligencia.</em></h1>
           <p class="lead hm-hero-p">Somos una agencia brasileña que entiende los dos lados: tu negocio y el mercado donde estás ahora. <strong>Habla con nosotros</strong> y empieza el nuevo capítulo de tu marca.</p>
           <div class="btns">
-            <a class="btn btn-primary" href="https://wa.me/5582999103246?text=Hola!%20Quiero%20agendar%20un%20diagn%C3%B3stico%20gratuito%20con%20Makewell." target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{content_name:'Schedule Free Diagnostic'})">Agendar Diagnóstico Gratuito</a>
+            <a class="btn btn-primary" href="https://wa.me/5582999103246?text=Hola!%20Quiero%20agendar%20un%20diagn%C3%B3stico%20gratuito%20con%20Makewell." target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{content_name:'Schedule Free Diagnostic'})">Agendar diagnóstico gratuito</a>
             <a class="btn btn-ghost" href="#cases">Ver Resultados →</a>
           </div>
         </div>
-        <div class="hm-hero-side" role="region" aria-label="Resultados comprobados">
+        <div class="hm-hero-side glass" role="region" aria-label="Resultados comprobados">
           <p class="hm-card-head"><span>Rendimiento Comprobado</span><span>Datos Reales</span></p>
           <div class="hm-stat"><span class="hm-stat-n">+26x</span><span class="hm-stat-l">Mejor ROI Entregado</span></div><div class="hm-stat"><span class="hm-stat-n">50+</span><span class="hm-stat-l">Clientes Atendidos</span></div><div class="hm-stat"><span class="hm-stat-n">+7 díg.</span><span class="hm-stat-l">Ingresos Generados para Clientes</span></div><div class="hm-stat"><span class="hm-stat-n">9+</span><span class="hm-stat-l">Años de Experiencia</span></div>
         </div>
@@ -470,7 +522,7 @@ n.queue=[];}(window, document,'script',
       <h2 class="h2" id="inst-title">Conoce Makewell</h2>
       <p class="lead">Mira cómo transformamos marcas en resultados con estrategia, performance e inteligencia.</p>
       <button type="button" class="video-poster hm-poster" data-yt="A28k_Yxm9cc" data-yt-params="cc_load_policy=1&amp;cc_lang_pref=es&amp;hl=es" aria-label="Ver video institucional">
-        <img src="/images/escritorio-sala.webp" alt="Oficina de Makewell en Maceió" loading="lazy">
+        <img src="/images/video-institucional.webp" alt="" width="1920" height="1080" loading="lazy">
         <span class="play"><svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#080808"/></svg></span>
         <span class="hm-poster-label">▶ Ver presentación</span>
       </button>
@@ -482,17 +534,46 @@ n.queue=[];}(window, document,'script',
     </div>
   </section>
 
-  <!-- PARA QUEM (BR) / POR QUE A MAKEWELL (intl) -->
-  <section class="t-light sec hm-seg" id="why" aria-labelledby="seg-title">
+  <!-- PARA QUEM (5 nichos) e POR QUE A MAKEWELL (3 diferenciais): as mesmas duas seções nas 4 línguas -->
+  <section class="t-light sec hm-seg" id="publico" aria-labelledby="publico-title">
+    <div class="wrap">
+      <p class="eyebrow">PARA QUIÉN</p>
+      <h2 class="h2" id="publico-title">Para quién es <span class="gold">Makewell</span></h2>
+      <p class="lead">Para quienes ya invirtieron en marketing y no vieron el resultado reflejado en los ingresos.</p>
+      <div class="grid hm-seg-grid hm-5">
+        <article class="card">
+            <span class="hm-num" aria-hidden="true">01</span>
+            <h3 class="h3">Despachos de Abogados</h3>
+            <p>Despachos con excelencia jurídica que dependen de recomendaciones, no logran diferenciarse en un mercado saturado y ven a competidores más pequeños crecer más rápido. Transformamos la reputación en autoridad digital que atrae al cliente correcto y acelera el crecimiento.</p>
+          </article><article class="card">
+            <span class="hm-num" aria-hidden="true">02</span>
+            <h3 class="h3">Clínicas Médicas</h3>
+            <p>Construimos la marca de clínicas que invierten en calidad, pero pierden pacientes frente a competidores con menos estructura y más presencia digital. Reputación difícil de controlar, dependencia de recomendaciones y dificultad para comunicarse con seguridad y autoridad.</p>
+          </article><article class="card">
+            <span class="hm-num" aria-hidden="true">03</span>
+            <h3 class="h3">Constructoras &amp; Promotoras</h3>
+            <p>Alta inversión en el proyecto, poco tiempo para vender y una sala de ventas llena de personal, pero sin demanda digital generada antes del lanzamiento. Construimos la estrategia que calienta al público, posiciona el producto y entrega leads calificados incluso antes de que las llaves estén listas.</p>
+          </article><article class="card">
+            <span class="hm-num" aria-hidden="true">04</span>
+            <h3 class="h3">Industrias</h3>
+            <p>Industrias que compiten en mercados donde un buen producto ya no es diferencial suficiente. Ciclo de venta largo, decisores difíciles de alcanzar y muchos competidores. Construimos la presencia digital que transforma la competencia técnica en autoridad y acorta el camino hasta la venta.</p>
+          </article><article class="card">
+            <span class="hm-num" aria-hidden="true">05</span>
+            <h3 class="h3">Hospitales &amp; Tercer Sector</h3>
+            <p>Hospitales y organizaciones sociales con credibilidad y una causa fuerte, pero que aún no logran traducirlo en una presencia digital que genere resultados e impacto real. Trabajamos con quienes marcan la diferencia y aún no han sido encontrados por quienes buscan.</p>
+          </article>
+      </div>
+    </div>
+  </section><section class="t-light sec hm-seg line-top hm-why" id="why" aria-labelledby="why-title">
     <div class="wrap">
       <p class="eyebrow">NUESTROS DIFERENCIALES</p>
-      <h2 class="h2" id="seg-title">¿Por qué <span class="gold">Makewell</span>?</h2>
+      <h2 class="h2" id="why-title">¿Por qué <span class="gold">Makewell</span>?</h2>
       <p class="lead">No somos una agencia típica. Tenemos método propio, entregamos resultados medibles y tratamos a cada cliente como único.</p>
       <div class="grid hm-seg-grid hm-3">
         <article class="card">
             <span class="hm-num">01</span>
             <h3 class="h3">El Método <span>FishWell</span></h3>
-            <p>Un proceso de 5 pasos, desarrollado a lo largo de 9 años, que transforma inversión en ingresos medibles y predecibles — no en conjeturas.</p>
+            <p>Un proceso de 5 pasos, desarrollado a lo largo de 9 años, que transforma inversión en ingresos medibles — no en conjeturas.</p>
           </article><article class="card">
             <span class="hm-num">02</span>
             <h3 class="h3">Resultados <span>medibles</span></h3>
@@ -509,9 +590,9 @@ n.queue=[];}(window, document,'script',
   <!-- MÉTODO FISHWELL -->
   <section class="t-warm2 sec hm-fish" id="method" aria-labelledby="method-title">
     <div class="wrap">
-      <p class="eyebrow">NUESTROS DIFERENCIALES</p>
+      <p class="eyebrow">NUESTRO MÉTODO</p>
       <h2 class="h2 hm-fish-h2" id="method-title">El Método <span class="gold">FishWell</span></h2>
-      <p class="lead">Cómo transformamos inversión en ingresos medibles y predecibles</p>
+      <p class="lead">Cómo transformamos inversión en ingresos medibles</p>
       <ol class="hm-steps">
         <li>
             <span class="hm-step-dot" aria-hidden="true"></span>
@@ -568,7 +649,7 @@ n.queue=[];}(window, document,'script',
           </article><article class="card">
             <p class="hm-svc-tag">Ventas + CRM</p>
             <h3 class="h3">Vende más con el mismo volumen de leads</h3>
-            <p>Capacitación en SPIN Selling, proceso de ventas estructurado y CRM integrado para un embudo de ventas eficiente y predecible.</p>
+            <p>Capacitación en SPIN Selling, proceso de ventas estructurado y CRM integrado para un embudo de ventas eficiente y medible.</p>
             <ul class="hm-check" aria-label="Entregables de Ventas"><li>Capacitación en SPIN Selling</li><li>Proceso de ventas estructurado</li><li>CRM integrado y automatización</li></ul>
           </article><article class="card">
             <p class="hm-svc-tag">SEO + Sitio Web</p>
@@ -602,8 +683,9 @@ n.queue=[];}(window, document,'script',
 
   <!-- CASES -->
   <section class="t-warm sec hm-cases" aria-label="Caso de Impacto">
+    <div class="hm-cases-bg" aria-hidden="true"><span></span><span></span><span></span></div>
     <div class="wrap">
-      <a class="hm-hl" href="/es/cases/casa-hunter-casa-dos-raros/" aria-label="Caso de Impacto: Casa Hunter y Casa dos Raros — leer caso completo">
+      <a class="hm-hl glass" href="/es/cases/casa-hunter-casa-dos-raros/" aria-label="Caso de Impacto: Casa Hunter y Casa dos Raros — leer caso completo">
         <div class="hm-hl-text">
           <p class="hm-badges"><span class="hm-badge hm-badge-accent">Caso de Impacto</span><span class="hm-badge">Alcance · 13M Personas</span></p>
           <h3 class="hm-hl-title">Cómo Makewell le dio voz a 13 millones de brasileños</h3>
@@ -616,15 +698,15 @@ n.queue=[];}(window, document,'script',
       </a>
 
       <div class="grid hm-case-grid">
-        <article class="card hm-case">
+        <article class="card glass hm-case">
             <p class="hm-badges"><span class="hm-badge">Legal</span><span class="hm-badge hm-badge-accent">ROI +26x</span></p>
             <h3 class="h3 hm-case-title">Dr. Felipe Vilela</h3>
-            <p class="hm-case-sub">Posicionamiento + Redes + Tráfico</p>
+            <p class="hm-case-sub">Posicionamiento + Redes + Tráfico + CRM</p>
             <div class="hm-metrics" role="list" aria-label="Métricas del caso legal">
               <div role="listitem"><span class="hm-metric-v accent">+26x</span><span class="hm-metric-l">ROI</span></div><div role="listitem"><span class="hm-metric-v">100+</span><span class="hm-metric-l">Clientes/mes</span></div><div role="listitem"><span class="hm-metric-v">400k</span><span class="hm-metric-l">Ingresos</span></div>
             </div>
             <blockquote class="hm-quote"><p>"Sin ustedes no lo hubiera logrado. Los ganchos, los textos y la calidad de grabación y edición"</p><cite>Felipe Vilela — Abogado</cite></blockquote>
-          </article><article class="card hm-case">
+          </article><article class="card glass hm-case">
             <p class="hm-badges"><span class="hm-badge">Salud</span><span class="hm-badge hm-badge-accent">ROI +20x</span></p>
             <h3 class="h3 hm-case-title">Dra. Thielen</h3>
             <p class="hm-case-sub">Posicionamiento + Redes + Tráfico</p>
@@ -640,7 +722,7 @@ n.queue=[];}(window, document,'script',
           <p class="eyebrow">próximo caso</p>
           <p class="hm-next-text">La próxima historia de éxito <em>podría ser la tuya.</em></p>
         </div>
-        <a class="btn btn-primary" href="https://wa.me/5582999103246?text=Hola!%20Quiero%20resultados%20como%20los%20casos%20de%20Makewell." target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{content_name:'I Want Results Like These'})">Quiero Resultados Así</a>
+        <a class="btn btn-primary" href="https://wa.me/5582999103246?text=Hola!%20Quiero%20resultados%20como%20los%20casos%20de%20Makewell." target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{content_name:'I Want Results Like These'})">Quiero resultados así</a>
       </div>
       <a class="link-arrow" href="/es/cases/">Ver todos los casos →</a>
     </div>
@@ -655,7 +737,7 @@ n.queue=[];}(window, document,'script',
       <div class="reels hm-reels">
         <button type="button" class="reel" data-yt="JRrnKGNk-UE" data-vertical>
             <span class="thumb">
-              <img src="https://img.youtube.com/vi/JRrnKGNk-UE/hqdefault.jpg" alt="Paola Massari" width="480" height="360" loading="lazy">
+              <img src="/images/depo-JRrnKGNk-UE.webp" alt="Paola Massari" width="720" height="1280" loading="lazy">
               <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
             </span>
             <span class="hm-reel-q">"Makewell logró abrazarlo todo. Son socios, son queridos, están muy comprometidos emocionalmente con nuestra causa"</span>
@@ -663,7 +745,7 @@ n.queue=[];}(window, document,'script',
             <span class="hm-reel-role">Casa Hunter</span>
           </button><button type="button" class="reel" data-yt="PoBa9wS9rYM" data-vertical>
             <span class="thumb">
-              <img src="https://img.youtube.com/vi/PoBa9wS9rYM/hqdefault.jpg" alt="Dra. Carolina Mergulhão" width="480" height="360" loading="lazy">
+              <img src="/images/depo-PoBa9wS9rYM.webp" alt="Dra. Carolina Mergulhão" width="720" height="1280" loading="lazy">
               <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
             </span>
             <span class="hm-reel-q">"Tengo mucha vergüenza con la exposición, y ellos siempre fueron excelentes y cariñosos conmigo"</span>
@@ -671,7 +753,7 @@ n.queue=[];}(window, document,'script',
             <span class="hm-reel-role">Endocrinología | Metabología</span>
           </button><button type="button" class="reel" data-yt="SjXs-_mmDxI" data-vertical>
             <span class="thumb">
-              <img src="https://img.youtube.com/vi/SjXs-_mmDxI/hqdefault.jpg" alt="Dra. Thielen" width="480" height="360" loading="lazy">
+              <img src="/images/depo-SjXs-_mmDxI.webp" alt="Dra. Thielen" width="720" height="1280" loading="lazy">
               <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
             </span>
             <span class="hm-reel-q">"¡Soy muy fan de ellos! Son los especialistas y la atención es incomparable"</span>
@@ -679,7 +761,7 @@ n.queue=[];}(window, document,'script',
             <span class="hm-reel-role">Cirujana Vascular</span>
           </button><button type="button" class="reel" data-yt="bJaKzu9WHy0" data-vertical>
             <span class="thumb">
-              <img src="https://img.youtube.com/vi/bJaKzu9WHy0/hqdefault.jpg" alt="Tereza Cristina" width="480" height="360" loading="lazy">
+              <img src="/images/depo-bJaKzu9WHy0.webp" alt="Tereza Cristina" width="720" height="1280" loading="lazy">
               <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
             </span>
             <span class="hm-reel-q">"Tenía miedo de no encontrar una agencia diferenciada"</span>
@@ -687,7 +769,7 @@ n.queue=[];}(window, document,'script',
             <span class="hm-reel-role">Abogado</span>
           </button><button type="button" class="reel" data-yt="ij42ilGNbrY" data-vertical>
             <span class="thumb">
-              <img src="https://img.youtube.com/vi/ij42ilGNbrY/hqdefault.jpg" alt="Felipe Vilela" width="480" height="360" loading="lazy">
+              <img src="/images/depo-ij42ilGNbrY.webp" alt="Felipe Vilela" width="720" height="1280" loading="lazy">
               <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
             </span>
             <span class="hm-reel-q">"Sin ustedes no lo hubiera logrado. Los ganchos, los textos y la calidad son increíbles"</span>
@@ -695,7 +777,7 @@ n.queue=[];}(window, document,'script',
             <span class="hm-reel-role">Abogado</span>
           </button><button type="button" class="reel" data-yt="8ZsBpSb9Rds" data-vertical>
             <span class="thumb">
-              <img src="https://img.youtube.com/vi/8ZsBpSb9Rds/hqdefault.jpg" alt="Dr. Rodrigo Medeiros" width="480" height="360" loading="lazy">
+              <img src="/images/depo-8ZsBpSb9Rds.webp" alt="Dr. Rodrigo Medeiros" width="720" height="1280" loading="lazy">
               <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
             </span>
             <span class="hm-reel-q">"Mi Instagram estaba todo desordenado y Makewell cambió eso conquistando a mi público"</span>
@@ -703,7 +785,7 @@ n.queue=[];}(window, document,'script',
             <span class="hm-reel-role">Médico</span>
           </button><button type="button" class="reel" data-yt="eefbnVm-VTc" data-vertical>
             <span class="thumb">
-              <img src="https://img.youtube.com/vi/eefbnVm-VTc/hqdefault.jpg" alt="Dra. Anita Costa" width="480" height="360" loading="lazy">
+              <img src="/images/depo-eefbnVm-VTc.webp" alt="Dra. Anita Costa" width="720" height="1280" loading="lazy">
               <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
             </span>
             <span class="hm-reel-q">"Desde 2022, Makewell me ayuda con mi posicionamiento de marca en Instagram"</span>
@@ -771,11 +853,11 @@ n.queue=[];}(window, document,'script',
   <section class="t-light sec hm-cta" aria-labelledby="cta-title">
     <div class="wrap">
       <div class="hm-cta-card">
-        <p class="eyebrow dot">Diagnóstico Gratuito</p>
+        <p class="eyebrow dot">Diagnóstico gratuito</p>
         <h2 class="h2" id="cta-title">¿Listo para un marketing<br>que genere ingresos?</h2>
         <p class="lead">Los negocios que invierten en estrategia crecen más rápido. Descubre el potencial real de tu negocio.</p>
         <div class="btns">
-          <a class="btn btn-primary" href="https://wa.me/5582999103246?text=Hola!%20Quiero%20agendar%20un%20diagn%C3%B3stico%20gratuito%20con%20Makewell." target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{content_name:'Schedule Diagnostic'})">Agendar Diagnóstico</a>
+          <a class="btn btn-primary" href="https://wa.me/5582999103246?text=Hola!%20Quiero%20agendar%20un%20diagn%C3%B3stico%20gratuito%20con%20Makewell." target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{content_name:'Schedule Diagnostic'})">Agendar diagnóstico</a>
           <a class="btn btn-ghost" href="https://wa.me/5582999103246" target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{content_name:'Direct WhatsApp'})">WhatsApp Directo →</a>
         </div>
       </div>
@@ -788,7 +870,7 @@ n.queue=[];}(window, document,'script',
 <footer class="site-footer">
   <div class="wrap foot-grid">
     <div class="foot-brand">
-      <a href="/es/" aria-label="Makewell Comunicação — inicio"><img class="logo" src="/images/logo-makewell-mi-branca.webp" alt="Makewell Comunicação" width="208" height="52" loading="lazy"></a>
+      <a href="/es/" aria-label="Makewell Comunicação — inicio"><img class="logo" src="/images/logo-makewell-mi-branca.webp" alt="Makewell Comunicação" width="136" height="44" loading="lazy"></a>
       <div class="foot-social">
         <a href="https://www.instagram.com/makewellcomunicacao/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.facebook.com/makewellcomunicacao" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v7h4v-7h3l1-4h-4V8a0 0 0 0 1 0 0Z"/></svg></a><a href="https://www.linkedin.com/company/makewell-comunicacao" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></a><a href="https://www.tiktok.com/@makewellcomunicacao" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5M14 3c.5 2.5 2.5 4.5 5 5"/></svg></a>
       </div>
@@ -884,28 +966,32 @@ n.queue=[];}(window, document,'script',
 (function () {
   if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var main = document.getElementById('main-content'); if (!main) return;
-  // páginas com um único <article> (ex.: case) têm as seções dentro dele
-  var root = main.children.length === 1 && main.firstElementChild.tagName === 'ARTICLE' ? main.firstElementChild : main;
-  var secs = root.querySelectorAll(':scope > section, :scope > article');
+  // blocos da página: seções (diretas, dentro do wrapper da home ou do article) e o header do article (sobre, case).
+  // O primeiro é o topo e não espera rolagem (evita atrasar a primeira pintura); páginas legais não têm blocos.
+  var blocks = main.querySelectorAll('section, article > header');
   var targets = [];
-  secs.forEach(function (sec, i) {
-    if (i === 0) return; // o hero (ou a página legal inteira) não espera rolagem: evita atrasar a primeira pintura
-    sec.querySelectorAll('.wrap > *, .grid > *, .card').forEach(function (el) { if (targets.indexOf(el) < 0) targets.push(el); });
+  Array.prototype.forEach.call(blocks, function (sec, i) {
+    if (i === 0) return;
+    sec.querySelectorAll('.wrap > *, .grid > *, .card').forEach(function (el) { if (targets.indexOf(el) < 0 && !blocks[0].contains(el)) targets.push(el); });
   });
   targets.forEach(function (el) {
     var p = el.parentElement, k = p ? Array.prototype.indexOf.call(p.children, el) : 0;
     el.style.setProperty('--rv-d', Math.min(k, 5) * 0.08 + 's');
     el.classList.add('rv');
   });
-  var io = new IntersectionObserver(function (es) {
-    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-  targets.forEach(function (el) { io.observe(el); });
+  // revela tudo que já chegou a 92% da altura da tela, inclusive o que uma rolagem rápida "pulou"
+  // (um IntersectionObserver perde elementos que vão de baixo para cima da tela num único quadro)
+  var pending = targets;
+  function reveal() {
+    var lim = innerHeight * 0.92;
+    pending = pending.filter(function (el) { if (el.getBoundingClientRect().top < lim) { el.classList.add('in'); return false; } return true; });
+  }
 
   // barra de progresso, cabeçalho compacto e "voltar ao topo"
   var bar = document.querySelector('.scroll-progress'), head = document.querySelector('.site-header'), top = document.getElementById('back-to-top'), ticking = false;
   function onScroll() {
     ticking = false;
+    if (pending.length) reveal();
     var y = window.scrollY, h = document.documentElement.scrollHeight - innerHeight;
     if (bar) bar.style.setProperty('--p', h > 0 ? (y / h).toFixed(4) : 0);
     if (head) head.classList.toggle('scrolled', y > 40);
@@ -938,6 +1024,7 @@ n.queue=[];}(window, document,'script',
   nums.forEach(function (d) { d.el.__mwNum = d; cio.observe(d.el); });
 })();
 </script>
+<script type="module" src="/assets/Page.astro_astro_type_script_index_0_lang.B-Ox8Cu9.js"></script>
 <!-- Consentimento de cookies (LGPD/GDPR): rastreadores (via GTM e Meta Pixel) só carregam depois de "Aceitar" -->
 <div id="mw-consent" role="region" aria-label="Aviso de cookies" tabindex="-1" hidden>
   <p>Usamos cookies analíticas y de marketing solo si nos lo permites. Más información en la <a href="/es/privacy-policy/">Política de Privacidad</a>.</p>
@@ -1030,10 +1117,44 @@ n.queue=[];}(window, document,'script',
   .hm .h1, .hm .h2, .hm .h3, .hm-hl-title, .hm-next-text, .hm-manifesto p { text-wrap: balance; }
 
   /* hero */
-  .hm-hero { padding-block: clamp(72px, 9vw, 112px) clamp(56px, 7vw, 88px); }
+  /* fundo do hero: gráfico de resultado. Forte à direita (atrás dos números), some à esquerda (título) */
+  .hm-chart { position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: .9; }
+  .hm-chart svg { width: 100%; height: 100%; display: block; }
+  .hm-chart::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--warm) 0%, rgba(14,13,11,.92) 30%, rgba(14,13,11,.55) 58%, rgba(14,13,11,.15) 100%), linear-gradient(0deg, rgba(14,13,11,.35) 0%, rgba(14,13,11,0) 18%); }
+  .hm-chart .grid line { stroke: rgba(244,241,236,.05); stroke-width: 1; }
+  .hm-chart .bar { transform-box: fill-box; transform-origin: 50% 100%; animation: hm-bar 1.6s cubic-bezier(.2,.7,.2,1) calc(var(--i) * 45ms + .2s) both, hm-breathe calc(5s + var(--i) * 170ms) ease-in-out calc(2.6s + var(--i) * 90ms) infinite; }
+  .hm-chart .ln { fill: none; stroke-linejoin: round; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: hm-draw 2.4s .5s cubic-bezier(.6,0,.2,1) forwards; }
+  .hm-chart .up { stroke: url(#hmUp); stroke-width: 3.5; }
+  .hm-chart .glow { stroke-width: 10; opacity: .55; }
+  .hm-chart .dn { stroke: rgba(244,241,236,.32); stroke-width: 2; stroke-dasharray: 1; animation-duration: 3s; animation-delay: .9s; }
+  .hm-chart .area { opacity: 0; animation: hm-fade 1.6s 1.6s ease forwards; }
+  .hm-chart .comet { fill: none; stroke: #FFE2B8; stroke-width: 4; stroke-linecap: round; stroke-dasharray: .05 .95; stroke-dashoffset: .05; opacity: 0; filter: drop-shadow(0 0 6px #F5A623); animation: hm-fade .6s 2.9s forwards, hm-comet 5.5s 2.9s linear infinite; }
+  .hm-chart .dot { fill: #F5A623; stroke: var(--warm); stroke-width: 3; opacity: 0; animation: hm-fade .5s ease forwards; animation-delay: calc(1.2s + var(--i) * .16s); }
+  @keyframes hm-bar { from { transform: scaleY(0); } }
+  /* depois de crescer, as barras "respiram" (cada uma no seu tempo) para o gráfico seguir vivo */
+  @keyframes hm-breathe { 50% { transform: scaleY(.93); } }
+  @keyframes hm-draw { to { stroke-dashoffset: 0; } }
+  @keyframes hm-fade { to { opacity: 1; } }
+  @keyframes hm-comet { to { stroke-dashoffset: -.95; } }
+  @media (max-width: 900px) { .hm-chart { opacity: .55; } .hm-chart::after { background: linear-gradient(0deg, var(--warm) 0%, rgba(14,13,11,.7) 40%, rgba(14,13,11,.35) 100%); } }
+  @media (prefers-reduced-motion: reduce) {
+    .hm-chart .bar, .hm-chart .ln, .hm-chart .area, .hm-chart .dot { animation: none; opacity: 1; stroke-dashoffset: 0; }
+    .hm-chart .comet { display: none; }
+  }
+  .hm-hero { padding-block: clamp(72px, 9vw, 112px) calc(clamp(56px, 7vw, 88px) + 57px); } /* +57px: a faixa de temas sobe sobre o fim do hero */
   .hm-hero-grid { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 48px 64px; }
   .hm-hero-main { flex: 999 1 560px; min-width: 0; }
-  .hm-hero-side { flex: 1 1 340px; min-width: 0; }
+  .hm-hero-side { flex: 1 1 400px; min-width: 0; max-width: 560px; border-radius: 28px; padding: 26px clamp(22px, 2.4vw, 32px) 6px; }
+  /* cases em vidro: brilhos laranja/âmbar que se movem devagar e uma grade fina passam desfocados por trás dos cards */
+  .hm-cases { position: relative; isolation: isolate; overflow: hidden; }
+  .hm-cases-bg { position: absolute; inset: 0; z-index: -1; pointer-events: none; background-image: linear-gradient(rgba(244,241,236,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(244,241,236,.04) 1px, transparent 1px); background-size: 96px 96px; }
+  .hm-cases-bg span { position: absolute; border-radius: 50%; filter: blur(60px); opacity: .55; animation: hm-orb 22s ease-in-out infinite alternate; }
+  .hm-cases-bg span:nth-child(1) { width: 46vw; height: 46vw; left: -8vw; top: 4%; background: radial-gradient(closest-side, #F07820, rgba(240,120,32,0)); }
+  .hm-cases-bg span:nth-child(2) { width: 38vw; height: 38vw; right: -6vw; top: 30%; background: radial-gradient(closest-side, #F5A623, rgba(245,166,35,0)); animation-duration: 28s; animation-direction: alternate-reverse; }
+  .hm-cases-bg span:nth-child(3) { width: 30vw; height: 30vw; left: 30%; bottom: -10%; background: radial-gradient(closest-side, #B4530F, rgba(180,83,15,0)); animation-duration: 34s; }
+  @keyframes hm-orb { 50% { transform: translate(8vw, 6vh) scale(1.15); } 100% { transform: translate(-4vw, 10vh) scale(.92); } }
+  @media (max-width: 900px), (prefers-reduced-motion: reduce) { .hm-cases-bg span { animation: none; } }
+  .hm-cases .card.glass { background: rgba(23,21,18,.42); }
   .hm-pill { color: var(--muted); }
   @media (max-width: 520px) { .hm-pill { font-size: 12px; letter-spacing: .1em; } }
   .hm-h1 { font-size: clamp(40px, 5.6vw, 84px); }
@@ -1049,7 +1170,9 @@ n.queue=[];}(window, document,'script',
   .hm-chips li { border: 1px solid var(--line); border-radius: 999px; padding: 10px 18px; font-size: 14px; color: #D8D3CB; }
   @media (max-width: 520px) { .hm-chips { gap: 8px; margin-top: 48px; } .hm-chips li { padding: 8px 13px; font-size: 13px; } }
   /* faixa de temas: uma linha só. Desktop: fonte menor e centralizada; abaixo de 1100px vira letreiro contínuo */
-  .hm-ticker { border-block: 1px solid var(--line); overflow: hidden; }
+  .hm-ticker { overflow: hidden; }
+  /* faixa de temas em vidro, flutuando sobre a base do gráfico do hero (as barras passam desfocadas por trás) */
+  .hm-ticker { position: relative; z-index: 2; margin-top: -57px; background: rgba(20,18,16,.32); -webkit-backdrop-filter: blur(14px) saturate(170%); backdrop-filter: blur(14px) saturate(170%); border-block: 1px solid rgba(255,255,255,.09); box-shadow: inset 0 1px 0 rgba(255,255,255,.08); }
   .hm-track { display: flex; justify-content: center; }
   .hm-ticker ul { display: flex; flex-wrap: nowrap; margin: 0; padding: 18px 0; list-style: none; white-space: nowrap; }
 
@@ -1073,9 +1196,9 @@ n.queue=[];}(window, document,'script',
 
   /* vídeo */
   .hm-poster { margin-top: 48px; }
-  .hm-poster img { filter: brightness(.7); }
+  .hm-poster img { filter: none; }
   .hm-poster .play { width: 104px; height: 104px; }
-  .hm-poster-label { position: absolute; left: 24px; bottom: 24px; background: rgba(8,8,8,.8); color: var(--paper); padding: 10px 18px; border-radius: 999px; font-size: 14px; font-weight: 600; }
+  .hm-poster-label { position: absolute; left: 24px; bottom: 24px; background: rgba(20,18,16,.38); -webkit-backdrop-filter: blur(14px) saturate(170%); backdrop-filter: blur(14px) saturate(170%); box-shadow: inset 0 1px 0 rgba(255,255,255,.22), inset 0 0 0 1px rgba(255,255,255,.08), 0 10px 30px rgba(0,0,0,.3); color: var(--paper); padding: 10px 18px; border-radius: 999px; font-size: 14px; font-weight: 600; }
   .hm-photos { margin-top: 16px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .hm-photos .photo { aspect-ratio: 4/3; height: 100%; border-radius: var(--r-card); }
   @media (max-width: 639px) {
@@ -1102,7 +1225,7 @@ n.queue=[];}(window, document,'script',
     .hm-seg-grid.hm-5 > * { grid-column: span 2; }
     .hm-seg-grid.hm-5 > :nth-child(n+4) { grid-column: span 3; }
   }
-  @media (min-width: 1100px) { .hm-seg-grid.hm-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); } .hm-seg-grid.hm-5 > * { grid-column: auto; } }
+  @media (min-width: 1100px) { .hm-seg-grid.hm-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); } .hm-seg-grid.hm-5 > :nth-child(n) { grid-column: auto; } }
   .hm-seg-grid.hm-3 { grid-template-columns: minmax(0, 1fr); }
   @media (min-width: 900px) { .hm-seg-grid.hm-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   .hm-num { font-size: 14px; font-weight: 700; color: var(--accent); margin-bottom: 18px; }
@@ -1127,6 +1250,17 @@ n.queue=[];}(window, document,'script',
   .hm-steps h3 { margin-top: 18px; }
   .hm-steps p { margin: 8px 0 0; font-size: 15px; line-height: 1.55; color: var(--muted); }
   .hm-fish .link-arrow { margin-top: 48px; }
+  /* desktop com GSAP (.hs): seção fixa na tela, etapas correm na horizontal sobre uma linha que se preenche */
+  .hm-fish.hs { min-height: 100vh; display: flex; align-items: center; padding-block: 112px 56px; overflow: clip; }
+  .hm-fish.hs > .wrap { width: 100%; }
+  .hm-fish.hs .hm-steps { position: relative; display: flex; gap: 40px; margin-top: 56px; padding-top: 1px; }
+  .hm-fish.hs .hm-steps::before, .hm-fish.hs .hm-steps::after { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 1px; background: var(--line); }
+  .hm-fish.hs .hm-steps::after { height: 2px; top: -1px; background: var(--accent); transform: scaleX(var(--hp, 0)); transform-origin: 0 50%; }
+  .hm-fish.hs .hm-steps li { flex: 0 0 min(460px, 34vw); border-top: 0; }
+  .hm-fish.hs .hm-step-n { font-size: clamp(96px, 9vw, 140px); margin-top: 32px; }
+  .hm-fish.hs .hm-steps h3 { font-size: 28px; margin-top: 24px; }
+  .hm-fish.hs .hm-steps p { font-size: 17px; max-width: 36ch; }
+  .hm-fish.hs .link-arrow { margin-top: 32px; }
 
   /* serviços */
   .hm-svc-grid { --min: 300px; margin-top: 56px; }
@@ -1147,7 +1281,7 @@ n.queue=[];}(window, document,'script',
   .hm-number p + p { margin-top: 14px; font-size: 16px; line-height: 1.5; color: var(--muted); max-width: 260px; }
 
   /* cases */
-  .hm-hl { display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-end; justify-content: space-between; padding: clamp(28px, 5vw, 64px); border-radius: var(--r-big); background: linear-gradient(135deg, #2A1606 0%, var(--warm-card) 60%); border: 1px solid #4A2A10; text-decoration: none; transition: border-color .2s; }
+  .hm-hl { display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-end; justify-content: space-between; padding: clamp(28px, 5vw, 64px); border-radius: var(--r-big); background: linear-gradient(135deg, rgba(42,22,6,.6) 0%, rgba(23,21,18,.3) 60%); text-decoration: none; }
   .hm-hl:hover { border-color: var(--accent); }
   .hm-hl-text { flex: 999 1 480px; min-width: 0; }
   .hm-hl-title { margin: 24px 0 0; font-size: clamp(30px, 3.6vw, 52px); line-height: 1.06; letter-spacing: -.03em; font-weight: 800; }
