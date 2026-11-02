@@ -20,14 +20,14 @@
 <link rel="alternate" hreflang="x-default" href="https://makewell.com.br/">
 <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
-<link rel="preload" as="image" href="/images/logo-makewell-branca.webp" type="image/webp">
+<link rel="preload" as="image" href="/images/logo-makewell-mi-branca.webp" type="image/webp">
 
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:title" content="Case: Casa Hunter &amp; Casa dos Raros | Makewell">
 <meta property="og:description" content="How Makewell helped give a voice to 13 million Brazilians with rare diseases. 4 years of strategy, national documentary series and impact at the Supreme Court.">
 <meta property="og:url" content="https://makewell.agency/en/cases/casa-hunter-casa-dos-raros/">
-<meta property="og:image" content="https://makewell.agency/images/og-casa-hunter-en.jpg">
+<meta property="og:image" content="https://makewell.agency/images/og/casaHunter-en.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Case Casa Hunter and Casa dos Raros — Makewell">
@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Case: Casa Hunter &amp; Casa dos Raros | Makewell">
 <meta name="twitter:description" content="How Makewell helped give a voice to 13 million Brazilians with rare diseases.">
-<meta name="twitter:image" content="https://makewell.agency/images/og-casa-hunter-en.jpg">
+<meta name="twitter:image" content="https://makewell.agency/images/og/casaHunter-en.jpg">
 <meta name="twitter:site" content="@makewellbr">
 
 <!-- Schema.org JSON-LD -->
@@ -75,249 +75,210 @@
   "keywords": "rare diseases, strategic communication, cause marketing, NGO, documentary series, NGO case study"
 }
 </script>
+<link rel="icon" type="image/svg+xml" href="/icons/favicon.svg"><style>/* Design system Makewell (redesign nov/2026, paleta "editorial" aprovada).
+   Escuro quente nos blocos de impacto, off-white quente nos de prova e leitura, laranja só como destaque.
+   Fontes do sistema (regra do projeto: sem Google Fonts). */
+:root {
+  --warm: #0E0D0B; --warm-2: #141210; --warm-card: #171512; --warm-line: #2A2723;
+  --light: #F4F1EC; --light-card: #FFFFFF; --light-line: #E2DCD2;
+  --ink: #14120F; --ink-muted: #5E584F; --paper: #F4F1EC; --paper-muted: #A8A196;
+  --accent: #F07820; --accent-2: #F5A623; --on-accent: #080808; --on-accent-muted: #2A1606;
+  --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --wrap: 1360px; --gutter: clamp(16px, 4vw, 40px);
+  --r-card: 20px; --r-big: 28px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--warm); color: var(--paper); font: 17px/1.6 var(--font); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.skip-link { position: absolute; left: 16px; top: -100px; background: var(--accent); color: var(--on-accent); padding: 10px 16px; border-radius: 0 0 8px 8px; font-weight: 700; z-index: 10001; text-decoration: none; }
+.skip-link:focus { top: 0; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root { --gold: #C8922A; --gold-light: #F07820; --dark: #0a0a0a; --dark-2: #141414; }
-  html { scroll-behavior: smooth; overflow-x: hidden; }
-  body { background: var(--dark); color: #ccc; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.75; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+/* ── seções e temas ── */
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-inline: var(--gutter); }
+.sec { padding-block: clamp(72px, 10vw, 120px); }
+.t-warm { background: var(--warm); color: var(--paper); --muted: var(--paper-muted); --card: var(--warm-card); --line: var(--warm-line); --tile: var(--light); }
+.t-warm2 { background: var(--warm-2); color: var(--paper); --muted: var(--paper-muted); --card: var(--warm-card); --line: var(--warm-line); --tile: var(--light); }
+.t-light { background: var(--light); color: var(--ink); --muted: var(--ink-muted); --card: var(--light-card); --line: var(--light-line); --tile: var(--light-card); }
+.t-accent { background: var(--accent); color: var(--on-accent); --muted: var(--on-accent-muted); --card: rgba(8,8,8,.06); --line: rgba(8,8,8,.85); --tile: var(--light); }
+.muted { color: var(--muted); }
+.line-top { border-top: 1px solid var(--line); }
 
-  a { color: var(--gold-light); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  strong { color: #fff; font-weight: 700; }
+/* ── tipografia ── */
+.eyebrow { display: flex; align-items: center; gap: 12px; margin: 0; font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+.t-accent .eyebrow { color: var(--on-accent); }
+.eyebrow.dot::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex: none; }
+.h1 { margin: 24px 0 0; font-size: clamp(42px, 6vw, 92px); line-height: 1.02; letter-spacing: -.035em; font-weight: 800; }
+.h1 em, .h2 em, .h1 .accent, .h2 .accent { font-style: normal; color: var(--accent); display: block; padding-bottom: .12em; }
+.t-accent .h2 em { color: var(--on-accent); }
+.h2 { margin: 16px 0 0; font-size: clamp(32px, 4vw, 56px); line-height: 1.06; letter-spacing: -.03em; font-weight: 800; }
+.h3 { margin: 0; font-size: 22px; line-height: 1.25; font-weight: 700; letter-spacing: -.01em; }
+.lead { margin: 20px 0 0; max-width: 62ch; font-size: clamp(17px, 1.6vw, 19px); line-height: 1.65; color: var(--muted); }
+.prose { max-width: 72ch; }
+.prose p, .prose li { color: var(--muted); }
+.prose p { margin: 0 0 16px; }
+.prose strong { color: inherit; }
+.t-light .prose strong { color: var(--ink); }
+.t-warm .prose strong, .t-warm2 .prose strong { color: var(--paper); }
 
-  :focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; border-radius: 2px; }
+/* ── botões ── */
+.btns { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 28px; border-radius: 999px; font: 700 16px/1 var(--font); text-decoration: none; border: 1px solid transparent; cursor: pointer; transition: transform .2s ease, background-color .2s ease, color .2s ease; }
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: var(--accent); color: var(--on-accent); }
+.btn-primary:hover { background: var(--accent-2); }
+.btn-ghost { border-color: var(--line); color: inherit; }
+.btn-ghost:hover { border-color: var(--accent); }
+.t-accent .btn-primary { background: var(--on-accent); color: var(--paper); }
+.link-arrow { display: inline-flex; gap: 8px; align-items: center; margin-top: 28px; padding-block: 10px; color: var(--accent); font-weight: 700; text-decoration: none; }
+.t-accent .link-arrow { color: var(--on-accent); }
 
-  .skip-link { position: absolute; top: -40px; left: 0; background: var(--gold-light); color: #080808; padding: 8px 16px; font-weight: 700; font-size: 14px; border-radius: 0 0 6px 0; z-index: 9999; transition: top .2s; }
-  .skip-link:focus { top: 0; }
+/* ── grades e cards ── */
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(var(--min, 260px), 100%), 1fr)); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-card); padding: clamp(24px, 3vw, 32px); }
+.t-light .card { border-color: var(--light-line); }
+.card .num { font-size: 14px; font-weight: 700; color: var(--accent); }
+.card p { color: var(--muted); margin: 10px 0 0; }
+.split { display: flex; flex-wrap: wrap; gap: clamp(40px, 6vw, 72px); align-items: flex-start; }
+.split > .main { flex: 999 1 520px; min-width: 0; }
+.split > .side { flex: 1 1 320px; min-width: 0; }
+.photo { width: 100%; object-fit: cover; border-radius: var(--r-big); }
+.tile { background: var(--tile); border-radius: 14px; display: flex; align-items: center; justify-content: center; min-height: 88px; padding: 12px; }
+.tile img { max-height: 48px; max-width: 70%; object-fit: contain; }
+.stat-n { font-size: clamp(48px, 5.4vw, 80px); font-weight: 800; letter-spacing: -.045em; line-height: 1; }
 
-  nav { background: rgba(8,8,8,0.98); border-bottom: 1px solid #1e1e1e; position: fixed; top: 0; left: 0; right: 0; z-index: 1700; height: calc(72px + env(safe-area-inset-top,0px)); padding: env(safe-area-inset-top,0px) 60px 0; display: flex; align-items: center; justify-content: space-between; }
-  .nav-logo { display: flex; align-items: center; text-decoration: none; }
-  .nav-logo img { display: block; height: 40px; width: auto; }
-  .nav-right { display: flex; align-items: center; gap: 24px; }
-  .nav-links { display: flex; align-items: center; gap: 22px; }
-  .nav-links a { font-size: 13px; font-weight: 500; color: #ccc; text-decoration: none; transition: color .2s; white-space: nowrap; }
-  .nav-links a:hover, .nav-links a:active { color: #fff; }
-  .nav-links a.active { color: var(--gold-light); }
-  .btn-nav { background: var(--gold-light); color: #fff; border: none; padding: 11px 20px; font-weight: 800; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; border-radius: 6px; transition: background .2s, transform .2s; white-space: nowrap; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; line-height: 1; box-sizing: border-box !important; width: 176px !important; min-width: 176px !important; max-width: 176px !important; flex: none !important;min-height:44px;}
-  .btn-nav:hover, .btn-nav:active { background: var(--gold); transform: translateY(-1px); }
-  #lang-toggle { display: flex; align-items: center; gap: 6px; }
-  .lang-sep { color: #333; font-size: 11px; }
-  .lang-btn { background: none; border: none; cursor: pointer; font-size: 11px; font-weight: 800; letter-spacing: 1.5px; color: #bbb; padding: 10px 8px; transition: color .2s; text-transform: uppercase; min-height: 44px; text-decoration: none; display: inline-flex; align-items: center; }
-  .lang-btn--active { color: var(--gold-light); }
-  .lang-btn:hover, .lang-btn:active { color: #fff; }.lang-dropdown{position:relative;}.lang-dropdown-trigger{display:flex;align-items:center;gap:6px;background:none;border:none;cursor:pointer;font-size:11px;font-weight:800;letter-spacing:1.5px;color:#bbb;padding:10px 8px;min-height:44px;transition:color .2s;text-transform:uppercase;}.lang-dropdown-trigger:hover,.lang-dropdown-trigger:active{color:#fff;}.lang-dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);right:0;background:#111;border:1px solid #222;border-radius:10px;padding:6px;min-width:190px;box-shadow:0 20px 50px rgba(0,0,0,.5);z-index:1001;}.lang-dropdown-menu.open{display:block;}.lang-dropdown-menu a{display:flex;align-items:center;gap:10px;padding:10px 12px;font-size:13px;color:#ccc;text-decoration:none;border-radius:6px;transition:background .2s,color .2s;white-space:nowrap;}.lang-dropdown-menu a:hover,.lang-dropdown-menu a:active{background:#1a1a1a;color:#fff;}.lang-dropdown-menu a[aria-current="true"]{color:var(--gold-light);}.lang-dropdown-menu svg{border-radius:2px;flex-shrink:0;}
-  .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 10px; z-index: 1600; position: relative; min-width: 44px; min-height: 44px; justify-content: center; align-items: center; }
-  .hamburger span { display: block; width: 24px; height: 2px; background: #fff; transition: all .3s; border-radius: 2px; }
-  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  .hamburger.open span:nth-child(2) { opacity: 0; }
-  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-  .mobile-menu { display: none; position: fixed; inset: 0; background: #080808; z-index: 1500; flex-direction: column; justify-content: flex-start; padding: 100px 36px 36px; gap: 0; }
-  .mobile-menu.open { display: flex; }
-  .mobile-menu a.mobile-link { font-size: 13px; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase; color: #999; text-decoration: none; padding: 20px 0; width: 100%; border-bottom: 1px solid #161616; transition: color .2s, border-color .2s; display: flex; align-items: center; justify-content: space-between; }
-  .mobile-menu a.mobile-link .mn { font-size: 10px; font-weight: 600; letter-spacing: 1px; color: #666; transition: color .2s; }
-  .mobile-menu a.mobile-link:last-of-type { border-bottom: none; }
-  .mobile-menu a.mobile-link:hover, .mobile-menu a.mobile-link:active { color: #fff; border-color: #2a2a2a; }
-  .mobile-menu a.mobile-link:hover .mn, .mobile-menu a.mobile-link:active .mn { color: var(--gold-light); }
-  
-  .mobile-menu .btn-nav { margin-top: 40px; width: 100%; justify-content: center;min-height:44px;}
+/* ── header / nav ── */
+/* o vidro fica num ::before: backdrop-filter no próprio header prenderia o menu mobile (position:fixed) dentro dele */
+.site-header { position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--warm-line); padding-top: env(safe-area-inset-top, 0px); transition: border-color .3s ease; }
+.site-header::before { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(14,13,11,.88); backdrop-filter: saturate(140%) blur(12px); -webkit-backdrop-filter: saturate(140%) blur(12px); }
+.site-header > .wrap { position: relative; z-index: 2; }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 76px; transition: min-height .3s ease; }
+.site-header.scrolled .nav { min-height: 62px; }
+.site-header.scrolled::before { background: rgba(14,13,11,.95); }
+.nav-logo img { height: 30px; width: auto; }
+.nav-links { display: flex; gap: 28px; }
+.nav-links a { color: var(--paper-muted); text-decoration: none; font-size: 15px; padding-block: 12px; }
+.nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--paper); }
+.nav-right { display: flex; align-items: center; gap: 14px; }
+.btn-nav { min-height: 44px; padding: 0 20px; font-size: 14px; }
+.lang { position: relative; }
+.lang-trigger { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--warm-line); background: none; color: var(--paper); font: 700 12px var(--font); letter-spacing: .08em; cursor: pointer; }
+.lang-menu { position: absolute; right: 0; top: calc(100% + 8px); min-width: 140px; background: var(--warm-card); border: 1px solid var(--warm-line); border-radius: 14px; padding: 6px; display: none; box-shadow: 0 16px 40px rgba(0,0,0,.5); }
+.lang.open .lang-menu { display: block; }
+.lang-menu a, .lang-menu button { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 44px; padding: 0 12px; border-radius: 10px; border: 0; background: none; color: var(--paper); font: 600 14px var(--font); text-decoration: none; cursor: pointer; }
+.lang-menu a:hover, .lang-menu button:hover { background: var(--warm-line); }
+.lang-menu [aria-current="true"] { color: var(--accent); }
+.hamburger { display: none; width: 44px; height: 44px; border: 1px solid var(--warm-line); border-radius: 12px; background: none; cursor: pointer; flex-direction: column; justify-content: center; align-items: center; gap: 5px; }
+.hamburger span { width: 18px; height: 2px; background: var(--paper); border-radius: 2px; }
+.mobile-menu { display: none; position: fixed; inset: 0; z-index: 1; background: var(--warm); padding: calc(96px + env(safe-area-inset-top, 0px)) var(--gutter) 40px; flex-direction: column; gap: 4px; overflow-y: auto; }
+.mobile-menu.open { display: flex; }
+.mobile-menu a.m-link { display: flex; gap: 16px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid var(--warm-line); color: var(--paper); text-decoration: none; font-size: 26px; font-weight: 700; }
+.mobile-menu .mn { font-size: 13px; color: var(--accent); }
+.mobile-menu .btn { margin-top: 28px; }
+@media (max-width: 900px) {
+  .nav-links, .nav .btn-nav { display: none; }
+  .hamburger { display: inline-flex; }
+}
 
-  main { max-width: 1120px; margin: 0 auto; padding: calc(72px + env(safe-area-inset-top,0px) + 48px) 60px 120px; }
+/* ── rodapé ── */
+.site-footer { background: var(--warm); color: var(--paper-muted); border-top: 1px solid var(--warm-line); font-size: 14px; line-height: 1.6; }
+.foot-grid { display: grid; gap: 40px 32px; grid-template-columns: 1.2fr repeat(4, minmax(0, 1fr)); padding-block: 64px 40px; }
+@media (max-width: 1000px) { .foot-grid { grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); } }
+.foot-brand .logo { height: 34px; width: auto; }
+.foot-social { display: flex; gap: 8px; margin-top: 22px; }
+.foot-social a { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--warm-line); display: inline-flex; align-items: center; justify-content: center; color: var(--paper); transition: border-color .2s, color .2s; }
+.foot-social a:hover { border-color: var(--accent); color: var(--accent); }
+.foot-title { margin: 0 0 14px; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--paper); }
+.foot-col p { margin: 0 0 10px; }
+.foot-col strong { color: var(--paper); }
+.foot-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.foot-col ul a, .foot-col a { color: var(--paper-muted); text-decoration: none; display: inline-block; padding-block: 4px; }
+.foot-col a:hover { color: var(--paper); }
+.foot-col .foot-link { color: var(--accent); font-weight: 700; }
+.foot-bottom { position: relative; display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between; padding-block: 24px 40px; }
+.foot-bottom::before { content: ""; position: absolute; top: 0; left: var(--gutter); right: var(--gutter); border-top: 1px solid var(--warm-line); }
+.foot-bottom p { margin: 0; }
+.foot-bottom .partners { display: flex; align-items: center; gap: 14px; font-size: 12px; }
+.foot-bottom .partners img { height: 40px; width: auto; background: #fff; padding: 6px 12px; border-radius: 10px; }
+.mw-prefs-line { margin: 0; }
+.mw-cookie-prefs { color: var(--paper-muted); }
 
-  .back-link { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #666; text-decoration: none; margin-right: 28px; margin-bottom: 16px; transition: color .2s; }
-  .back-link:hover { color: var(--gold-light); }
-  .back-link svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.case-kicker { display: inline-block; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-light); font-weight: 800; padding: 6px 14px; border: 1px solid var(--gold-light); border-radius: 999px; margin-bottom: 24px; }
-  h1.case-title { font-size: clamp(32px, 5vw, 54px); font-weight: 900; color: #fff; letter-spacing: -1.8px; line-height: 1.1; margin-bottom: 20px; }
-  .case-lead { font-size: clamp(16px, 1.8vw, 20px); color: #aaa; margin-bottom: 64px; line-height: 1.6; max-width: 680px; }
+/* ── flutuantes: WhatsApp, voltar ao topo, barra de progresso ── */
+.wa-float { position: fixed; right: 20px; bottom: 20px; z-index: 900; width: 56px; height: 56px; border-radius: 50%; background: #25D366; color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(0,0,0,.35); transition: transform .2s ease; }
+.wa-float:hover { transform: scale(1.06); }
+.back-to-top { position: fixed; right: 26px; bottom: 88px; z-index: 900; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--warm-line); background: rgba(14,13,11,.9); color: var(--paper); cursor: pointer; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transform: translateY(8px); transition: opacity .3s, transform .3s; }
+.back-to-top.show { opacity: 1; pointer-events: auto; transform: none; }
+.scroll-progress { position: fixed; left: 0; top: 0; z-index: 1001; height: 3px; width: 100%; background: var(--accent); transform: scaleX(var(--p, 0)); transform-origin: 0 50%; pointer-events: none; }
 
-  h2 { font-size: clamp(22px, 3vw, 30px); font-weight: 800; color: #fff; margin: 64px 0 20px; letter-spacing: -.6px; line-height: 1.2; }
-  h2 .gold { color: var(--gold-light); }
-  h3 { font-size: 18px; font-weight: 700; color: #fff; margin: 36px 0 14px; }
+/* ── vídeo, depoimentos, FAQ, tabela legal ── */
+.video-poster { position: relative; display: block; width: 100%; aspect-ratio: 16/9; border-radius: var(--r-big); overflow: hidden; background: var(--warm-card); border: 0; padding: 0; cursor: pointer; }
+.video-poster img { width: 100%; height: 100%; object-fit: cover; }
+.play { position: absolute; inset: 0; margin: auto; width: 96px; height: 96px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 60px rgba(0,0,0,.45); }
+.play.sm { width: 56px; height: 56px; background: rgba(8,8,8,.65); border: 1px solid rgba(244,241,236,.35); box-shadow: none; }
+.reels { display: flex; gap: 16px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x mandatory; }
+.reel { flex: 0 0 232px; scroll-snap-align: start; background: none; border: 0; padding: 0; text-align: left; color: inherit; font: inherit; cursor: pointer; }
+.reel .thumb { position: relative; display: block; aspect-ratio: 9/16; border-radius: var(--r-card); overflow: hidden; background: var(--card); }
+.reel .thumb img { width: 100%; height: 100%; object-fit: cover; }
+.modal { position: fixed; inset: 0; z-index: 9995; background: rgba(0,0,0,.88); display: none; align-items: center; justify-content: center; padding: 24px; }
+.modal.open { display: flex; }
+.modal iframe { width: min(100%, 1100px); aspect-ratio: 16/9; border: 0; border-radius: 16px; background: #000; }
+.modal.vertical iframe { width: min(100%, 420px); aspect-ratio: 9/16; max-height: 86vh; }
+.modal-close { position: absolute; top: 16px; right: 16px; width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba(255,255,255,.3); background: rgba(0,0,0,.5); color: #fff; font-size: 24px; cursor: pointer; }
+.faq details { border-top: 1px solid var(--line); padding: 20px 0; }
+.faq summary { cursor: pointer; font-weight: 700; font-size: 18px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+.faq summary::after { content: "+"; color: var(--accent); font-size: 24px; line-height: 1; }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { color: var(--muted); margin: 12px 0 0; }
+.legal-table-wrap { overflow-x: auto; margin: 0 0 16px; border: 1px solid var(--line); border-radius: 10px; }
+.legal-table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 560px; }
+.legal-table th, .legal-table td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+.legal-table th { font-weight: 700; }
+.legal-table tr:last-child td { border-bottom: 0; }
 
-  p { font-size: 16px; color: #b8b8b8; margin-bottom: 18px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
 
-  .big-quote { font-size: clamp(22px, 3vw, 30px); font-weight: 900; color: #fff; line-height: 1.35; letter-spacing: -.8px; padding: 36px 0 36px 28px; border-left: 3px solid var(--gold-light); margin: 48px 0; font-style: italic; }
-  .big-quote::before { content: '\201C'; color: var(--gold-light); }
-  .big-quote::after { content: '\201D'; color: var(--gold-light); }
+/* ── movimento (respeita prefers-reduced-motion) ──
+   Revelação ao rolar (o JS do layout marca .rv e depois .in), brilho no hero, cards que levantam. */
+.js .rv { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); transition-delay: var(--rv-d, 0s); }
+.js .rv.in { opacity: 1; transform: none; }
+/* títulos sobem um pouco mais (sem clip-path: área zero impedia o IntersectionObserver de disparar) */
+.js h2.rv { transform: translateY(44px); transition: opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1); }
+main > section:first-child.t-warm { position: relative; isolation: isolate; overflow: hidden; }
+main > section:first-child.t-warm::before { content: ""; position: absolute; z-index: -1; width: 70vmax; height: 70vmax; right: -25vmax; top: -30vmax; border-radius: 50%; background: radial-gradient(closest-side, rgba(240,120,32,.16), rgba(240,120,32,0)); animation: mw-glow 18s ease-in-out infinite alternate; pointer-events: none; }
+@keyframes mw-glow { 0% { transform: translate(0, 0) scale(1); } 50% { transform: translate(-12vmax, 10vmax) scale(1.15); } 100% { transform: translate(-4vmax, 18vmax) scale(.95); } }
+main > section:first-child h1 { animation: mw-rise .9s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes mw-rise { from { transform: translateY(18px); } to { transform: none; } }
+.card { transition: transform .35s cubic-bezier(.2,.7,.2,1), border-color .35s ease, box-shadow .35s ease; }
+.card:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 18px 40px rgba(0,0,0,.10); }
+.t-warm .card:hover, .t-warm2 .card:hover { box-shadow: 0 18px 40px rgba(0,0,0,.45); }
+.photo, .video-poster img, .reel .thumb img { transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+.video-poster:hover img, .reel:hover .thumb img { transform: scale(1.04); }
+.play { animation: mw-pulse 2.6s ease-out infinite; }
+@keyframes mw-pulse { 0% { box-shadow: 0 0 0 0 rgba(240,120,32,.45); } 70%, 100% { box-shadow: 0 0 0 22px rgba(240,120,32,0); } }
+@media (prefers-reduced-motion: reduce) {
+  .js .rv, .js h2.rv { opacity: 1; transform: none; transition: none; }
+  .scroll-progress { display: none; }
+  main > section:first-child.t-warm::before, main > section:first-child h1, .play { animation: none; }
+  .card, .card:hover, .photo, .video-poster img, .reel .thumb img { transition: none; transform: none; }
+}
 
-  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 32px 0 40px; }
-  .stat { background: var(--dark-2); border: 1px solid #222; border-radius: 12px; padding: 24px 18px; text-align: center; }
-  .stat-num { font-size: clamp(24px, 3.5vw, 36px); font-weight: 900; color: var(--gold-light); letter-spacing: -1px; line-height: 1; margin-bottom: 8px; }
-  .stat-label { font-size: 12px; color: #888; letter-spacing: .08em; text-transform: uppercase; }
+/* grades de 6 itens: 3 + 3 no desktop (com o site mais largo, o auto-fit faria 4 + 2) */
+@media (min-width: 900px) { .grid:has(> :nth-child(6):last-child) { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+/* títulos com quebra equilibrada; grades de 3 e 4 itens sem card órfão em larguras intermediárias */
+.h1, .h2, .h3, h1, h2, h3 { text-wrap: balance; }
+@media (min-width: 900px) { .grid:has(> :nth-child(3):last-child) { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 600px) and (max-width: 1099px) { .grid:has(> :nth-child(4):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .grid:has(> :nth-child(4):last-child) { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 
-  ul.results-list { list-style: none; padding: 0; margin: 24px 0 40px; }
-  ul.results-list li { position: relative; padding: 14px 0 14px 32px; border-bottom: 1px solid #1a1a1a; font-size: 16px; color: #ccc; }
-  ul.results-list li::before { content: ""; position: absolute; left: 0; top: 22px; width: 18px; height: 2px; background: var(--gold-light); }
-  ul.results-list li strong { display: block; color: #fff; font-size: 14px; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 4px; }
-
-  .related { background: var(--dark-2); border: 1px solid #222; border-radius: 14px; padding: 28px; margin: 56px 0 0; }
-  .related h3 { margin-top: 0; color: var(--gold-light); font-size: 14px; letter-spacing: .1em; text-transform: uppercase; }
-  .related p { margin-bottom: 10px; }
-  .related a { font-weight: 700; }
-
-  .case-cta { margin-top: 88px; padding: 56px 32px; background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%); border-radius: 16px; text-align: center; color: #080808; }
-  .case-cta h2 { color: #080808; margin: 0 0 14px; }
-  .case-cta p { color: rgba(0,0,0,.75); font-size: 16px; margin-bottom: 28px; }
-  .case-cta .btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 32px; background: #080808; color: #fff; border-radius: 999px; font-weight: 700; font-size: 15px; letter-spacing: .04em; min-height: 52px; }
-  .case-cta .btn:hover { background: #000; text-decoration: none; transform: translateY(-1px); transition: all .2s ease; }
-
-  .footer-partners { padding: 0 0 24px; margin-bottom: 24px; border-bottom: 1px solid #1a1a1a; text-align: center; }
-  .footer-partners .label { display: block; font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: #888; font-weight: 700; margin-bottom: 16px; }
-  .footer-partners-logos { display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
-  .footer-partners img { height: 50px; width: auto; background: #fff; padding: 8px 18px; border-radius: 10px; display: block; }
-
-  footer.site { border-top: 1px solid #1a1a1a; padding: 32px 60px; text-align: center; font-size: 13px; color: #999; }
-  footer.site a { color: var(--gold-light); }
-
-  @media (max-width: 768px) {
-    nav { padding: env(safe-area-inset-top,0px) 20px 0; background: #080808; }
-    .nav-links { display: none; }
-    #lang-toggle { display: none; }
-    .btn-nav { display: none;min-height:44px;}
-    .hamburger { display: flex; }
-    main { padding: calc(72px + env(safe-area-inset-top,0px)) 20px 80px; }
-    .stats-grid { grid-template-columns: repeat(2, 1fr); }
-    footer.site { padding: 24px 20px; }
-    .footer-partners { padding-bottom: 20px; margin-bottom: 20px; }
-    .footer-partners img { height: 42px; padding: 7px 14px; }
-    .case-cta { padding: 40px 24px; }
-  }
-  @media (max-width: 375px) {
-    .stats-grid { grid-template-columns: 1fr; }
-  }
-</style>
-</head>
+/* contraste AA: eyebrow laranja em fundo claro usa o laranja escuro */
+.t-light .eyebrow { color: #B4530F; }
+.t-light .card .num, .card p.eyebrow { color: #B4530F; }
+.t-warm .card p.eyebrow, .t-warm2 .card p.eyebrow { color: var(--accent); }
+</style></head>
 <body>
-
-<a href="#main-content" class="skip-link">Skip to main content</a>
-
-<header>
-  <nav id="nav" role="navigation" aria-label="Main navigation">
-    <a href="/en/" class="nav-logo" aria-label="Makewell Communications — home">
-      <img src="/images/logo-makewell-branca.webp" alt="Makewell Communications" width="160" height="40">
-    </a>
-    <div class="nav-right">
-      <div class="nav-links" role="list">
-        <a href="/en/about/" role="listitem">About</a>
-        <a href="/en/services/" role="listitem">Services</a>
-        <a href="/en/framework/" role="listitem">Framework</a>
-        <a href="/en/method/" role="listitem">Method</a>
-        <a href="/en/cases/" role="listitem" class="active">Cases</a>
-      </div>
-            <div id="lang-dropdown" class="lang-dropdown">
-        <button class="lang-dropdown-trigger" id="langDropdownTrigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg>
-          <span>EN</span>
-        </button>
-        <div class="lang-dropdown-menu" id="langDropdownMenu" role="menu" aria-label="Select language">
-          <a href="https://makewell.com.br/cases/casa-hunter-casa-dos-raros/" role="menuitem" hreflang="pt-BR"><svg width="16" height="12" viewBox="0 0 16 12" aria-hidden="true"><rect width="16" height="12" fill="#009C3B"/><polygon points="8,1.5 14.5,6 8,10.5 1.5,6" fill="#FEDF00"/><circle cx="8" cy="6" r="2.6" fill="#002776"/></svg>BR</a>
-          <a href="https://makewell.agency/en/cases/casa-hunter-casa-dos-raros/" role="menuitem" hreflang="en" aria-current="true"><svg width="16" height="12" viewBox="0 0 16 12" aria-hidden="true"><rect width="16" height="12" fill="#B22234"/><rect y="1.09" width="16" height="0.92" fill="#fff"/><rect y="2.18" width="16" height="0.92" fill="#B22234"/><rect y="3.27" width="16" height="0.92" fill="#fff"/><rect y="4.36" width="16" height="0.92" fill="#B22234"/><rect y="5.45" width="16" height="0.92" fill="#fff"/><rect y="6.54" width="16" height="0.92" fill="#B22234"/><rect y="7.63" width="16" height="0.92" fill="#fff"/><rect y="8.72" width="16" height="0.92" fill="#B22234"/><rect y="9.81" width="16" height="0.92" fill="#fff"/><rect y="10.9" width="16" height="0.92" fill="#B22234"/><rect width="6.4" height="5.45" fill="#3C3B6E"/></svg>EN</a>
-          <a href="https://makewell.agency/es/cases/casa-hunter-casa-dos-raros/" role="menuitem" hreflang="es"><svg width="16" height="12" viewBox="0 0 16 12" aria-hidden="true"><rect width="16" height="12" fill="#AA151B"/><rect y="3" width="16" height="6" fill="#F1BF00"/></svg>ES</a>
-          <a href="https://makewell.agency/pt/cases/casa-hunter-casa-dos-raros/" role="menuitem" hreflang="pt-PT"><svg width="16" height="12" viewBox="0 0 16 12" aria-hidden="true"><rect width="16" height="12" fill="#FF0000"/><rect width="6.4" height="12" fill="#046A38"/><circle cx="6.4" cy="6" r="2.4" fill="#FFCC00"/></svg>PT</a>
-        </div>
-      </div>
-      <a href="https://wa.me/5582999103246?text=Hello!%20I%20want%20to%20schedule%20a%20free%20diagnosis%20with%20Makewell." class="btn-nav" aria-label="Schedule a free diagnosis" target="_blank" rel="noopener noreferrer">Schedule a Diagnosis</a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile menu" aria-modal="true">
-    <a href="/en/about/" class="mobile-link"><span class="mn">01</span><span>About</span></a>
-    <a href="/en/services/" class="mobile-link"><span class="mn">02</span><span>Services</span></a>
-    <a href="/en/framework/" class="mobile-link"><span class="mn">03</span><span>Framework</span></a>
-    <a href="/en/method/" class="mobile-link"><span class="mn">04</span><span>Method</span></a>
-    <a href="/en/cases/" class="mobile-link"><span class="mn">05</span><span>Cases</span></a>
-    <a href="https://wa.me/5582999103246?text=Hello!%20I%20want%20to%20schedule%20a%20free%20diagnosis%20with%20Makewell." class="btn-nav" style="margin-top:40px;width:100%;justify-content:center;font-size:13px;padding:13px 28px;text-decoration:none;letter-spacing:.08em" target="_blank" rel="noopener noreferrer">Schedule Free Diagnosis</a>
-  </div>
-</header>
-
-<main id="main-content">
-  <article>
-    <header>
-      <a href="/en/cases/" class="back-link"><svg viewBox="0 0 24 24"><polyline points="15,18 9,12 15,6"/></svg>Cases</a>
-      <span class="case-kicker">Impact Case</span>
-      <h1 class="case-title">How Makewell helped give a voice to 13 million Brazilians</h1>
-      <p class="case-lead">Casa Hunter and Casa dos Raros — four years of strategic communication that transcended the digital, mobilized the country and set the agenda at the Supreme Court.</p>
-    </header>
-
-    <section id="challenge">
-      <h2>The Challenge: The <span class="gold">invisibility</span> of 13 million people</h2>
-      <p>In Brazil, an estimated <strong>13 million people live with rare diseases</strong>. These are patients who face not only the severity of their conditions, but also the silence of society, the slowness in diagnoses and the lack of access to adequate treatments.</p>
-      <p>When <strong>Casa Hunter</strong>, an association supporting patients with rare diseases, and <strong>Casa dos Raros</strong>, the first center in Latin America dedicated to the care, diagnosis and research of rare diseases, began their partnership with Makewell, the challenge was not just to "gain followers".</p>
-      <p>The challenge was to translate the urgency of these people's lives into communication that would mobilize society, the medical community and public authorities. How to communicate pain and hope without falling into sensationalism? How to transform an NGO into a national voice of authority?</p>
-    </section>
-
-    <section id="solution">
-      <h2>The Solution: Communication that transcends the digital</h2>
-      <p>Makewell understood that the strategy could not be limited to social media posts. Communication needed to be the engine of a movement. Over four years of partnership, the agency structured a communication ecosystem focused on <strong>authority, empathy and mobilization</strong>.</p>
-
-      <h3>1. Community building and organic growth</h3>
-      <p>The first step was to organize the digital home. With consistent content planning, focused on education about the diseases and humanization of the people behind the conditions, we helped both institutions build a solid community.</p>
-      <p>Today, Casa Hunter has more than <strong>35 thousand engaged followers</strong>, and Casa dos Raros, inaugurated as a landmark in Latin American healthcare, has already surpassed <strong>17 thousand followers</strong>. Together, they form a network of more than 50 thousand people united by a purpose.</p>
-
-      <h3>2. National mobilization campaigns</h3>
-      <p>Makewell was behind massively impactful campaigns such as <strong>"Futuro Não se Apaga"</strong> and <strong>"Somos 13 Milhões"</strong>, the latter in partnership with one of the country's largest open TV networks. The visual strategy and tone of voice developed by the agency ensured the message reached not just patients, but decision-makers, helping to set discussions at the Supreme Court about access to essential treatments.</p>
-
-      <h3>3. A national documentary series on rare diseases</h3>
-      <p>The pinnacle of the <em>Show, Don't Tell</em> strategy was the communication around a <strong>national documentary series</strong> on rare diseases, available on one of the country's main streaming platforms. The series follows the journey of seven patients, showing their daily struggles and victories.</p>
-      <p>Makewell's role was fundamental in amplifying the reach of the series: we created launch campaigns, support materials and digital engagement that brought the work to thousands of viewers, proving that an NGO's communication can (and should) have the same level of excellence as major entertainment productions.</p>
-    </section>
-
-    <section id="results">
-      <h2>The Results: far beyond the <span class="gold">likes</span></h2>
-      <p>The long-standing partnership between Makewell, Casa Hunter and Casa dos Raros proves that true marketing is not measured in vanity metrics alone.</p>
-
-      <div class="stats-grid" role="list">
-        <div class="stat" role="listitem"><div class="stat-num">50K+</div><div class="stat-label">Engaged followers</div></div>
-        <div class="stat" role="listitem"><div class="stat-num">4 years</div><div class="stat-label">Of continuous partnership</div></div>
-        <div class="stat" role="listitem"><div class="stat-num">Streaming</div><div class="stat-label">National documentary series</div></div>
-        <div class="stat" role="listitem"><div class="stat-num">STF</div><div class="stat-label">Impact on public policy</div></div>
-      </div>
-
-      <ul class="results-list">
-        <li><strong>Base growth</strong>From beginner profiles to a consolidated community of more than 50 thousand followers.</li>
-        <li><strong>Institutional authority</strong>Positioning Casa dos Raros as a pioneering reference in Latin America.</li>
-        <li><strong>Cultural impact</strong>Amplification of national campaigns and a documentary series on one of the country's largest streaming platforms.</li>
-        <li><strong>Longevity</strong>More than four years of continuous partnership, demonstrating Makewell's ability to sustain and evolve long-term strategies.</li>
-      </ul>
-    </section>
-
-    <section id="philosophy">
-      <blockquote class="big-quote">We don't sell posts. We build bridges.</blockquote>
-
-      <h2>The Makewell Philosophy in action</h2>
-      <p>For Makewell, this case is the definitive proof of our positioning.</p>
-      <p>While mediocre agencies worry about explaining how the Instagram algorithm works, we use the algorithm to place a documentary series on one of the country's main streaming platforms and help ensure treatment for those who are in a hurry to live.</p>
-      <p>This is the power of strategic communication. This is the Makewell delivery.</p>
-
-      <div class="related">
-        <h3>Understand how we got to this result</h3>
-        <p>Every Makewell campaign is built from proprietary frameworks that cross the greatest minds of world advertising with applied neuromarketing.</p>
-        <p><a href="/en/how-we-create/">Discover the method &rarr;</a></p>
-      </div>
-    </section>
-
-    <section class="case-cta">
-      <h2>Want a strategy at this level?</h2>
-      <p>Let's talk about how to transform your brand into a movement.</p>
-      <a class="btn" href="https://wa.me/5582999103246?text=Hello!%20I%20saw%20the%20Casa%20Hunter%20case%20and%20want%20a%20strategy%20at%20this%20level." target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{content_name:'Case Casa Hunter EN CTA'})">Talk to the team &rarr;</a>
-    </section>
-  </article>
-</main>
-
-<footer class="site">
-  <div class="footer-partners">
-    <span class="label">Partners &amp; Official Certifications</span>
-    <div class="footer-partners-logos">
-      <img src="/images/logo-kommo-partner.webp" alt="Kommo Partner" loading="lazy">
-    </div>
-  </div>
-  <p>&copy; 2026 Makewell Communications. All rights reserved. &middot; <a href="/en/privacy-policy/">Privacy Policy</a> &middot; <a href="/en/terms-of-use/">Terms of Use</a> &middot; Tax ID (CNPJ): 27.238.877/0001-71</p>
-  <p class="mw-prefs-line"><button type="button" class="mw-cookie-prefs">Cookie preferences</button></p>
-</footer>
-
-<!-- Meta Pixel (shim inline — external script deferred) -->
 <script>
   (function () {
     var blocked = ['r', 'mod', 'uri', 'elementor_library', 'et_core_page_resource'];
@@ -325,7 +286,9 @@
     var dirty = blocked.some(function (p) { return params.has(p); });
     if (dirty) { window.location.replace(window.location.pathname); }
   })();
+</script>
 
+<script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -333,58 +296,308 @@ if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 </script>
+<script>document.documentElement.classList.add('js');</script>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <nav id="nav" class="nav" aria-label="Main menu">
+      <a href="/en/" class="nav-logo" aria-label="Makewell Communications — home">
+        <img src="/images/logo-makewell-mi-branca.webp" alt="Makewell Communications" width="160" height="40" fetchpriority="high">
+      </a>
+      <div class="nav-links">
+        <a href="/en/about/">About</a><a href="/en/services/">Services</a><a href="/en/framework/">Framework</a><a href="/en/method/">Method</a><a href="/en/cases/" aria-current="page">Cases</a>
+      </div>
+      <div class="nav-right">
+        <div id="lang-dropdown" class="lang">
+          <button class="lang-trigger" id="langDropdownTrigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>EN</span>
+          </button>
+          <div class="lang-menu" id="langDropdownMenu" role="menu" aria-label="Select language">
+            <a href="https://makewell.com.br/cases/casa-hunter-casa-dos-raros/" role="menuitem" hreflang="pt-BR">BR</a><a href="https://makewell.agency/en/cases/casa-hunter-casa-dos-raros/" role="menuitem" hreflang="en" aria-current="true">EN</a><a href="https://makewell.agency/es/cases/casa-hunter-casa-dos-raros/" role="menuitem" hreflang="es">ES</a><a href="https://makewell.agency/pt/cases/casa-hunter-casa-dos-raros/" role="menuitem" hreflang="pt-PT">PT</a>
+          </div>
+        </div>
+        <a href="https://wa.me/5582999103246?text=Hello!%20I%27d%20like%20to%20schedule%20a%20free%20diagnosis%20with%20Makewell." class="btn btn-primary btn-nav" aria-label="Schedule a free diagnosis" target="_blank" rel="noopener noreferrer">Schedule a Diagnosis</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" data-close="Close menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile menu" aria-modal="true">
+    <a href="/en/about/" class="m-link"><span class="mn">01</span><span>About</span></a><a href="/en/services/" class="m-link"><span class="mn">02</span><span>Services</span></a><a href="/en/framework/" class="m-link"><span class="mn">03</span><span>Framework</span></a><a href="/en/method/" class="m-link"><span class="mn">04</span><span>Method</span></a><a href="/en/cases/" class="m-link"><span class="mn">05</span><span>Cases</span></a>
+    <a href="https://wa.me/5582999103246?text=Hello!%20I%27d%20like%20to%20schedule%20a%20free%20diagnosis%20with%20Makewell." class="btn btn-primary" target="_blank" rel="noopener noreferrer">Schedule a Diagnosis</a>
+  </div>
+</header>
+<main id="main-content">
+  <article>
+    <header class="t-warm ch-hero">
+      <div class="wrap">
+        <nav aria-label="Breadcrumb" class="ch-crumb">
+          <a href="/en/cases/">Cases</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Casa Hunter</span>
+        </nav>
+        <div class="split ch-hero-split">
+          <div class="main">
+            <p class="eyebrow dot ch-kicker">Impact Case</p>
+            <h1 class="h1 ch-h1">How Makewell helped give a voice <em>to 13 million Brazilians</em></h1>
+            <p class="lead">Casa Hunter and Casa dos Raros — four years of strategic communication that transcended the digital, mobilized the country and set the agenda at the Supreme Court.</p>
+          </div>
+          <div class="side ch-logos">
+            <div class="ch-logo"><img src="/images/logo-casa-hunter.webp" alt="Casa Hunter" width="1714" height="1072"></div>
+            <div class="ch-logo"><img src="/images/logo-casa-dos-raros.webp" alt="Casa dos Raros" width="2838" height="2246"></div>
+          </div>
+        </div>
+        <dl class="ch-facts">
+          <div><dt>Client</dt><dd>Casa Hunter and Casa dos Raros</dd></div><div><dt>Sector</dt><dd>Nonprofit · Rare diseases</dd></div><div><dt>Period</dt><dd>More than 4 years of continuous partnership</dd></div><div><dt>Services</dt><dd>Content planning, national campaigns, visual strategy and tone of voice, documentary series launch</dd></div>
+        </dl>
+      </div>
+    </header>
+
+    <div class="t-light sec ch-story">
+      <div class="wrap ch-stack">
+        <section id="challenge" class="card ch-card">
+          <div class="ch-card-head"><span class="num">01</span><h2>The Challenge</h2></div>
+          <div class="ch-card-body prose">
+            <h3 class="ch-title">The <span class="ch-hl">invisibility</span> of 13 million people</h3>
+            <p>In Brazil, an estimated <strong>13 million people live with rare diseases</strong>. These are patients who face not only the severity of their conditions, but also the silence of society, the slowness in diagnoses and the lack of access to adequate treatments.</p><p>When <strong>Casa Hunter</strong>, an association supporting patients with rare diseases, and <strong>Casa dos Raros</strong>, the first center in Latin America dedicated to the care, diagnosis and research of rare diseases, began their partnership with Makewell, the challenge was not just to "gain followers".</p><p>The challenge was to translate the urgency of these people's lives into communication that would mobilize society, the medical community and public authorities. How to communicate pain and hope without falling into sensationalism? How to transform an NGO into a national voice of authority?</p>
+          </div>
+        </section>
+
+        <section id="solution" class="card ch-card">
+          <div class="ch-card-head"><span class="num">02</span><h2>The Solution</h2></div>
+          <div class="ch-card-body prose">
+            <h3 class="ch-title">Communication that transcends the digital</h3>
+            <p>Makewell understood that the strategy could not be limited to social media posts. Communication needed to be the engine of a movement. Over four years of partnership, the agency structured a communication ecosystem focused on <strong>authority, empathy and mobilization</strong>.</p>
+            <ul class="ch-pills"><li>Authority</li><li>Empathy</li><li>Mobilization</li></ul>
+          </div>
+        </section>
+
+        <section class="card ch-card">
+          <div class="ch-card-head"><span class="num">03</span><h2>What Makewell did</h2></div>
+          <div class="ch-card-body">
+            <div class="ch-did prose">
+                <h3><span class="num">01</span>Community building and organic growth</h3>
+                <p>The first step was to organize the digital home. With consistent content planning, focused on education about the diseases and humanization of the people behind the conditions, we helped both institutions build a solid community.</p><p>Today, Casa Hunter has more than <strong>35 thousand engaged followers</strong>, and Casa dos Raros, inaugurated as a landmark in Latin American healthcare, has already surpassed <strong>17 thousand followers</strong>. Together, they form a network of more than 50 thousand people united by a purpose.</p>
+              </div><div class="ch-did prose">
+                <h3><span class="num">02</span>National mobilization campaigns</h3>
+                <p>Makewell was behind massively impactful campaigns such as <strong>"Futuro Não se Apaga"</strong> and <strong>"Somos 13 Milhões"</strong>, the latter in partnership with one of the country's largest open TV networks. The visual strategy and tone of voice developed by the agency ensured the message reached not just patients, but decision-makers, helping to set discussions at the Supreme Court about access to essential treatments.</p>
+              </div><div class="ch-did prose">
+                <h3><span class="num">03</span>A national documentary series on rare diseases</h3>
+                <p>The pinnacle of the <em>Show, Don't Tell</em> strategy was the communication around a <strong>national documentary series</strong> on rare diseases, available on one of the country's main streaming platforms. The series follows the journey of seven patients, showing their daily struggles and victories.</p><p>Makewell's role was fundamental in amplifying the reach of the series: we created launch campaigns, support materials and digital engagement that brought the work to thousands of viewers, proving that an NGO's communication can (and should) have the same level of excellence as major entertainment productions.</p>
+              </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <section id="results" class="t-accent sec ch-num">
+      <div class="wrap">
+        <h2 class="h2">The Results: far beyond the <em>likes</em></h2>
+        <p class="lead">The long-standing partnership between Makewell, Casa Hunter and Casa dos Raros proves that true marketing is not measured in vanity metrics alone.</p>
+        <div class="ch-stats" role="list">
+          <div role="listitem"><p class="stat-n">50K+</p><p class="ch-stat-l">Engaged followers</p></div><div role="listitem"><p class="stat-n">4 years</p><p class="ch-stat-l">Of continuous partnership</p></div><div role="listitem"><p class="stat-n">Streaming</p><p class="ch-stat-l">National documentary series</p></div><div role="listitem"><p class="stat-n">STF</p><p class="ch-stat-l">Impact on public policy</p></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="t-light sec ch-res">
+      <ul class="wrap grid ch-res-list">
+        <li class="card"><span class="num">01</span><div><h3 class="h3">Base growth</h3><p>From beginner profiles to a consolidated community of more than 50 thousand followers.</p></div></li><li class="card"><span class="num">02</span><div><h3 class="h3">Institutional authority</h3><p>Positioning Casa dos Raros as a pioneering reference in Latin America.</p></div></li><li class="card"><span class="num">03</span><div><h3 class="h3">Cultural impact</h3><p>Amplification of national campaigns and a documentary series on one of the country&#39;s largest streaming platforms.</p></div></li><li class="card"><span class="num">04</span><div><h3 class="h3">Longevity</h3><p>More than four years of continuous partnership, demonstrating Makewell&#39;s ability to sustain and evolve long-term strategies.</p></div></li>
+      </ul>
+    </div>
+
+    <section id="philosophy" class="t-warm sec">
+      <div class="wrap ch-quote">
+        <button type="button" class="ch-video" data-yt="JRrnKGNk-UE" data-vertical data-yt-params="cc_load_policy=1&amp;cc_lang_pref=en&amp;hl=en" aria-label="Watch the testimonial from Paola Massari, Casa Hunter">
+          <img src="https://img.youtube.com/vi/JRrnKGNk-UE/hqdefault.jpg" alt="Paola Massari, Casa Hunter" width="480" height="360" loading="lazy">
+          <span class="play" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="#080808"><polygon points="8,5 19,12 8,19"></polygon></svg></span>
+        </button>
+        <div class="ch-quote-text">
+          <figure>
+            <p class="eyebrow">Video testimonial</p>
+            <blockquote class="ch-bq">“Makewell managed to embrace everything. They are partners, they are caring, they are very emotionally invested in our cause”</blockquote>
+            <figcaption><span class="ch-name">Paola Massari</span><span class="muted">Marketing · Casa Hunter</span></figcaption>
+            <p class="muted ch-note">* Testimonials in the original language (Portuguese)</p>
+          </figure>
+          <div class="ch-phil line-top">
+            <h2 class="ch-phil-h">The Makewell Philosophy in action</h2>
+            <blockquote class="ch-tagline">We don&#39;t sell posts. We build bridges.</blockquote>
+            <div class="prose"><p>For Makewell, this case is the definitive proof of our positioning.</p><p>While mediocre agencies worry about explaining how the Instagram algorithm works, we use the algorithm to place a documentary series on one of the country&#39;s main streaming platforms and help ensure treatment for those who are in a hurry to live.</p><p>This is the power of strategic communication. This is the Makewell delivery.</p></div>
+            <div class="ch-rel line-top">
+              <h3 class="h3">Understand how we got to this result</h3>
+              <p class="muted">Every Makewell campaign is built from proprietary frameworks that cross the greatest minds of world advertising with applied neuromarketing.</p>
+              <a class="link-arrow" href="/en/how-we-create/">Discover the method →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="diagnostico" class="t-light sec">
+      <div class="wrap">
+        <div class="card ch-cta">
+          <p class="eyebrow">Free diagnosis</p>
+          <h2 class="h2">Want a strategy at this level?</h2>
+          <p class="lead">Let&#39;s talk about how to transform your brand into a movement.</p>
+          <div class="btns">
+            <a class="btn btn-primary" href="https://wa.me/5582999103246?text=Hello!%20I%20saw%20the%20Casa%20Hunter%20case%20and%20want%20a%20strategy%20at%20this%20level." target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{content_name:'Case Casa Hunter EN CTA'})">Talk to the team →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+  
+</main>
+<footer class="site-footer">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a href="/en/" aria-label="Makewell Communications — home"><img class="logo" src="/images/logo-makewell-mi-branca.webp" alt="Makewell Communications" width="208" height="52" loading="lazy"></a>
+      <div class="foot-social">
+        <a href="https://www.instagram.com/makewellcomunicacao/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.facebook.com/makewellcomunicacao" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v7h4v-7h3l1-4h-4V8a0 0 0 0 1 0 0Z"/></svg></a><a href="https://www.linkedin.com/company/makewell-comunicacao" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></a><a href="https://www.tiktok.com/@makewellcomunicacao" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5M14 3c.5 2.5 2.5 4.5 5 5"/></svg></a>
+      </div>
+    </div>
+    <div class="foot-col">
+      <p class="foot-title">The Agency</p>
+      <p>Makewell is a communications and performance agency specializing in branding, sales, and digital positioning.</p>
+    </div>
+    <nav class="foot-col" aria-label="Navigation">
+      <p class="foot-title">Navigation</p>
+      <ul>
+        <li><a href="/en/about/">About Us</a></li><li><a href="/en/services/">Services</a></li><li><a href="/en/framework/">Framework</a></li><li><a href="/en/method/">Method</a></li><li><a href="/en/cases/">Cases</a></li>
+        <li><a href="/en/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="/en/terms-of-use/">Terms of Use</a></li>
+      </ul>
+    </nav>
+    <div class="foot-col">
+      <p class="foot-title">Blog &amp; Content</p>
+      <p>Strategic content on marketing, sales and digital positioning. <strong>Coming soon.</strong></p>
+      <a class="foot-link" href="https://www.instagram.com/makewellcomunicacao/" target="_blank" rel="noopener noreferrer">Follow on Instagram →</a>
+    </div>
+    <div class="foot-col">
+      <p class="foot-title">Location</p>
+      <p>R. Prof. Lourenço Peixoto, 36, Sala 04, Jatiúca, Maceió, AL.</p>
+      <p><a href="mailto:contato@makewell.com.br">contato@makewell.com.br</a></p>
+      <p>Tax ID (CNPJ): 27.238.877/0001-71</p>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <p>Copyright © 2026 Makewell | All Rights Reserved &middot; Brazil · Florida · makewell.agency</p>
+    <p class="mw-prefs-line"><button type="button" class="mw-cookie-prefs">Cookie preferences</button></p>
+    <div class="partners">
+      <span>Official Partners &amp; Certifications</span>
+      <img src="/images/logo-kommo-partner.webp" alt="Kommo Partner" width="160" height="48" loading="lazy">
+    </div>
+  </div>
+</footer>
+<div class="modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Vídeo">
+  <button class="modal-close" type="button" aria-label="Close video">&times;</button>
+  <iframe title="YouTube" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen src=""></iframe>
+</div>
 <script>
-(function(){
-  var ham = document.getElementById('hamburger');
-  var menu = document.getElementById('mobileMenu');
-  if(!ham||!menu) return;
-  ham.addEventListener('click', function(){
-    var open = ham.classList.toggle('open');
-    menu.classList.toggle('open', open);
-    ham.setAttribute('aria-expanded', open ? 'true' : 'false');
-    document.body.style.overflow = open ? 'hidden' : '';
+(function () {
+  var modal = document.getElementById('videoModal'); if (!modal) return;
+  var frame = modal.querySelector('iframe'), last = null;
+  function close() { modal.classList.remove('open', 'vertical'); frame.src = ''; document.body.style.overflow = ''; if (last) last.focus(); }
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('[data-yt]'); if (!b) return;
+    e.preventDefault(); last = b;
+    var extra = b.getAttribute('data-yt-params') || '';
+    frame.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(b.getAttribute('data-yt')) + '?autoplay=1&rel=0' + (extra ? '&' + extra : '');
+    modal.classList.toggle('vertical', b.hasAttribute('data-vertical'));
+    modal.classList.add('open'); document.body.style.overflow = 'hidden';
+    modal.querySelector('.modal-close').focus();
   });
-  menu.addEventListener('click', function(e){ if(e.target===menu){ ham.classList.remove('open'); menu.classList.remove('open'); ham.setAttribute('aria-expanded','false'); document.body.style.overflow=''; } });
+  modal.addEventListener('click', function (e) { if (e.target === modal || e.target.closest('.modal-close')) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal.classList.contains('open')) close(); });
+})();
+</script>
+<div class="scroll-progress" aria-hidden="true"></div>
+<a href="https://wa.me/5582999103246?text=Hello!%20I%20came%20through%20Makewell%27s%20website%20and%20would%20like%20more%20information." class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"></path></svg></a>
+<button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></button>
+<script>
+(function () {
+  var lang = document.getElementById('lang-dropdown'), trig = document.getElementById('langDropdownTrigger');
+  if (lang && trig) {
+    trig.addEventListener('click', function (e) { e.stopPropagation(); var o = lang.classList.toggle('open'); trig.setAttribute('aria-expanded', o); });
+    document.addEventListener('click', function (e) { if (!lang.contains(e.target)) { lang.classList.remove('open'); trig.setAttribute('aria-expanded', 'false'); } });
+    var br = lang.querySelector('[data-lang="pt"]');
+    if (br) br.addEventListener('click', function () { try { localStorage.setItem('mw-lang', 'pt'); } catch (e) {} lang.classList.remove('open'); });
+  }
+  var ham = document.getElementById('hamburger'), menu = document.getElementById('mobileMenu');
+  var openLbl = ham && ham.getAttribute('aria-label');
+  function setMenu(o) {
+    menu.classList.toggle('open', o); ham.setAttribute('aria-expanded', o);
+    ham.setAttribute('aria-label', o ? ham.getAttribute('data-close') : openLbl);
+    document.body.style.overflow = o ? 'hidden' : '';
+    if (o) { var f = menu.querySelector('a'); if (f) f.focus(); }
+  }
+  if (ham && menu) {
+    ham.addEventListener('click', function () { setMenu(!menu.classList.contains('open')); });
+    menu.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+  }
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    if (lang) { lang.classList.remove('open'); if (trig) trig.setAttribute('aria-expanded', 'false'); }
+    if (menu && menu.classList.contains('open')) { setMenu(false); ham.focus(); }
+  });
 })();
 </script>
 <script>
-(function(){
-  if(!window.matchMedia('(hover:hover) and (pointer:fine)').matches)return;
-  document.querySelectorAll('.btn-nav').forEach(function(btn){
-    var bRect=null,bRaf=0;
-    btn.addEventListener('mouseenter',function(){bRect=btn.getBoundingClientRect();});
-    btn.addEventListener('mousemove',function(e){
-      if(!bRect)return;
-      var ex=e.clientX,ey=e.clientY;
-      if(!bRaf)bRaf=requestAnimationFrame(function(){
-        var x=(ex-bRect.left-bRect.width/2)*0.13;
-        var y=(ey-bRect.top-bRect.height/2)*0.13;
-        btn.style.transform='translate('+x+'px,'+y+'px)';
-        bRaf=0;
-      });
-    });
-    btn.addEventListener('mouseleave',function(){bRect=null;btn.style.transform='';});
+// Movimento: revelação ao rolar e contadores nos números grandes. Sem efeito com prefers-reduced-motion.
+(function () {
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var main = document.getElementById('main-content'); if (!main) return;
+  // páginas com um único <article> (ex.: case) têm as seções dentro dele
+  var root = main.children.length === 1 && main.firstElementChild.tagName === 'ARTICLE' ? main.firstElementChild : main;
+  var secs = root.querySelectorAll(':scope > section, :scope > article');
+  var targets = [];
+  secs.forEach(function (sec, i) {
+    if (i === 0) return; // o hero (ou a página legal inteira) não espera rolagem: evita atrasar a primeira pintura
+    sec.querySelectorAll('.wrap > *, .grid > *, .card').forEach(function (el) { if (targets.indexOf(el) < 0) targets.push(el); });
   });
-})();
-</script>
-<script>
-(function() {
-  document.querySelectorAll('.lang-dropdown').forEach(function(dropdown) {
-    var trigger = dropdown.querySelector('.lang-dropdown-trigger');
-    var menu = dropdown.querySelector('.lang-dropdown-menu');
-    if (!trigger || !menu) return;
-    function closeMenu() {
-      menu.classList.remove('open');
-      trigger.setAttribute('aria-expanded', 'false');
-    }
-    trigger.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var open = menu.classList.toggle('open');
-      trigger.setAttribute('aria-expanded', open);
-    });
-    document.addEventListener('click', function(e) { if (!menu.contains(e.target) && e.target !== trigger) closeMenu(); });
-    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeMenu(); });
+  targets.forEach(function (el) {
+    var p = el.parentElement, k = p ? Array.prototype.indexOf.call(p.children, el) : 0;
+    el.style.setProperty('--rv-d', Math.min(k, 5) * 0.08 + 's');
+    el.classList.add('rv');
   });
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  targets.forEach(function (el) { io.observe(el); });
+
+  // barra de progresso, cabeçalho compacto e "voltar ao topo"
+  var bar = document.querySelector('.scroll-progress'), head = document.querySelector('.site-header'), top = document.getElementById('back-to-top'), ticking = false;
+  function onScroll() {
+    ticking = false;
+    var y = window.scrollY, h = document.documentElement.scrollHeight - innerHeight;
+    if (bar) bar.style.setProperty('--p', h > 0 ? (y / h).toFixed(4) : 0);
+    if (head) head.classList.toggle('scrolled', y > 40);
+    if (top) top.classList.toggle('show', y > innerHeight);
+  }
+  addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  onScroll();
+  if (top) top.addEventListener('click', function () { scrollTo({ top: 0, behavior: 'smooth' }); });
+
+  // contadores: texto curto tipo "+26x", "50+", "R$400k", "13M+", "4 anos" em fonte grande; ignora anos e "01"
+  var nums = [];
+  main.querySelectorAll('p, span, div, strong, dt, dd, b').forEach(function (el) {
+    if (el.children.length) return;
+    var t = el.textContent.trim(), m = t.match(/^([+R$€]*\s?)(\d{1,4})([^\d].{0,8})?$/);
+    if (!m || t.length > 12 || /^0\d/.test(m[2]) || (+m[2] >= 1900 && +m[2] <= 2100)) return;
+    if (parseFloat(getComputedStyle(el).fontSize) < 36) return;
+    nums.push({ el: el, pre: m[1], n: +m[2], suf: m[3] || '' });
+  });
+  var cio = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (!e.isIntersecting) return; cio.unobserve(e.target);
+      var d = e.target.__mwNum, t0 = performance.now();
+      (function step(now) {
+        var k = Math.min(1, (now - t0) / 1400), v = Math.round(d.n * (1 - Math.pow(1 - k, 3)));
+        d.el.textContent = d.pre + v + d.suf;
+        if (k < 1) requestAnimationFrame(step);
+      })(t0);
+    });
+  }, { threshold: 0.6 });
+  nums.forEach(function (d) { d.el.__mwNum = d; cio.observe(d.el); });
 })();
 </script>
 <!-- Consentimento de cookies (LGPD/GDPR): rastreadores (via GTM e Meta Pixel) só carregam depois de "Aceitar" -->
@@ -469,3 +682,97 @@ n.queue=[];}(window, document,'script',
 </script>
 </body>
 </html>
+
+<style>
+  .ch-hero { padding-block: 56px 88px; }
+  .ch-crumb { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 14px; color: var(--muted); }
+  .ch-crumb a { color: var(--muted); text-decoration: none; padding-block: 12px; }
+  .ch-crumb a:hover { color: var(--paper); }
+  .ch-crumb [aria-current] { color: var(--paper); }
+  .ch-hero-split { align-items: flex-end; margin-top: 40px; }
+  .ch-kicker { color: var(--muted); }
+  .ch-h1 { font-size: clamp(40px, 5.6vw, 84px); }
+  .ch-logos { display: grid; gap: 12px; }
+  .ch-logo { background: var(--tile); border-radius: 24px; height: 170px; display: flex; align-items: center; justify-content: center; }
+  .ch-logo img { max-height: 92px; max-width: 64%; width: auto; object-fit: contain; }
+  .ch-facts { margin: 72px 0 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px 24px; }
+  .ch-facts > div { border-top: 1px solid var(--line); padding-top: 20px; }
+  .ch-facts dt { font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .ch-facts dd { margin: 12px 0 0; font-size: 17px; line-height: 1.5; }
+
+  .ch-story { border-block: 1px solid var(--line); }
+  .ch-stack { display: flex; flex-direction: column; gap: 16px; }
+  .ch-card { display: grid; gap: 24px; padding: clamp(28px, 5vw, 64px); scroll-margin-top: 96px; }
+  .ch-card:hover { transform: none; box-shadow: none; border-color: var(--light-line); }
+  .ch-card .num, .ch-res-list .num { color: #B4530F; }
+  @media (min-width: 900px) {
+    .ch-card { grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 64px; }
+    .ch-card-head { position: sticky; top: 112px; align-self: start; }
+  }
+  .ch-card-head h2 { margin: 14px 0 0; font-size: clamp(30px, 3vw, 40px); font-weight: 800; letter-spacing: -.03em; line-height: 1.05; }
+  .ch-card-body { min-width: 0; max-width: 72ch; }
+  .ch-card-body p { font-size: 17px; line-height: 1.7; }
+  .ch-title { margin: 0 0 20px; font-size: clamp(26px, 2.6vw, 36px); font-weight: 800; letter-spacing: -.03em; line-height: 1.15; }
+  .ch-hl { color: #B4530F; }
+  .ch-pills { display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0 0; padding: 0; list-style: none; }
+  .ch-pills li { border: 1px solid var(--line); border-radius: 999px; padding: 10px 18px; font-size: 14px; color: var(--ink); }
+  .ch-did { border-top: 1px solid var(--line); padding: 28px 0 12px; max-width: none; }
+  .ch-did:first-child { border-top: 0; padding-top: 0; }
+  .ch-did h3 { margin: 0 0 12px; font-size: 22px; font-weight: 700; line-height: 1.3; display: flex; gap: 14px; align-items: baseline; }
+  .ch-did h3 .num { font-size: 13px; flex: none; }
+  .ch-did p { margin-left: 32px; font-size: 16px; }
+
+  .ch-num .h2 { max-width: 760px; font-size: clamp(32px, 3.4vw, 48px); }
+  .ch-num .h2 em { display: inline; font-style: italic; padding: 0; }
+  .ch-num .lead { max-width: 620px; }
+  .ch-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px 32px; margin-top: 56px; }
+  .ch-stats > div { border-top: 2px solid var(--line); padding-top: 24px; }
+  .ch-stats .stat-n { margin: 0; font-size: clamp(40px, 3.5vw, 50px); }
+  .ch-stat-l { margin: 14px 0 0; font-size: 16px; line-height: 1.5; color: var(--muted); max-width: 240px; }
+
+  .ch-res-list { list-style: none; margin-block: 0; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .ch-res-list .card { display: flex; flex-direction: column; gap: 40px; }
+  .ch-res-list .h3 { font-size: 24px; }
+  .ch-res-list p { font-size: 15px; line-height: 1.55; }
+
+  .ch-quote { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 56px 80px; }
+  .ch-video { flex: 0 1 340px; min-width: 0; position: relative; display: block; padding: 0; border: 1px solid var(--line); border-radius: 24px; overflow: hidden; background: var(--card); cursor: pointer; margin-inline: auto; }
+  .ch-video img { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; }
+  .ch-video .play { width: 76px; height: 76px; transition: transform .2s ease; }
+  .ch-video:hover .play { transform: scale(1.06); }
+  .ch-quote-text { flex: 999 1 480px; min-width: 0; }
+  .ch-quote-text figure { margin: 0; }
+  .ch-bq { margin: 24px 0 0; font-size: clamp(28px, 3.4vw, 48px); font-weight: 800; letter-spacing: -.03em; line-height: 1.12; }
+  .ch-quote-text figcaption { margin-top: 32px; display: flex; flex-direction: column; gap: 4px; font-size: 15px; }
+  .ch-name { font-size: 18px; font-weight: 700; }
+  .ch-note { margin: 16px 0 0; font-size: 13px; }
+  .ch-phil { margin-top: 48px; padding-top: 32px; scroll-margin-top: 96px; }
+  .ch-phil-h { margin: 0; font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .ch-tagline { margin: 14px 0 20px; font-size: 26px; font-weight: 800; letter-spacing: -.02em; line-height: 1.25; color: var(--accent); }
+  .ch-phil .prose p { font-size: 16px; line-height: 1.65; }
+  .ch-rel { margin-top: 28px; padding-top: 28px; }
+  .ch-rel p { margin: 10px 0 0; max-width: 60ch; font-size: 16px; }
+  .ch-rel .link-arrow { margin-top: 12px; }
+
+  .ch-cta { border-radius: var(--r-big); padding: clamp(40px, 7vw, 104px) clamp(24px, 6vw, 88px); text-align: center; }
+  .ch-cta:hover { transform: none; box-shadow: none; border-color: var(--light-line); }
+  .ch-cta .eyebrow { justify-content: center; color: #B4530F; }
+  .ch-cta .h2 { max-width: 820px; margin-inline: auto; font-size: clamp(34px, 4.4vw, 64px); }
+  .ch-cta .lead { margin-inline: auto; }
+  .ch-cta .btns { justify-content: center; }
+  @media (max-width: 1100px) { .ch-res-list, .ch-stats, .ch-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 600px) {
+    .ch-hero { padding-block: 32px 64px; }
+    .ch-logos { grid-template-columns: 1fr 1fr; }
+    .ch-logo { height: 112px; border-radius: 18px; }
+    .ch-logo img { max-height: 64px; max-width: 72%; }
+    .ch-facts { margin-top: 48px; gap: 28px 16px; }
+    .ch-facts dd { font-size: 15px; }
+    .ch-stats { gap: 32px 16px; margin-top: 40px; }
+    .ch-stats .stat-n { font-size: 31px; }
+    .ch-video { flex-basis: 100%; max-width: 280px; }
+    .ch-did p { margin-left: 0; }
+    .ch-res-list { grid-template-columns: 1fr; }
+    .ch-res-list .card { gap: 20px; }
+  }
+</style>
