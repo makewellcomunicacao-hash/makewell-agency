@@ -9,6 +9,7 @@
 <meta name="description" content="A Makewell é uma agência brasileira de marketing digital que atende remotamente empresários brasileiros e com ligações ao Brasil em Portugal.">
 <meta name="keywords" content="agência de marketing digital para brasileiros em Portugal, agência brasileira de marketing digital, marketing digital para brasileiros em Portugal, marketing para empreendedor brasileiro no exterior, tráfego pago para negócio brasileiro em Portugal, gestão de redes sociais para brasileiros em Portugal, Google Ads para brasileiros em Portugal, agência de marketing digital Lisboa brasileiros, agência de marketing digital Porto brasileiros, criação de site para brasileiro em Portugal, SEO para brasileiros em Portugal, CRM marketing, performance marketing agency">
 <meta name="theme-color" content="#080808">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="color-scheme" content="dark">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Makewell Comunicação">
@@ -21,7 +22,6 @@
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <link rel="manifest" href="/manifest.json">
 <link rel="preload" as="image" href="/images/logo-makewell-mi-branca.webp" type="image/webp">
-<link rel="preconnect" href="https://img.youtube.com" crossorigin>
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -60,6 +60,7 @@
       "addressLocality": "Maceió",
       "addressRegion": "AL",
       "streetAddress": "R. Prof. Lourenço Peixoto, 36, Sala 04",
+      "postalCode": "57035-640",
       "addressCountry": "BR"
     },
     {
@@ -214,7 +215,7 @@ a { color: inherit; }
 
 /* ── botões ── */
 .btns { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
-.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 28px; border-radius: 999px; font: 700 16px/1 var(--font); text-decoration: none; border: 1px solid transparent; cursor: pointer; transition: transform .2s ease, background-color .2s ease, color .2s ease; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 28px; text-align: center; line-height: 1.2; border-radius: 999px; font: 700 16px/1 var(--font); text-decoration: none; border: 1px solid transparent; cursor: pointer; transition: transform .2s ease, background-color .2s ease, color .2s ease; }
 .btn:hover { transform: translateY(-1px); }
 .btn-primary { background: var(--accent); color: var(--on-accent); }
 .btn-primary:hover { background: var(--accent-2); }
@@ -257,13 +258,13 @@ a { color: inherit; }
 .nav-right { display: flex; align-items: center; gap: 14px; }
 .btn-nav { min-height: 44px; padding: 0 20px; font-size: 14px; }
 .lang { position: relative; }
-.lang-trigger { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--warm-line); background: none; color: var(--paper); font: 700 12px var(--font); letter-spacing: .08em; cursor: pointer; }
+.lang-trigger { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,.14); background: none; color: var(--paper); font: 700 12px var(--font); letter-spacing: .08em; cursor: pointer; }
 .lang-menu { position: absolute; right: 0; top: calc(100% + 8px); min-width: 140px; background: rgba(23,21,18,.9); -webkit-backdrop-filter: blur(18px) saturate(170%); backdrop-filter: blur(18px) saturate(170%); border: 1px solid rgba(255,255,255,.1); border-radius: 14px; padding: 6px; display: none; box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 16px 40px rgba(0,0,0,.5); }
 .lang.open .lang-menu { display: block; }
 .lang-menu a, .lang-menu button { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 44px; padding: 0 12px; border-radius: 10px; border: 0; background: none; color: var(--paper); font: 600 14px var(--font); text-decoration: none; cursor: pointer; }
 .lang-menu a:hover, .lang-menu button:hover { background: var(--warm-line); }
 .lang-menu [aria-current="true"] { color: var(--accent); }
-.hamburger { display: none; width: 44px; height: 44px; border: 1px solid var(--warm-line); border-radius: 12px; background: none; cursor: pointer; flex-direction: column; justify-content: center; align-items: center; gap: 5px; }
+.hamburger { display: none; width: 44px; height: 44px; border: 1px solid rgba(255,255,255,.14); border-radius: 12px; background: none; cursor: pointer; flex-direction: column; justify-content: center; align-items: center; gap: 5px; }
 .hamburger span { width: 18px; height: 2px; background: var(--paper); border-radius: 2px; }
 .mobile-menu { display: none; position: fixed; inset: 0; z-index: 1; background: var(--warm); padding: calc(96px + env(safe-area-inset-top, 0px)) var(--gutter) 40px; flex-direction: column; gap: 4px; overflow-y: auto; }
 .mobile-menu.open { display: flex; }
@@ -287,7 +288,7 @@ a { color: inherit; }
 .foot-col p { margin: 0 0 10px; }
 .foot-col strong { color: var(--paper); }
 .foot-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
-.foot-col ul a, .foot-col a { color: var(--paper-muted); text-decoration: none; display: inline-block; padding-block: 4px; }
+.foot-col ul a, .foot-col a { color: var(--paper-muted); text-decoration: none; display: inline-block; padding-block: 10px; }
 .foot-col a:hover { color: var(--paper); }
 .foot-col .foot-link { color: var(--accent); font-weight: 700; }
 .foot-bottom { position: relative; display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between; padding-block: 24px 40px; }
@@ -378,8 +379,8 @@ p { text-wrap: pretty; }
 @media (max-width: 600px) { .foot-bottom { padding-bottom: 96px; } }
 
 /* contraste AA: eyebrow laranja em fundo claro usa o laranja escuro */
-.t-light .eyebrow { color: #B4530F; }
-.t-light .card .num, .card p.eyebrow { color: #B4530F; }
+.t-light .eyebrow { color: #A84B0C; }
+.t-light .card .num, .card p.eyebrow { color: #A84B0C; }
 .t-warm .card p.eyebrow, .t-warm2 .card p.eyebrow { color: var(--accent); }
 
 /* GSAP: máscara das linhas dos títulos com folga para acentos e descendentes (g, p, ç) */
@@ -388,7 +389,7 @@ p { text-wrap: pretty; }
 @media (prefers-reduced-motion: reduce) { .ln-mask { padding: 0; margin: 0; } }
 
 /* "liquid glass": vidro com desfoque saturado, borda de luz em degradê e reflexo que segue o mouse (--mx/--my via JS).
-   Só onde há cor atrás para refratar (painel do topo e cases da home); raio e espaçamento vêm do próprio elemento */
+   Só no painel de números do topo da home, sobre o gráfico animado (cabeçalho e menus usam o próprio vidro); raio e espaçamento vêm do elemento */
 .glass { position: relative; isolation: isolate;
   background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.025) 45%, rgba(255,255,255,.06));
   -webkit-backdrop-filter: blur(16px) saturate(170%); backdrop-filter: blur(16px) saturate(170%);
@@ -399,36 +400,26 @@ p { text-wrap: pretty; }
 .glass::after { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit; pointer-events: none;
   background: radial-gradient(circle at var(--mx, 18%) var(--my, 0%), rgba(255,255,255,.14), rgba(255,255,255,0) 42%); transition: background-position .2s; }
 
-/* fundo para blocos de vidro com dados de resultado: brilhos laranja/âmbar que se movem devagar e uma grade fina
- (cases da home e da página Cases, topo da Sobre e do case Casa Hunter); parados no celular */
-.glow-host { position: relative; isolation: isolate; overflow: hidden; }
-.glow-bg { position: absolute; inset: 0; z-index: -1; pointer-events: none; background-image: linear-gradient(rgba(244,241,236,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(244,241,236,.04) 1px, transparent 1px); background-size: 96px 96px; }
-.glow-bg span { position: absolute; border-radius: 50%; filter: blur(60px); opacity: .55; animation: mw-orb 22s ease-in-out infinite alternate; }
-.glow-bg span:nth-child(1) { width: 46vw; height: 46vw; left: -8vw; top: 4%; background: radial-gradient(closest-side, #F07820, rgba(240,120,32,0)); }
-.glow-bg span:nth-child(2) { width: 38vw; height: 38vw; right: -6vw; top: 30%; background: radial-gradient(closest-side, #F5A623, rgba(245,166,35,0)); animation-duration: 28s; animation-direction: alternate-reverse; }
-.glow-bg span:nth-child(3) { width: 30vw; height: 30vw; left: 30%; bottom: -10%; background: radial-gradient(closest-side, #B4530F, rgba(180,83,15,0)); animation-duration: 34s; }
-@keyframes mw-orb { 50% { transform: translate(8vw, 6vh) scale(1.15); } 100% { transform: translate(-4vw, 10vh) scale(.92); } }
-@media (max-width: 900px), (prefers-reduced-motion: reduce) { .glow-bg span { animation: none; } }
-.glow-host .card.glass { background: rgba(23,21,18,.42); }
 
 /* capa do vídeo institucional (componente VideoCover): fundo da marca com brilho atrás da apresentadora,
    título e play à esquerda; no celular, texto em cima e apresentadora embaixo */
 .vcover { display: flex; align-items: center; text-align: left; color: var(--paper); font: inherit; isolation: isolate;
-  background: radial-gradient(42% 70% at 76% 78%, rgba(240,120,32,.5), rgba(240,120,32,0) 70%), radial-gradient(30% 50% at 92% 18%, rgba(245,166,35,.18), rgba(245,166,35,0) 70%),
+  background: radial-gradient(40% 70% at 76% 50%, rgba(240,120,32,.42), rgba(240,120,32,0) 70%), radial-gradient(30% 50% at 92% 18%, rgba(245,166,35,.18), rgba(245,166,35,0) 70%),
     linear-gradient(rgba(244,241,236,.035) 1px, transparent 1px) 0 0 / 72px 72px, linear-gradient(90deg, rgba(244,241,236,.035) 1px, transparent 1px) 0 0 / 72px 72px, linear-gradient(120deg, #1D1915, var(--warm) 60%); }
 .vc-text { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: flex-start; gap: clamp(8px, 1.4vw, 18px); max-width: 54%; padding-left: clamp(22px, 6%, 80px); }
 .vc-kicker { font-size: clamp(11px, 1vw, 13px); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
 .vc-title { font-size: clamp(24px, 4vw, 58px); line-height: 1.04; letter-spacing: -.03em; font-weight: 800; text-wrap: balance; }
 .vc-cta { display: inline-flex; align-items: center; gap: 14px; margin-top: clamp(6px, 1.4vw, 18px); font-size: clamp(14px, 1.3vw, 17px); font-weight: 700; }
 .vcover .play { position: static; inset: auto; margin: 0; flex: none; width: clamp(48px, 5.6vw, 76px); height: clamp(48px, 5.6vw, 76px); }
-.vcover .vc-person { position: absolute; z-index: 1; right: 7%; bottom: 0; width: auto; height: 94%; object-fit: contain; transform-origin: 50% 100%;
-  -webkit-mask-image: linear-gradient(to bottom, #000 76%, transparent); mask-image: linear-gradient(to bottom, #000 76%, transparent); filter: drop-shadow(0 24px 60px rgba(0,0,0,.55)); }
+.vcover .vc-mark { position: absolute; z-index: 1; right: 9%; top: 19%; height: 62%; width: auto; filter: drop-shadow(0 0 48px rgba(240,120,32,.45)) drop-shadow(0 30px 60px rgba(0,0,0,.5)); animation: vc-float 7s ease-in-out infinite alternate; }
+@keyframes vc-float { to { translate: 0 -14px; } }
+@media (prefers-reduced-motion: reduce) { .vcover .vc-mark { animation: none; } }
 @media (max-width: 600px) {
   .vcover { aspect-ratio: 4 / 5; align-items: flex-start; padding-top: 30px;
     background: radial-gradient(75% 45% at 50% 92%, rgba(240,120,32,.5), rgba(240,120,32,0) 70%),
       linear-gradient(rgba(244,241,236,.035) 1px, transparent 1px) 0 0 / 56px 56px, linear-gradient(90deg, rgba(244,241,236,.035) 1px, transparent 1px) 0 0 / 56px 56px, linear-gradient(160deg, #1D1915, var(--warm) 60%); }
   .vc-text { max-width: 100%; padding-inline: 22px; }
-  .vcover .vc-person { right: 0; left: 0; margin-inline: auto; height: 62%; }
+  .vcover .vc-mark { right: 0; left: 0; margin-inline: auto; top: auto; bottom: 12%; height: 40%; }
 }
 
 
@@ -443,717 +434,44 @@ p { text-wrap: pretty; }
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
   .glass { background: var(--warm-card); }
 }
-</style></head>
-<body>
-<script>
-  (function () {
-    var blocked = ['r', 'mod', 'uri', 'elementor_library', 'et_core_page_resource'];
-    var params = new URLSearchParams(window.location.search);
-    var dirty = blocked.some(function (p) { return params.has(p); });
-    if (dirty) { window.location.replace(window.location.pathname); }
-  })();
-</script>
 
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-</script>
-<script>document.documentElement.classList.add('js');</script>
-<a href="#main-content" class="skip-link">Saltar para o conteúdo</a>
-<header class="site-header">
-  <div class="wrap">
-    <nav id="nav" class="nav" aria-label="Menu principal">
-      <a href="/pt/" class="nav-logo" aria-label="Makewell Comunicação — início">
-        <img src="/images/logo-makewell-mi-branca.webp" alt="Makewell Comunicação" width="161" height="52" fetchpriority="high">
-      </a>
-      <div class="nav-links">
-        <a href="/pt/about/">Sobre</a><a href="/pt/services/">Serviços</a><a href="/pt/framework/">Framework</a><a href="/pt/method/">Método</a><a href="/pt/cases/">Cases</a>
-      </div>
-      <div class="nav-right">
-        <div id="lang-dropdown" class="lang">
-          <button class="lang-trigger" id="langDropdownTrigger" aria-haspopup="true" aria-expanded="false" aria-label="Mudar idioma">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>PT</span>
-          </button>
-          <div class="lang-menu" id="langDropdownMenu" role="menu" aria-label="Selecionar idioma">
-            <a href="https://makewell.com.br/" role="menuitem" hreflang="pt-BR">BR</a><a href="https://makewell.agency/en/" role="menuitem" hreflang="en">EN</a><a href="https://makewell.agency/es/" role="menuitem" hreflang="es">ES</a><a href="https://makewell.agency/pt/" role="menuitem" hreflang="pt-PT" aria-current="true">PT</a>
-          </div>
-        </div>
-        <a href="https://wa.me/5582999103246?text=Ol%C3%A1!%20Quero%20agendar%20um%20diagn%C3%B3stico%20gratuito%20com%20a%20Makewell." class="btn btn-primary btn-nav" aria-label="Agendar um diagnóstico gratuito" target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{content_name:'Schedule Diagnosis'})">Agendar Diagnóstico</a>
-        <button class="hamburger" id="hamburger" aria-label="Abrir menu" data-close="Fechar menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
-      </div>
-    </nav>
-  </div>
-  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menu mobile" aria-modal="true">
-    <a href="/pt/about/" class="m-link"><span class="mn">01</span><span>Sobre</span></a><a href="/pt/services/" class="m-link"><span class="mn">02</span><span>Serviços</span></a><a href="/pt/framework/" class="m-link"><span class="mn">03</span><span>Framework</span></a><a href="/pt/method/" class="m-link"><span class="mn">04</span><span>Método</span></a><a href="/pt/cases/" class="m-link"><span class="mn">05</span><span>Cases</span></a>
-    <a href="https://wa.me/5582999103246?text=Ol%C3%A1!%20Quero%20agendar%20um%20diagn%C3%B3stico%20gratuito%20com%20a%20Makewell." class="btn btn-primary" target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{content_name:'Schedule Free Diagnostic'})">Agendar Diagnóstico</a>
-  </div>
-</header>
-<main id="main-content">
-<div class="hm">
+/* carrossel horizontal (.hscroll): arrasta com mouse ou dedo, encaixa card a card, setas e avanço automático suave
+   (script no Page.astro). Cards de texto com largura padrão; os reels mantêm a largura própria */
+.hscroll { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; overscroll-behavior-x: contain; scrollbar-width: none; padding-bottom: 4px;
+  margin-right: calc((min(100vw, var(--wrap)) - 100vw) / 2 - var(--gutter)); padding-right: var(--gutter); }
+.hscroll::-webkit-scrollbar { display: none; }
+.hscroll > .card { flex: 0 0 min(400px, 82vw); scroll-snap-align: start; }
+.hscroll > * { scroll-snap-align: start; }
+@media (hover: hover) and (pointer: fine) { .hscroll { cursor: grab; } .hscroll.dragging { cursor: grabbing; scroll-snap-type: none; scroll-behavior: auto; user-select: none; } }
+.hs-nav { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+.hs-nav[hidden] { display: none; }
+.hs-btn { width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--line); background: none; color: inherit; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; transition: border-color .2s, opacity .2s; }
+.hs-btn:hover:not([aria-disabled="true"]) { border-color: var(--accent); }
 
-  <!-- HERO -->
-  <section class="t-warm hm-hero" aria-label="Agência de marketing digital para negócios brasileiros em Portugal">
-    <!-- fundo: gráfico de resultado (barras crescendo, ROI subindo, CAC caindo); decorativo -->
-    <div class="hm-chart" aria-hidden="true">
-      <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" focusable="false">
-        <defs>
-          <linearGradient id="hmUp" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#F5A623"></stop><stop offset="1" stop-color="#F07820"></stop></linearGradient>
-          <linearGradient id="hmArea" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#F07820" stop-opacity=".28"></stop><stop offset="1" stop-color="#F07820" stop-opacity="0"></stop></linearGradient>
-          <linearGradient id="hmBar" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#F5A623" stop-opacity=".4"></stop><stop offset="1" stop-color="#F07820" stop-opacity="0"></stop></linearGradient>
-          <filter id="hmGlow" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="6"></feGaussianBlur></filter>
-        </defs>
-        <g class="grid"><line x1="0" x2="1440" y1="100" y2="100"></line><line x1="0" x2="1440" y1="200" y2="200"></line><line x1="0" x2="1440" y1="300" y2="300"></line><line x1="0" x2="1440" y1="400" y2="400"></line><line x1="0" x2="1440" y1="500" y2="500"></line><line x1="0" x2="1440" y1="600" y2="600"></line><line x1="0" x2="1440" y1="700" y2="700"></line><line x1="0" x2="1440" y1="800" y2="800"></line></g>
-        <g class="bars" fill="url(#hmBar)"><rect class="bar" style="--i:0" x="24" y="840" width="26" height="60" rx="3"></rect><rect class="bar" style="--i:1" x="84" y="799" width="26" height="101" rx="3"></rect><rect class="bar" style="--i:2" x="144" y="828" width="26" height="72" rx="3"></rect><rect class="bar" style="--i:3" x="204" y="767" width="26" height="133" rx="3"></rect><rect class="bar" style="--i:4" x="264" y="786" width="26" height="114" rx="3"></rect><rect class="bar" style="--i:5" x="324" y="805" width="26" height="95" rx="3"></rect><rect class="bar" style="--i:6" x="384" y="724" width="26" height="176" rx="3"></rect><rect class="bar" style="--i:7" x="444" y="743" width="26" height="157" rx="3"></rect><rect class="bar" style="--i:8" x="504" y="692" width="26" height="208" rx="3"></rect><rect class="bar" style="--i:9" x="564" y="741" width="26" height="159" rx="3"></rect><rect class="bar" style="--i:10" x="624" y="650" width="26" height="250" rx="3"></rect><rect class="bar" style="--i:11" x="684" y="679" width="26" height="221" rx="3"></rect><rect class="bar" style="--i:12" x="744" y="618" width="26" height="282" rx="3"></rect><rect class="bar" style="--i:13" x="804" y="667" width="26" height="233" rx="3"></rect><rect class="bar" style="--i:14" x="864" y="566" width="26" height="334" rx="3"></rect><rect class="bar" style="--i:15" x="924" y="605" width="26" height="295" rx="3"></rect><rect class="bar" style="--i:16" x="984" y="554" width="26" height="346" rx="3"></rect><rect class="bar" style="--i:17" x="1044" y="503" width="26" height="397" rx="3"></rect><rect class="bar" style="--i:18" x="1104" y="542" width="26" height="358" rx="3"></rect><rect class="bar" style="--i:19" x="1164" y="461" width="26" height="439" rx="3"></rect><rect class="bar" style="--i:20" x="1224" y="480" width="26" height="420" rx="3"></rect><rect class="bar" style="--i:21" x="1284" y="409" width="26" height="491" rx="3"></rect><rect class="bar" style="--i:22" x="1344" y="418" width="26" height="482" rx="3"></rect><rect class="bar" style="--i:23" x="1404" y="357" width="26" height="543" rx="3"></rect></g>
-        <path class="area" d="M0,900 L0,780 L120,752 L240,716 L360,730 L480,664 L600,634 L720,572 L840,590 L960,486 L1080,446 L1200,350 L1320,270 L1440,170 L1440,900 Z" fill="url(#hmArea)"></path>
-        <polyline class="ln dn" points="0,330 160,356 320,348 480,402 640,420 800,470 960,490 1120,548 1280,566 1440,618" pathLength="1"></polyline>
-        <polyline class="ln up glow" points="0,780 120,752 240,716 360,730 480,664 600,634 720,572 840,590 960,486 1080,446 1200,350 1320,270 1440,170" pathLength="1" filter="url(#hmGlow)"></polyline>
-        <polyline class="ln up" points="0,780 120,752 240,716 360,730 480,664 600,634 720,572 840,590 960,486 1080,446 1200,350 1320,270 1440,170" pathLength="1"></polyline>
-        <polyline class="comet" points="0,780 120,752 240,716 360,730 480,664 600,634 720,572 840,590 960,486 1080,446 1200,350 1320,270 1440,170" pathLength="1"></polyline>
-        <g class="dots"><circle class="dot" style="--i:4" cx="480" cy="664" r="5"></circle><circle class="dot" style="--i:6" cx="720" cy="572" r="5"></circle><circle class="dot" style="--i:8" cx="960" cy="486" r="5"></circle><circle class="dot" style="--i:10" cx="1200" cy="350" r="5"></circle><circle class="dot" style="--i:12" cx="1440" cy="170" r="5"></circle></g>
-      </svg>
-    </div>
-    <div class="wrap">
-      <div class="hm-hero-grid">
-        <div class="hm-hero-main">
-          <p class="eyebrow dot hm-pill">Agência brasileira · Mais de 9 anos a transformar marcas</p>
-          <h1 class="h1 hm-h1">A tua marca no topo<br>com estratégia,<br> <em>performance e inteligência.</em></h1>
-          <p class="lead hm-hero-p">Somos uma agência brasileira que entende os dois lados: o seu negócio e o mercado onde está agora. <strong>Fale connosco</strong> e comece o novo capítulo da sua marca.</p>
-          <div class="btns">
-            <a class="btn btn-primary" href="https://wa.me/5582999103246?text=Ol%C3%A1!%20Quero%20agendar%20um%20diagn%C3%B3stico%20gratuito%20com%20a%20Makewell." target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{content_name:'Schedule Free Diagnostic'})">Agendar diagnóstico gratuito</a>
-            <a class="btn btn-ghost" href="#cases">Ver Resultados →</a>
-          </div>
-        </div>
-        <div class="hm-hero-side glass" role="region" aria-label="Resultados comprovados">
-          <p class="hm-card-head"><span>Desempenho Comprovado</span><span>Dados Reais</span></p>
-          <div class="hm-stat"><span class="hm-stat-n">+26x</span><span class="hm-stat-l">Melhor ROI Entregue</span></div><div class="hm-stat"><span class="hm-stat-n">50+</span><span class="hm-stat-l">Clientes Atendidos</span></div><div class="hm-stat"><span class="hm-stat-n">+7 díg.</span><span class="hm-stat-l">Faturação Gerada para Clientes</span></div><div class="hm-stat"><span class="hm-stat-n">9+</span><span class="hm-stat-l">Anos de Experiência</span></div>
-        </div>
-      </div>
-      <ul class="hm-chips" aria-label="Serviços">
-        <li>Branding</li><li>Tráfego</li><li>SEO</li><li>CRM</li><li>IA</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- FAIXA DE TEMAS (antigo ticker) -->
-  <div class="t-warm2 hm-ticker">
-    <div class="hm-track">
-      <ul><li>Estratégia</li><li>Branding</li><li>Tráfego Pago</li><li>Social Selling</li><li>Automação</li><li>SEO</li><li>SPIN Selling</li><li>CRM</li><li>Funil de Vendas</li><li>Posicionamento</li><li aria-hidden="true">Estratégia</li><li aria-hidden="true">Branding</li><li aria-hidden="true">Tráfego Pago</li><li aria-hidden="true">Social Selling</li><li aria-hidden="true">Automação</li><li aria-hidden="true">SEO</li><li aria-hidden="true">SPIN Selling</li><li aria-hidden="true">CRM</li><li aria-hidden="true">Funil de Vendas</li><li aria-hidden="true">Posicionamento</li><li aria-hidden="true">Estratégia</li><li aria-hidden="true">Branding</li><li aria-hidden="true">Tráfego Pago</li><li aria-hidden="true">Social Selling</li><li aria-hidden="true">Automação</li><li aria-hidden="true">SEO</li><li aria-hidden="true">SPIN Selling</li><li aria-hidden="true">CRM</li><li aria-hidden="true">Funil de Vendas</li><li aria-hidden="true">Posicionamento</li></ul>
-      <ul aria-hidden="true"><li>Estratégia</li><li>Branding</li><li>Tráfego Pago</li><li>Social Selling</li><li>Automação</li><li>SEO</li><li>SPIN Selling</li><li>CRM</li><li>Funil de Vendas</li><li>Posicionamento</li><li>Estratégia</li><li>Branding</li><li>Tráfego Pago</li><li>Social Selling</li><li>Automação</li><li>SEO</li><li>SPIN Selling</li><li>CRM</li><li>Funil de Vendas</li><li>Posicionamento</li><li>Estratégia</li><li>Branding</li><li>Tráfego Pago</li><li>Social Selling</li><li>Automação</li><li>SEO</li><li>SPIN Selling</li><li>CRM</li><li>Funil de Vendas</li><li>Posicionamento</li></ul>
-    </div>
-  </div>
-
-  <!-- LOGOS -->
-  <section class="t-light hm-logos" aria-label="Marcas que confiam na Makewell">
-    <div class="wrap">
-      <p class="eyebrow">Marcas que já confiaram na Makewell</p>
-      <div class="grid hm-logo-grid">
-        <div class="tile"><img src="/images/logo-casa-hunter-t.webp" alt="Casa Hunter" loading="lazy" style="height:61px;width:auto;max-height:none;max-width:100%"></div><div class="tile"><img src="/images/logo-carolina-mergulhao-t.webp" alt="Dra. Carolina Mergulhão" loading="lazy" style="height:56px;width:auto;max-height:none;max-width:100%"></div><div class="tile"><img src="/images/logo-drathielen-t.webp" alt="Dra. Thielen Szczypkowski" loading="lazy" style="height:54px;width:auto;max-height:none;max-width:100%"></div><div class="tile"><img src="/images/logo-anita-t.webp" alt="Dra. Anita Costa" loading="lazy" style="height:40px;width:auto;max-height:none;max-width:100%"></div><div class="tile"><img src="/images/logo-rodrigo-medeiros-t.webp" alt="Dr. Rodrigo Medeiros" loading="lazy" style="height:27px;width:auto;max-height:none;max-width:100%"></div><div class="tile"><img src="/images/logo-amy-farmacia-t.webp" alt="Amy Farmácia de Manipulação" loading="lazy" style="height:68px;width:auto;max-height:none;max-width:100%"></div><div class="tile"><img src="/images/logo-vilela-advogados-t.webp" alt="Vilela Advogados" loading="lazy" style="height:40px;width:auto;max-height:none;max-width:100%"></div><div class="tile"><img src="/images/logo-tcn-advocacia-t.webp" alt="TCN Advocacia" loading="lazy" style="height:44px;width:auto;max-height:none;max-width:100%"></div><div class="tile"><img src="/images/logo-cavalcante-peixoto-t.webp" alt="Cavalcante Peixoto Engenharia" loading="lazy" style="height:43px;width:auto;max-height:none;max-width:100%"></div><div class="tile"><img src="/images/logo-fazenda-brejo-t.webp" alt="Fazenda Brejo" loading="lazy" style="height:48px;width:auto;max-height:none;max-width:100%"></div><div class="tile"><img src="/images/logo-iupi-t.webp" alt="iupi" loading="lazy" style="height:68px;width:auto;max-height:none;max-width:100%"></div><div class="tile"><img src="/images/logo-koinonia-t.webp" alt="Koinonia" loading="lazy" style="height:68px;width:auto;max-height:none;max-width:100%"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- VÍDEO INSTITUCIONAL -->
-  <section class="t-warm sec hm-video" id="institucional" aria-labelledby="inst-title">
-    <div class="wrap">
-      <p class="eyebrow">Sobre Nós</p>
-      <h2 class="h2" id="inst-title">Conheça a Makewell</h2>
-      <p class="lead">Veja como transformamos marcas em resultados com estratégia, performance e inteligência.</p>
-      <button type="button" class="video-poster vcover hm-poster" data-yt="A28k_Yxm9cc" data-yt-params="cc_load_policy=1&amp;cc_lang_pref=pt-PT&amp;hl=pt-PT" aria-label="Ver vídeo institucional">
-  <span class="vc-text" aria-hidden="true">
-    <span class="vc-kicker">Vídeo institucional · 40s</span>
-    <span class="vc-title">Conheça a Makewell em 40 segundos</span>
-    <span class="vc-cta"><span class="play"><svg width="30" height="30" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#080808"></path></svg></span>Ver a apresentação</span>
-  </span>
-  <img class="vc-person" src="/images/video-apresentadora.webp" alt="" width="510" height="700" loading="lazy" decoding="async">
-</button>
-      <div class="grid hm-photos">
-        <img class="photo" src="/images/escritorio-estudio.webp" alt="Estúdio da Makewell com poltrona amarela e projetor" loading="lazy">
-        <img class="photo" src="/images/escritorio-campanhas.webp" alt="Quadros de campanhas criadas pela Makewell" loading="lazy">
-        <img class="photo" src="/images/escritorio-estante.webp" alt="Estante do escritório Makewell" loading="lazy">
-      </div>
-    </div>
-  </section>
-
-  <!-- PARA QUEM (5 nichos) e POR QUE A MAKEWELL (3 diferenciais): as mesmas duas seções nas 4 línguas -->
-  <section class="t-light sec hm-seg" id="publico" aria-labelledby="publico-title">
-    <div class="wrap">
-      <p class="eyebrow">PARA QUEM</p>
-      <h2 class="h2" id="publico-title">Para quem é a <span class="gold">Makewell</span></h2>
-      <p class="lead">Para quem já investiu em marketing e não viu o resultado refletido na faturação.</p>
-      <div class="grid hm-seg-grid hm-5">
-        <article class="card">
-            <span class="hm-num" aria-hidden="true">01</span>
-            <h3 class="h3">Escritórios de Advogados</h3>
-            <p>Escritórios com excelência jurídica que dependem de recomendações, não se conseguem diferenciar num mercado saturado e veem concorrentes mais pequenos a crescer mais depressa. Transformamos reputação em autoridade digital que atrai o cliente certo e acelera o crescimento.</p>
-          </article><article class="card">
-            <span class="hm-num" aria-hidden="true">02</span>
-            <h3 class="h3">Clínicas Médicas</h3>
-            <p>Construímos a marca de clínicas que investem em qualidade, mas perdem pacientes para concorrentes com menos estrutura e mais presença digital. Reputação difícil de controlar, dependência de recomendações e dificuldade em comunicar com segurança e autoridade.</p>
-          </article><article class="card">
-            <span class="hm-num" aria-hidden="true">03</span>
-            <h3 class="h3">Construtoras &amp; Promotoras</h3>
-            <p>Investimento elevado no empreendimento, prazo curto para vender e um espaço de vendas cheio de equipa, mas sem procura digital gerada antes do lançamento. Construímos a estratégia que aquece o público, posiciona o produto e entrega leads qualificados antes mesmo de as chaves estarem prontas.</p>
-          </article><article class="card">
-            <span class="hm-num" aria-hidden="true">04</span>
-            <h3 class="h3">Indústrias</h3>
-            <p>Indústrias que competem em mercados onde um bom produto já não é diferencial suficiente. Ciclo de venda longo, decisores difíceis de alcançar e muitos concorrentes. Construímos a presença digital que transforma competência técnica em autoridade e encurta o caminho até à venda.</p>
-          </article><article class="card">
-            <span class="hm-num" aria-hidden="true">05</span>
-            <h3 class="h3">Hospitais &amp; Terceiro Setor</h3>
-            <p>Hospitais e organizações sociais com credibilidade e uma causa forte, mas que ainda não conseguem traduzir isso numa presença digital que gere resultados e impacto real. Trabalhamos com quem faz a diferença e ainda não foi encontrado por quem procura.</p>
-          </article>
-      </div>
-    </div>
-  </section><section class="t-light sec hm-seg line-top hm-why" id="why" aria-labelledby="why-title">
-    <div class="wrap">
-      <p class="eyebrow">OS NOSSOS DIFERENCIAIS</p>
-      <h2 class="h2" id="why-title">Porquê a <span class="gold">Makewell</span>?</h2>
-      <p class="lead">Não somos uma agência típica. Temos um método próprio, entregamos resultados mensuráveis e tratamos cada cliente como único.</p>
-      <div class="grid hm-seg-grid hm-3">
-        <article class="card">
-            <span class="hm-num">01</span>
-            <h3 class="h3">O Método <span>FishWell</span></h3>
-            <p>Um processo de 5 etapas desenvolvido ao longo de 9 anos que transforma investimento em faturação mensurável — nada de suposições.</p>
-          </article><article class="card">
-            <span class="hm-num">02</span>
-            <h3 class="h3">Resultados <span>mensuráveis</span></h3>
-            <p>Cada ação tem um número, um objetivo e um responsável. Acompanha o ROI em tempo real — sem relatórios de vaidade, apenas o que importa: crescimento.</p>
-          </article><article class="card">
-            <span class="hm-num">03</span>
-            <h3 class="h3">Atendimento <span>exclusivo</span></h3>
-            <p>Cada cliente tem uma estratégia exclusiva, equipa dedicada e acesso direto à liderança. Sem terceirização, sem modelos genéricos — só estratégia feita à medida.</p>
-          </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- MÉTODO FISHWELL -->
-  <section class="t-warm2 sec hm-fish" id="method" aria-labelledby="method-title">
-    <div class="wrap">
-      <p class="eyebrow">O NOSSO MÉTODO</p>
-      <h2 class="h2 hm-fish-h2" id="method-title">O Método <span class="gold">FishWell</span></h2>
-      <p class="lead">Como transformamos investimento em faturação mensurável</p>
-      <ol class="hm-steps">
-        <li>
-            <span class="hm-step-dot" aria-hidden="true"></span>
-            <span class="hm-step-n">01</span>
-            <h3 class="h3">Diagnóstico</h3>
-            <p>Mapeamento de oportunidades reais de crescimento</p>
-          </li><li>
-            <span class="hm-step-dot" aria-hidden="true"></span>
-            <span class="hm-step-n">02</span>
-            <h3 class="h3">Planeamento</h3>
-            <p>Posicionamento preciso junto ao público-alvo ideal</p>
-          </li><li>
-            <span class="hm-step-dot" aria-hidden="true"></span>
-            <span class="hm-step-n">03</span>
-            <h3 class="h3">Comunicação</h3>
-            <p>Criativos, conteúdo e linguagem que convertem</p>
-          </li><li>
-            <span class="hm-step-dot" aria-hidden="true"></span>
-            <span class="hm-step-n">04</span>
-            <h3 class="h3">Investimento</h3>
-            <p>Inteligência de risco, conversão e vendas</p>
-          </li><li>
-            <span class="hm-step-dot" aria-hidden="true"></span>
-            <span class="hm-step-n">05</span>
-            <h3 class="h3">Mensuração</h3>
-            <p>Dados, performance e crescimento contínuo</p>
-          </li>
-      </ol>
-      <a class="link-arrow" href="/pt/method/">Ver método completo →</a>
-    </div>
-  </section>
-
-  <!-- SERVIÇOS -->
-  <section class="t-light sec hm-svc" id="services" aria-labelledby="services-title" aria-description="Serviços: tráfego pago, redes sociais, branding, SEO, automação de marketing e CRM para empresários brasileiros em Portugal">
-    <div class="wrap">
-      <p class="eyebrow">O QUE FAZEMOS</p>
-      <h2 class="h2" id="services-title">Posicionamento + Social + <span class="gold">Tráfego</span></h2>
-      <div class="grid hm-svc-grid">
-        <article class="card">
-            <p class="hm-svc-tag">Branding</p>
-            <h3 class="h3">Torne a sua marca a primeira escolha</h3>
-            <p>Construímos um posicionamento forte, uma identidade visual que transmite autoridade e mensagens que ligam com quem decide.</p>
-            <ul class="hm-check" aria-label="Entregáveis de Branding"><li>Posicionamento estratégico</li><li>Identidade visual de autoridade</li><li>Mensagens que convertem</li></ul>
-          </article><article class="card">
-            <p class="hm-svc-tag">Social + Conteúdo</p>
-            <h3 class="h3">Transforme audiência em clientes reais</h3>
-            <p>Conteúdo magnético, Social Selling estruturado e gestão de tráfego para transformar seguidores em clientes de forma consistente.</p>
-            <ul class="hm-check" aria-label="Entregáveis de Social"><li>Conteúdo magnético</li><li>Social Selling estruturado</li><li>Gestão de tráfego segmentado</li></ul>
-          </article><article class="card">
-            <p class="hm-svc-tag">Tráfego Pago</p>
-            <h3 class="h3">Apareça para quem está pronto para comprar</h3>
-            <p>Google Ads, Meta Ads e LinkedIn Ads com segmentação avançada e otimização contínua para maximizar conversões e ROI.</p>
-            <ul class="hm-check" aria-label="Entregáveis de Tráfego Pago"><li>Google, Meta &amp; LinkedIn Ads</li><li>Segmentação avançada</li><li>Otimização contínua de ROI</li></ul>
-          </article><article class="card">
-            <p class="hm-svc-tag">Vendas + CRM</p>
-            <h3 class="h3">Venda mais com o mesmo volume de leads</h3>
-            <p>Formação em SPIN Selling, processo de vendas estruturado e CRM integrado para um funil de vendas eficiente e mensurável.</p>
-            <ul class="hm-check" aria-label="Entregáveis de Vendas"><li>Formação em SPIN Selling</li><li>Processo de vendas estruturado</li><li>CRM e automação integrados</li></ul>
-          </article><article class="card">
-            <p class="hm-svc-tag">SEO + Website</p>
-            <h3 class="h3">Seja encontrado por quem já quer comprar</h3>
-            <p>Sites estratégicos otimizados para pesquisa orgânica, landing pages que convertem e design que constrói credibilidade e autoridade.</p>
-            <ul class="hm-check" aria-label="Entregáveis de SEO"><li>SEO avançado</li><li>Landing pages que convertem</li><li>Design de autoridade</li></ul>
-          </article><article class="card">
-            <p class="hm-svc-tag">Automação + IA</p>
-            <h3 class="h3">Qualifique e atenda leads 24 horas por dia</h3>
-            <p>Bots e IA para responder, qualificar e nutrir leads com rapidez. Cada oportunidade captada, cada cliente atendido no momento certo.</p>
-            <ul class="hm-check" aria-label="Entregáveis de Automação"><li>Bots e IA 24/7</li><li>Qualificação automática</li><li>Funil de vendas eficiente</li></ul>
-          </article>
-      </div>
-      <a class="link-arrow" href="/pt/services/">Ver todos os serviços →</a>
-    </div>
-  </section>
-
-  <!-- NÚMEROS + CASES (abertura) -->
-  <section class="t-accent sec hm-num-sec" id="cases" aria-labelledby="cases-title">
-    <div class="wrap">
-      <p class="eyebrow">QUANDO O MARKETING FUNCIONA</p>
-      <h2 class="h2 hm-num-h2" id="cases-title">Resultados que os <span class="gold">números provam</span></h2>
-      <div class="grid hm-numbers" role="group" aria-label="Números e resultados">
-        <div class="hm-number"><p class="stat-n">+26x</p><p>Maior ROI já entregue a um único cliente</p></div><div class="hm-number"><p class="stat-n">100+</p><p>Clientes conquistados num único mês (recorde)</p></div><div class="hm-number"><p class="stat-n">R$400k</p><p>Recorde de faturação gerado para um único cliente</p></div><div class="hm-number"><p class="stat-n">9+</p><p>Anos a transformar marcas no Brasil</p></div>
-      </div>
-      <div class="btns">
-        <a class="btn btn-primary" href="https://wa.me/5582999103246?text=Ol%C3%A1!%20Quero%20falar%20sobre%20o%20meu%20case%20com%20a%20Makewell." target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{content_name:'Ver todos os cases'})">Ver todos os cases →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CASES -->
-  <section class="t-warm sec hm-cases glow-host" aria-label="Case de Impacto">
-    <div class="glow-bg" aria-hidden="true"><span></span><span></span><span></span></div>
-    <div class="wrap">
-      <a class="hm-hl glass" href="/pt/cases/casa-hunter-casa-dos-raros/" aria-label="Case de Impacto: Casa Hunter e Casa dos Raros — ler case completo">
-        <div class="hm-hl-text">
-          <p class="hm-badges"><span class="hm-badge hm-badge-accent">Case de Impacto</span><span class="hm-badge">Alcance · 13M Pessoas</span></p>
-          <h3 class="hm-hl-title">Como a Makewell deu voz a 13 milhões de brasileiros</h3>
-          <p class="hm-hl-sub">Casa Hunter &amp; Casa dos Raros: 4 anos, 50 mil seguidores, série documental em streaming e impacto no Supremo Tribunal Federal.</p>
-          <span class="hm-hl-cta">Ler case completo &rarr;</span>
-        </div>
-        <div class="hm-hl-stats" aria-hidden="true">
-          <div><span>50K+</span><small>seguidores</small></div><div><span>4 anos</span><small>de parceria</small></div><div><span>Streaming</span><small>série documental</small></div>
-        </div>
-      </a>
-
-      <div class="grid hm-case-grid">
-        <article class="card glass hm-case">
-            <p class="hm-badges"><span class="hm-badge">Jurídico</span><span class="hm-badge hm-badge-accent">ROI +26x</span></p>
-            <h3 class="h3 hm-case-title">Dr. Felipe Vilela</h3>
-            <p class="hm-case-sub">Posicionamento + Social + Tráfego + CRM</p>
-            <div class="hm-metrics" role="list" aria-label="Métricas do case Jurídico">
-              <div role="listitem"><span class="hm-metric-v accent">+26x</span><span class="hm-metric-l">ROI</span></div><div role="listitem"><span class="hm-metric-v">100+</span><span class="hm-metric-l">Clientes/mês</span></div><div role="listitem"><span class="hm-metric-v">400k</span><span class="hm-metric-l">Faturação</span></div>
-            </div>
-            <blockquote class="hm-quote"><p>"Sem vocês não teria conseguido. Os ganchos, os textos e a qualidade de gravação e edição"</p><cite>Felipe Vilela — Advogado</cite></blockquote>
-          </article><article class="card glass hm-case">
-            <p class="hm-badges"><span class="hm-badge">Saúde</span><span class="hm-badge hm-badge-accent">ROI +20x</span></p>
-            <h3 class="h3 hm-case-title">Dra. Thielen</h3>
-            <p class="hm-case-sub">Posicionamento + Social + Tráfego</p>
-            <div class="hm-metrics" role="list" aria-label="Métricas do case Saúde">
-              <div role="listitem"><span class="hm-metric-v accent">+20x</span><span class="hm-metric-l">ROI</span></div><div role="listitem"><span class="hm-metric-v">39+</span><span class="hm-metric-l">Clientes/mês</span></div><div role="listitem"><span class="hm-metric-v">100k</span><span class="hm-metric-l">Faturação</span></div>
-            </div>
-            <blockquote class="hm-quote"><p>"Sou muito fã deles! São os especialistas e a atenção é incomparável"</p><cite>Dra. Thielen — Cirurgiã Vascular</cite></blockquote>
-          </article>
-      </div>
-
-      <div class="hm-next">
-        <div>
-          <p class="eyebrow">próximo case</p>
-          <p class="hm-next-text">A próxima história de sucesso <em>pode ser a sua.</em></p>
-        </div>
-        <a class="btn btn-primary" href="https://wa.me/5582999103246?text=Ol%C3%A1!%20Quero%20resultados%20como%20os%20cases%20da%20Makewell." target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{content_name:'I Want Results Like These'})">Quero resultados assim</a>
-      </div>
-      <a class="link-arrow" href="/pt/cases/">Ver todos os cases →</a>
-    </div>
-  </section>
-
-  <!-- DEPOIMENTOS -->
-  <section class="t-light sec hm-depo" aria-labelledby="depo-title">
-    <div class="wrap">
-      <p class="eyebrow">Resultados Reais</p>
-      <h2 class="h2" id="depo-title">O que os nossos clientes <span>dizem sobre a Makewell</span></h2>
-      <p class="hm-note">* Depoimentos no idioma original (português do Brasil)</p>
-      <div class="reels hm-reels">
-        <button type="button" class="reel" data-yt="JRrnKGNk-UE" data-vertical>
-            <span class="thumb">
-              <img src="/images/depo-JRrnKGNk-UE.webp" alt="Paola Massari" width="720" height="1280" loading="lazy">
-              <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
-            </span>
-            <span class="hm-reel-q">"A Makewell conseguiu abraçar tudo. São parceiros, são queridos, são muito emotivos com a nossa causa"</span>
-            <span class="hm-reel-name">Paola Massari</span>
-            <span class="hm-reel-role">Casa Hunter</span>
-          </button><button type="button" class="reel" data-yt="PoBa9wS9rYM" data-vertical>
-            <span class="thumb">
-              <img src="/images/depo-PoBa9wS9rYM.webp" alt="Dra. Carolina Mergulhão" width="720" height="1280" loading="lazy">
-              <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
-            </span>
-            <span class="hm-reel-q">"Tenho muita vergonha em exposição, e eles foram sempre muito excelentes e carinhosos"</span>
-            <span class="hm-reel-name">Dra. Carolina Mergulhão</span>
-            <span class="hm-reel-role">Endocrinologia | Metabologia</span>
-          </button><button type="button" class="reel" data-yt="SjXs-_mmDxI" data-vertical>
-            <span class="thumb">
-              <img src="/images/depo-SjXs-_mmDxI.webp" alt="Dra. Thielen" width="720" height="1280" loading="lazy">
-              <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
-            </span>
-            <span class="hm-reel-q">"Sou muito fã deles! São os especialistas e a atenção é incomparável"</span>
-            <span class="hm-reel-name">Dra. Thielen</span>
-            <span class="hm-reel-role">Cirurgiã Vascular</span>
-          </button><button type="button" class="reel" data-yt="bJaKzu9WHy0" data-vertical>
-            <span class="thumb">
-              <img src="/images/depo-bJaKzu9WHy0.webp" alt="Tereza Cristina" width="720" height="1280" loading="lazy">
-              <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
-            </span>
-            <span class="hm-reel-q">"Estava com medo de não encontrar uma agência diferenciada"</span>
-            <span class="hm-reel-name">Tereza Cristina</span>
-            <span class="hm-reel-role">Advogado(a)</span>
-          </button><button type="button" class="reel" data-yt="ij42ilGNbrY" data-vertical>
-            <span class="thumb">
-              <img src="/images/depo-ij42ilGNbrY.webp" alt="Felipe Vilela" width="720" height="1280" loading="lazy">
-              <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
-            </span>
-            <span class="hm-reel-q">"Sem vocês não teria conseguido. Os ganchos, os textos e a qualidade são incríveis"</span>
-            <span class="hm-reel-name">Felipe Vilela</span>
-            <span class="hm-reel-role">Advogado(a)</span>
-          </button><button type="button" class="reel" data-yt="8ZsBpSb9Rds" data-vertical>
-            <span class="thumb">
-              <img src="/images/depo-8ZsBpSb9Rds.webp" alt="Dr. Rodrigo Medeiros" width="720" height="1280" loading="lazy">
-              <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
-            </span>
-            <span class="hm-reel-q">"O meu Instagram estava todo desregrado e a Makewell mudou isso cativando o meu público"</span>
-            <span class="hm-reel-name">Dr. Rodrigo Medeiros</span>
-            <span class="hm-reel-role">Médico</span>
-          </button><button type="button" class="reel" data-yt="eefbnVm-VTc" data-vertical>
-            <span class="thumb">
-              <img src="/images/depo-eefbnVm-VTc.webp" alt="Dra. Anita Costa" width="720" height="1280" loading="lazy">
-              <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
-            </span>
-            <span class="hm-reel-q">"Desde 2022, a Makewell ajuda-me com o meu posicionamento de marca no Instagram"</span>
-            <span class="hm-reel-name">Dra. Anita Costa</span>
-            <span class="hm-reel-role">Médica</span>
-          </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- QUEM LIDERA -->
-  <section class="t-warm sec hm-about glow-host" id="about" aria-labelledby="about-title">
-    <div class="glow-bg" aria-hidden="true"><span></span><span></span><span></span></div>
-    <div class="wrap split">
-      <div class="main">
-        <p class="eyebrow">QUEM LIDERA</p>
-        <h2 class="h2" id="about-title">Há mais de <span class="gold">9 anos</span> a transformar negócios</h2>
-        <p class="lead">A Makewell nasceu com um propósito claro: transformar negócios em marcas com alma, direção e propósito. Com estratégia, performance e branding de alto nível, impulsionamos empresas brasileiras no Brasil e além-fronteiras — incluindo empresários brasileiros em Portugal, atendidos remotamente pela nossa equipa no Brasil.</p>
-        <blockquote class="hm-manifesto"><p>"Não vendemos publicações. Construímos pontes."</p></blockquote>
-        <a class="link-arrow" href="/pt/about/">Ler a tese completa →</a>
-      </div>
-      <div class="side glass hm-about-panel">
-        <div class="hm-team">
-            <img src="/images/giuliana.webp" alt="Giuliana Castela, Diretora de Operações e Estratégia Criativa da Makewell Comunicação" width="110" height="110" loading="lazy">
-            <div><p class="hm-team-name">Giuliana Castela</p><p class="hm-team-role">Diretora de Operações e Estratégia Criativa</p></div>
-          </div><div class="hm-team">
-            <img src="/images/ismael.webp" alt="Ismael Filho, Diretor de Vendas e Administrativo da Makewell Comunicação" width="110" height="110" loading="lazy">
-            <div><p class="hm-team-name">Ismael Filho</p><p class="hm-team-role">Diretor de Vendas e Administrativo</p></div>
-          </div>
-        <div class="hm-about-stats" role="group" aria-label="Estatísticas da empresa">
-          <div><span>9+</span><small>Anos</small></div><div><span>Brasil</span><small>Nacional</small></div><div><span>AL+SP</span><small>Escritórios</small></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="t-warm2 sec line-top hm-faq" aria-labelledby="faq-title">
-    <div class="wrap split">
-      <div class="side">
-        <p class="eyebrow">PERGUNTAS FREQUENTES</p>
-        <h2 class="h2" id="faq-title">Perguntas <span class="gold">frequentes</span></h2>
-      </div>
-      <div class="main faq" itemscope itemtype="https://schema.org/FAQPage">
-        <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <summary><span itemprop="name">Quanto custa contratar a Makewell?</span></summary>
-            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">Os nossos planos são personalizados de acordo com a dimensão e os objetivos de cada negócio. O primeiro passo é um diagnóstico gratuito, em que analisamos o seu negócio e apresentamos uma proposta à medida. Contacte-nos via WhatsApp para agendar.</p></div>
-          </details><details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <summary><span itemprop="name">Quanto tempo demora até ver resultados?</span></summary>
-            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">Os primeiros resultados de tráfego pago normalmente aparecem entre 2 a 4 semanas. Para estratégias de branding e SEO, o crescimento é mais consistente e consolida-se entre 60 e 90 dias. O nosso Método FishWell garante acompanhamento contínuo e objetivos claros em cada etapa.</p></div>
-          </details><details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <summary><span itemprop="name">A Makewell atende empresários brasileiros em Portugal?</span></summary>
-            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">Sim! Somos especialistas em empresários e negócios brasileiros a operar em Portugal, atendidos remotamente pela nossa equipa no Brasil. Também atendemos clientes em todo o mundo à distância. A nossa equipa entende tanto a cultura de negócios brasileira quanto o mercado português, o que nos torna o parceiro ideal para quem quer crescer dos dois lados do Atlântico.</p></div>
-          </details><details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <summary><span itemprop="name">Que plataformas a Makewell gere?</span></summary>
-            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">Gerimos Google Ads, Meta Ads (Instagram e Facebook), SEO, TikTok, LinkedIn, email marketing e estratégias de CRM. Todas as ações estão integradas dentro do Método FishWell para garantir resultados mensuráveis.</p></div>
-          </details><details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <summary><span itemprop="name">Como funciona o acompanhamento de resultados?</span></summary>
-            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">Cada cliente tem acesso a relatórios periódicos com métricas reais: ROI, custo por lead, alcance e conversões. Realizamos reuniões de alinhamento regulares e tem contacto direto com a equipa responsável pela sua conta — sem intermediários.</p></div>
-          </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA FINAL -->
-  <section class="t-light sec hm-cta" aria-labelledby="cta-title">
-    <div class="wrap">
-      <div class="hm-cta-card">
-        <p class="eyebrow dot">Diagnóstico gratuito</p>
-        <h2 class="h2" id="cta-title">Pronto para um marketing<br>que gera faturação?</h2>
-        <p class="lead">Negócios que investem em estratégia crescem mais rápido. Descubra o verdadeiro potencial do seu negócio.</p>
-        <div class="btns">
-          <a class="btn btn-primary" href="https://wa.me/5582999103246?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20gratuito%20com%20a%20Makewell." target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{content_name:'Schedule Diagnostic'})">Agendar diagnóstico</a>
-          <a class="btn btn-ghost" href="https://wa.me/5582999103246" target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{content_name:'Direct WhatsApp'})">WhatsApp Direto →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</div>
-
-</main>
-<footer class="site-footer">
-  <div class="wrap foot-grid">
-    <div class="foot-brand">
-      <a href="/pt/" aria-label="Makewell Comunicação — início"><img class="logo" src="/images/logo-makewell-mi-branca.webp" alt="Makewell Comunicação" width="161" height="52" loading="lazy"></a>
-      <div class="foot-social">
-        <a href="https://www.instagram.com/makewellcomunicacao/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.facebook.com/makewellcomunicacao" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v7h4v-7h3l1-4h-4V8a0 0 0 0 1 0 0Z"/></svg></a><a href="https://www.linkedin.com/company/makewell-comunicacao" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></a><a href="https://www.tiktok.com/@makewellcomunicacao" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5M14 3c.5 2.5 2.5 4.5 5 5"/></svg></a>
-      </div>
-    </div>
-    <div class="foot-col">
-      <p class="foot-title">A Agência</p>
-      <p>A Makewell é uma agência de comunicação e performance especializada em branding, vendas e posicionamento digital.</p>
-    </div>
-    <nav class="foot-col" aria-label="Navegação">
-      <p class="foot-title">Navegação</p>
-      <ul>
-        <li><a href="/pt/about/">Sobre Nós</a></li><li><a href="/pt/services/">Serviços</a></li><li><a href="/pt/framework/">Framework</a></li><li><a href="/pt/method/">Método</a></li><li><a href="/pt/cases/">Cases</a></li>
-        <li><a href="/pt/privacy-policy/">Política de Privacidade</a></li>
-        <li><a href="/pt/terms-of-use/">Termos de Uso</a></li>
-      </ul>
-    </nav>
-    <div class="foot-col">
-      <p class="foot-title">Blog &amp; Conteúdo</p>
-      <p>Conteúdo estratégico sobre marketing, vendas e posicionamento digital. <strong>Brevemente.</strong></p>
-      <a class="foot-link" href="https://www.instagram.com/makewellcomunicacao/" target="_blank" rel="noopener noreferrer">Siga no Instagram →</a>
-    </div>
-    <div class="foot-col">
-      <p class="foot-title">Localização</p>
-      <p>R. Prof. Lourenço Peixoto, 36, Sala 04, Jatiúca, Maceió, AL.</p>
-      <p><a href="mailto:contato@makewell.com.br">contato@makewell.com.br</a></p>
-      <p>NIF/CNPJ: 27.238.877/0001-71</p>
-    </div>
-  </div>
-  <div class="wrap foot-bottom">
-    <p>Copyright © 2026 Makewell | Todos os direitos reservados &middot; Brasil · Portugal · makewell.agency</p>
-    <p class="mw-prefs-line"><button type="button" class="mw-cookie-prefs">Preferências de cookies</button></p>
-    <div class="partners">
-      <span>Parceiros e Certificações Oficiais</span>
-      <img src="/images/logo-kommo-partner.webp" alt="Kommo Partner" width="160" height="48" loading="lazy">
-    </div>
-  </div>
-</footer>
-<div class="modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Vídeo">
-  <button class="modal-close" type="button" aria-label="Fechar">&times;</button>
-  <iframe title="YouTube" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen src=""></iframe>
-</div>
-<script>
-(function () {
-  var modal = document.getElementById('videoModal'); if (!modal) return;
-  var frame = modal.querySelector('iframe'), last = null;
-  function close() { modal.classList.remove('open', 'vertical'); frame.src = ''; document.body.style.overflow = ''; if (last) last.focus(); }
-  document.addEventListener('click', function (e) {
-    var b = e.target.closest && e.target.closest('[data-yt]'); if (!b) return;
-    e.preventDefault(); last = b;
-    var extra = b.getAttribute('data-yt-params') || '';
-    frame.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(b.getAttribute('data-yt')) + '?autoplay=1&rel=0' + (extra ? '&' + extra : '');
-    modal.classList.toggle('vertical', b.hasAttribute('data-vertical'));
-    modal.classList.add('open'); document.body.style.overflow = 'hidden';
-    modal.querySelector('.modal-close').focus();
-  });
-  modal.addEventListener('click', function (e) { if (e.target === modal || e.target.closest('.modal-close')) close(); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal.classList.contains('open')) close(); });
-})();
-</script>
-<div class="scroll-progress" aria-hidden="true"></div>
-<a href="https://wa.me/5582999103246?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Makewell%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"></path></svg></a>
-<button type="button" class="back-to-top" id="back-to-top" aria-label="Voltar ao topo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></button>
-<script>
-(function () {
-  var lang = document.getElementById('lang-dropdown'), trig = document.getElementById('langDropdownTrigger');
-  if (lang && trig) {
-    trig.addEventListener('click', function (e) { e.stopPropagation(); var o = lang.classList.toggle('open'); trig.setAttribute('aria-expanded', o); });
-    document.addEventListener('click', function (e) { if (!lang.contains(e.target)) { lang.classList.remove('open'); trig.setAttribute('aria-expanded', 'false'); } });
-    var br = lang.querySelector('[data-lang="pt"]');
-    if (br) br.addEventListener('click', function () { try { localStorage.setItem('mw-lang', 'pt'); } catch (e) {} lang.classList.remove('open'); });
-  }
-  var ham = document.getElementById('hamburger'), menu = document.getElementById('mobileMenu');
-  var openLbl = ham && ham.getAttribute('aria-label');
-  function setMenu(o) {
-    menu.classList.toggle('open', o); ham.setAttribute('aria-expanded', o);
-    ham.setAttribute('aria-label', o ? ham.getAttribute('data-close') : openLbl);
-    document.body.style.overflow = o ? 'hidden' : '';
-    if (o) { var f = menu.querySelector('a'); if (f) f.focus(); }
-  }
-  if (ham && menu) {
-    ham.addEventListener('click', function () { setMenu(!menu.classList.contains('open')); });
-    menu.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
-  }
-  document.addEventListener('keydown', function (e) {
-    if (e.key !== 'Escape') return;
-    if (lang) { lang.classList.remove('open'); if (trig) trig.setAttribute('aria-expanded', 'false'); }
-    if (menu && menu.classList.contains('open')) { setMenu(false); ham.focus(); }
-  });
-})();
-</script>
-<script>
-// Movimento: revelação ao rolar e contadores nos números grandes. Sem efeito com prefers-reduced-motion.
-(function () {
-  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var main = document.getElementById('main-content'); if (!main) return;
-  // blocos da página: seções (diretas, dentro do wrapper da home ou do article) e o header do article (sobre, case).
-  // O primeiro é o topo e não espera rolagem (evita atrasar a primeira pintura); páginas legais não têm blocos.
-  var blocks = main.querySelectorAll('section, article > header');
-  var targets = [];
-  Array.prototype.forEach.call(blocks, function (sec, i) {
-    if (i === 0) return;
-    sec.querySelectorAll('.wrap > *, .grid > *, .card').forEach(function (el) { if (targets.indexOf(el) < 0 && !blocks[0].contains(el)) targets.push(el); });
-  });
-  targets.forEach(function (el) {
-    var p = el.parentElement, k = p ? Array.prototype.indexOf.call(p.children, el) : 0;
-    el.style.setProperty('--rv-d', Math.min(k, 5) * 0.08 + 's');
-    el.classList.add('rv');
-  });
-  // revela tudo que já chegou a 92% da altura da tela, inclusive o que uma rolagem rápida "pulou"
-  // (um IntersectionObserver perde elementos que vão de baixo para cima da tela num único quadro)
-  var pending = targets;
-  function reveal() {
-    var lim = innerHeight * 0.92;
-    pending = pending.filter(function (el) { if (el.getBoundingClientRect().top < lim) { el.classList.add('in'); return false; } return true; });
-  }
-
-  // barra de progresso, cabeçalho compacto e "voltar ao topo"
-  var bar = document.querySelector('.scroll-progress'), head = document.querySelector('.site-header'), top = document.getElementById('back-to-top'), ticking = false;
-  function onScroll() {
-    ticking = false;
-    if (pending.length) reveal();
-    var y = window.scrollY, h = document.documentElement.scrollHeight - innerHeight;
-    if (bar) bar.style.setProperty('--p', h > 0 ? (y / h).toFixed(4) : 0);
-    if (head) head.classList.toggle('scrolled', y > 40);
-    if (top) top.classList.toggle('show', y > innerHeight);
-  }
-  addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
-  onScroll();
-  if (top) top.addEventListener('click', function () { scrollTo({ top: 0, behavior: 'smooth' }); });
-
-  // contadores: texto curto tipo "+26x", "50+", "R$400k", "13M+", "4 anos" em fonte grande; ignora anos e "01"
-  var nums = [];
-  main.querySelectorAll('p, span, div, strong, dt, dd, b').forEach(function (el) {
-    if (el.children.length) return;
-    var t = el.textContent.trim(), m = t.match(/^([+R$€]*\s?)(\d{1,4})([^\d].{0,8})?$/);
-    if (!m || t.length > 12 || /^0\d/.test(m[2]) || (+m[2] >= 1900 && +m[2] <= 2100)) return;
-    if (parseFloat(getComputedStyle(el).fontSize) < 36) return;
-    nums.push({ el: el, pre: m[1], n: +m[2], suf: m[3] || '' });
-  });
-  var cio = new IntersectionObserver(function (es) {
-    es.forEach(function (e) {
-      if (!e.isIntersecting) return; cio.unobserve(e.target);
-      var d = e.target.__mwNum, t0 = performance.now();
-      (function step(now) {
-        var k = Math.min(1, (now - t0) / 1400), v = Math.round(d.n * (1 - Math.pow(1 - k, 3)));
-        d.el.textContent = d.pre + v + d.suf;
-        if (k < 1) requestAnimationFrame(step);
-      })(t0);
-    });
-  }, { threshold: 0.6 });
-  nums.forEach(function (d) { d.el.__mwNum = d; cio.observe(d.el); });
-})();
-</script>
-<script type="module" src="/assets/Page.astro_astro_type_script_index_0_lang.COtMMsJ5.js"></script>
-<!-- Consentimento de cookies (LGPD/GDPR): rastreadores (via GTM e Meta Pixel) só carregam depois de "Aceitar" -->
-<div id="mw-consent" role="region" aria-label="Aviso de cookies" tabindex="-1" hidden>
-  <p>Utilizamos cookies analíticos e de marketing apenas se o permitir. Saiba mais na <a href="/pt/privacy-policy/">Política de Privacidade</a>.</p>
-  <div class="mw-consent-btns">
-    <button type="button" data-consent="declined">Recusar</button>
-    <button type="button" data-consent="accepted">Aceitar</button>
-  </div>
-</div>
-<style>
-#mw-consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:9990;max-width:720px;margin:0 auto;background:#141414;color:#ddd;border:1px solid #2a2a2a;border-radius:14px;padding:18px 20px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;box-shadow:0 12px 40px rgba(0,0,0,.5);font:14px/1.5 'Segoe UI',system-ui,-apple-system,sans-serif;cursor:auto}
-#mw-consent[hidden]{display:none}
-#mw-consent:focus{outline:none}
-#mw-consent p{margin:0;flex:1 1 300px}
-#mw-consent a{color:#F5A623;text-decoration:underline;cursor:pointer}
-.mw-consent-btns{display:flex;gap:10px;flex:0 0 auto}
-.mw-consent-btns button{min-height:44px;min-width:110px;padding:0 20px;border-radius:999px;border:1px solid #F07820;background:transparent;color:#F4F1EC;font:700 14px 'Segoe UI',system-ui,-apple-system,sans-serif;cursor:pointer}
-.mw-consent-btns button:hover,.mw-consent-btns button:focus-visible{background:#F07820;color:#080808}
-.mw-cookie-prefs{display:inline-flex;align-items:center;min-height:44px;background:none;border:0;padding:0 4px;color:inherit;font:inherit;text-decoration:underline;cursor:pointer}
-</style>
-<script>
-(function(){
-  // v2: o banner antigo ("ao continuar navegando…") não valia como consentimento; todos respondem de novo.
-  // Mudou a lista de ferramentas no GTM? Suba a versão da chave para perguntar de novo.
-  var KEY='mw-consent-v2', NO_TRACKERS=false;
-  function get(){try{return localStorage.getItem(KEY);}catch(e){return null;}}
-  function set(v){try{localStorage.setItem(KEY,v);}catch(e){}}
-  function clear(){try{localStorage.removeItem(KEY);}catch(e){}}
-  var consentAtLoad=get()==='accepted';
-  // shim do Meta Pixel: só enfileira (nada é enviado) para os onclick de Lead não quebrarem
-  if(!NO_TRACKERS&&typeof window.fbq!=='function'){
-    var n=window.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments);};
-    if(!window._fbq)window._fbq=n;n.push=n;n.loaded=true;n.version='2.0';n.queue=[];
-  }
-  function loadTrackers(){
-    if(NO_TRACKERS||window.__mwTrackers||typeof fbq!=='function')return;
-    window.__mwTrackers=true;
-    // eventos de antes do aceite nesta página são descartados; com aceite prévio, vão depois do init
-    var early=fbq.queue?fbq.queue.splice(0):[];
-    fbq('init','2571294026447618');fbq('track','PageView');
-    if(consentAtLoad)early.forEach(function(a){fbq.apply(null,a);});
-    var t=document.createElement('script');t.async=true;
-    t.src='https://connect.facebook.net/en_US/fbevents.js';document.head.appendChild(t);
-    window.dataLayer=window.dataLayer||[];
-    window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
-    var j=document.createElement('script');j.async=true;
-    j.src='https://www.googletagmanager.com/gtm.js?id=GTM-NFGD8X8';document.head.appendChild(j);
-  }
-  function dropTrackerData(){
-    var host=location.hostname.replace(/^www\./,'');
-    document.cookie.split(';').forEach(function(c){
-      var n=c.split('=')[0].trim();
-      if(!/^(_ga|_gid|_gat|_gcl|_fbp|_fbc|_clck|_clsk|_uet|__obref)/.test(n))return;
-      ['', host, '.'+host].forEach(function(d){
-        document.cookie=n+'=; Max-Age=0; path=/'+(d?'; domain='+d:'');
-      });
-    });
-    try{['_gcl_ls','lastExternalReferrer','lastExternalReferrerTime','cookie-consent'].forEach(function(k){localStorage.removeItem(k);});}catch(e){}
-  }
-  var banner=document.getElementById('mw-consent');
-  banner.addEventListener('click',function(e){
-    var v=e.target.getAttribute('data-consent');
-    if(!v)return;
-    set(v);banner.hidden=true;
-    if(v==='accepted')loadTrackers();
-  });
-  document.addEventListener('click',function(e){
-    if(!e.target.closest||!e.target.closest('.mw-cookie-prefs'))return;
-    var was=get();clear();dropTrackerData();
-    if(was==='accepted'){window['ga-disable-G-71YG2WTXNM']=true;location.reload();return;}
-    banner.hidden=false;banner.focus();
-  });
-  if(consentAtLoad){
-    if('requestIdleCallback' in window)requestIdleCallback(loadTrackers,{timeout:4000});
-    else setTimeout(loadTrackers,2000);
-  } else {
-    dropTrackerData();
-    if(get()!=='declined')banner.hidden=false;
-  }
-})();
-</script>
-</body>
-</html>
-
-<style>
+/* acessibilidade e celular (auditoria 02/11/2026) */
+/* anel de foco visível em qualquer fundo: escuro no laranja, laranja escuro no claro */
+.t-accent :focus-visible { outline-color: var(--on-accent); }
+.t-light :focus-visible { outline-color: #A84B0C; }
+/* vidro do topo: texto secundário mais claro para manter AA sobre o gráfico */
+.glass { --muted: #C9C2B7; }
+/* menu mobile: ícone vira X quando aberto */
+.hamburger span { transition: transform .25s ease, opacity .2s ease; }
+.hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+/* carrossel: botão de pausa; setas à esquerda no celular (à direita ficam os flutuantes) */
+.hs-btn[aria-disabled="true"] { opacity: .3; cursor: default; }
+.hs-pause { margin-right: auto; }
+@media (max-width: 600px) { .hs-nav { justify-content: flex-start; } }
+@media (prefers-reduced-motion: reduce) { .hscroll { scroll-behavior: auto; } }
+/* WhatsApp no celular só depois de rolar o topo (no topo ele cobria os botões principais) */
+@media (max-width: 600px) { .wa-float { opacity: 0; pointer-events: none; transform: translateY(8px); transition: opacity .3s, transform .3s; } .wa-float.show { opacity: 1; pointer-events: auto; transform: none; } }
+@media (max-width: 360px) { .foot-bottom { padding-bottom: 150px; } }
+/* banner de cookies não cobre o elemento em foco */
+html:has(#mw-consent:not([hidden])) { scroll-padding-bottom: 220px; }
+/* CTAs finais centralizados: mesmo respiro entre título e texto que o CTA da home */
+:is(.sv-cta, .fw-cta, .me-cta) :is(h2, .h2) + p { margin-top: 20px; }
+</style><style>
   .hm { --ink-accent: #A84B0C; }
   .hm .gold { color: var(--accent); }
   .hm .t-light .gold, .hm .t-light .eyebrow, .hm .t-light .link-arrow, .hm .t-light .hm-num { color: var(--ink-accent); }
@@ -1242,20 +560,6 @@ n.queue=[];}(window, document,'script',
   .hm-seg-grid { margin-top: 56px; }
   .hm-seg .card { display: flex; flex-direction: column; gap: 14px; }
   .hm-seg .card p { margin: 0; font-size: 15px; line-height: 1.6; }
-  /* 5 nichos: 5 numa linha (desktop), 3 + 2 (tablet), empilhados (celular). 3 itens (intl): 3 ou empilhados */
-  .hm-seg-grid.hm-5 { gap: 12px; }
-  .hm-seg-grid.hm-5 .card { padding: 24px 20px; gap: 10px; }
-  .hm-seg-grid.hm-5 .card p { font-size: 14px; line-height: 1.55; }
-  .hm-seg-grid.hm-5 .h3 { font-size: 18px; }
-  .hm-seg-grid.hm-5 .hm-num { margin-bottom: 8px; }
-  @media (min-width: 640px) {
-    .hm-seg-grid.hm-5 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-    .hm-seg-grid.hm-5 > * { grid-column: span 2; }
-    .hm-seg-grid.hm-5 > :nth-child(n+4) { grid-column: span 3; }
-  }
-  @media (min-width: 1100px) { .hm-seg-grid.hm-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); } .hm-seg-grid.hm-5 > :nth-child(n) { grid-column: auto; } }
-  .hm-seg-grid.hm-3 { grid-template-columns: minmax(0, 1fr); }
-  @media (min-width: 900px) { .hm-seg-grid.hm-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   .hm-num { font-size: 14px; font-weight: 700; color: var(--accent); margin-bottom: 18px; }
   .hm-seg h3 span { color: var(--ink-accent); }
 
@@ -1274,7 +578,7 @@ n.queue=[];}(window, document,'script',
   }
   .hm-steps li { border-top: 1px solid var(--line); }
   .hm-step-dot { display: block; width: 11px; height: 11px; border-radius: 50%; background: var(--accent); margin-top: -6px; }
-  .hm-step-n { display: block; margin-top: 28px; font-size: 64px; font-weight: 800; letter-spacing: -.04em; line-height: 1; color: #3A3631; }
+  .hm-step-n { display: block; margin-top: 28px; font-size: 64px; font-weight: 800; letter-spacing: -.04em; line-height: 1; color: #6B645A; }
   .hm-steps h3 { margin-top: 18px; }
   .hm-steps p { margin: 8px 0 0; font-size: 15px; line-height: 1.55; color: var(--muted); }
   .hm-fish .link-arrow { margin-top: 48px; }
@@ -1309,7 +613,7 @@ n.queue=[];}(window, document,'script',
   .hm-number p + p { margin-top: 14px; font-size: 16px; line-height: 1.5; color: var(--muted); max-width: 260px; }
 
   /* cases */
-  .hm-hl { display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-end; justify-content: space-between; padding: clamp(28px, 5vw, 64px); border-radius: var(--r-big); background: linear-gradient(135deg, rgba(42,22,6,.6) 0%, rgba(23,21,18,.3) 60%); text-decoration: none; }
+  .hm-hl { display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-end; justify-content: space-between; padding: clamp(28px, 5vw, 64px); border-radius: var(--r-big); background: linear-gradient(135deg, #2A1606 0%, var(--warm-card) 60%); border: 1px solid #4A2A10; text-decoration: none; transition: border-color .2s; }
   .hm-hl:hover { border-color: var(--accent); }
   .hm-hl-text { flex: 999 1 480px; min-width: 0; }
   .hm-hl-title { margin: 24px 0 0; font-size: clamp(30px, 3.6vw, 52px); line-height: 1.06; letter-spacing: -.03em; font-weight: 800; }
@@ -1348,11 +652,6 @@ n.queue=[];}(window, document,'script',
   .hm-manifesto { margin: 40px 0 0; padding-left: 24px; border-left: 3px solid var(--accent); }
   .hm-manifesto p { margin: 0; font-size: clamp(28px, 3.2vw, 44px); font-weight: 800; letter-spacing: -.025em; line-height: 1.12; }
   .hm-team { display: flex; align-items: center; gap: 18px; padding: 18px 0; border-top: 1px solid var(--line); }
-  /* equipe e números num painel de vidro sobre os brilhos; a borda do painel substitui a primeira linha */
-  .hm-about-panel { flex-basis: 400px; border-radius: 28px; padding: clamp(18px, 2.4vw, 32px) clamp(22px, 2.6vw, 36px); }
-  .hm-about-panel .hm-about-stats { gap: 12px; }
-  .hm-about-panel .hm-about-stats span { font-size: clamp(20px, 1.9vw, 26px); }
-  .hm-about-panel > .hm-team:first-child { border-top: 0; padding-top: 4px; }
   .hm-team img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex: none; }
   .hm-team p { margin: 0; }
   .hm-team-name { font-weight: 700; font-size: 18px; }
@@ -1366,4 +665,768 @@ n.queue=[];}(window, document,'script',
   .hm-cta-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-big); padding: clamp(32px, 6vw, 88px); }
   .hm-cta-card .h2 { max-width: 820px; font-size: clamp(34px, 4.4vw, 64px); }
   @media (max-width: 520px) { .hm .btns .btn { flex: 1 1 100%; } }
+</style></head>
+<body>
+
+<!--email_off-->
+<script>
+  (function () {
+    var blocked = ['r', 'mod', 'uri', 'elementor_library', 'et_core_page_resource'];
+    var params = new URLSearchParams(window.location.search);
+    var dirty = blocked.some(function (p) { return params.has(p); });
+    if (dirty) { window.location.replace(window.location.pathname); }
+  })();
+</script>
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+</script>
+<script>document.documentElement.classList.add('js');</script>
+<a href="#main-content" class="skip-link">Saltar para o conteúdo</a>
+<header class="site-header">
+  <div class="wrap">
+    <nav id="nav" class="nav" aria-label="Menu principal">
+      <a href="/pt/" class="nav-logo" aria-label="Makewell Comunicação — início">
+        <img src="/images/logo-makewell-mi-branca.webp" alt="Makewell Comunicação" width="161" height="52" fetchpriority="high">
+      </a>
+      <div class="nav-links">
+        <a href="/pt/about/">Sobre</a><a href="/pt/services/">Serviços</a><a href="/pt/framework/">Framework</a><a href="/pt/method/">Método</a><a href="/pt/cases/">Cases</a>
+      </div>
+      <div class="nav-right">
+        <div id="lang-dropdown" class="lang">
+          <button class="lang-trigger" id="langDropdownTrigger" aria-haspopup="true" aria-expanded="false" aria-label="Mudar idioma (PT)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>PT</span>
+          </button>
+          <div class="lang-menu" id="langDropdownMenu" aria-label="Selecionar idioma">
+            <a href="https://makewell.com.br/" hreflang="pt-BR">BR</a><a href="https://makewell.agency/en/" hreflang="en">EN</a><a href="https://makewell.agency/es/" hreflang="es">ES</a><a href="https://makewell.agency/pt/" hreflang="pt-PT" aria-current="true">PT</a>
+          </div>
+        </div>
+        <a href="https://wa.me/5582999103246?text=Ol%C3%A1!%20Quero%20agendar%20um%20diagn%C3%B3stico%20gratuito%20com%20a%20Makewell." class="btn btn-primary btn-nav" aria-label="Agendar diagnóstico gratuito" target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{content_name:'Schedule Diagnosis'})">Agendar diagnóstico</a>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu" data-close="Fechar menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menu mobile" aria-modal="true">
+    <a href="/pt/about/" class="m-link"><span class="mn" aria-hidden="true">01</span><span>Sobre</span></a><a href="/pt/services/" class="m-link"><span class="mn" aria-hidden="true">02</span><span>Serviços</span></a><a href="/pt/framework/" class="m-link"><span class="mn" aria-hidden="true">03</span><span>Framework</span></a><a href="/pt/method/" class="m-link"><span class="mn" aria-hidden="true">04</span><span>Método</span></a><a href="/pt/cases/" class="m-link"><span class="mn" aria-hidden="true">05</span><span>Cases</span></a>
+    <a href="https://wa.me/5582999103246?text=Ol%C3%A1!%20Quero%20agendar%20um%20diagn%C3%B3stico%20gratuito%20com%20a%20Makewell." class="btn btn-primary" target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{content_name:'Schedule Free Diagnostic'})">Agendar diagnóstico</a>
+  </div>
+</header>
+<main id="main-content">
+<div class="hm">
+
+  <!-- HERO -->
+  <section class="t-warm hm-hero" aria-label="Agência de marketing digital para negócios brasileiros em Portugal">
+    <!-- fundo: gráfico de resultado (barras crescendo, ROI subindo, CAC caindo); decorativo -->
+    <div class="hm-chart" aria-hidden="true">
+      <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" focusable="false">
+        <defs>
+          <linearGradient id="hmUp" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#F5A623"></stop><stop offset="1" stop-color="#F07820"></stop></linearGradient>
+          <linearGradient id="hmArea" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#F07820" stop-opacity=".28"></stop><stop offset="1" stop-color="#F07820" stop-opacity="0"></stop></linearGradient>
+          <linearGradient id="hmBar" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#F5A623" stop-opacity=".4"></stop><stop offset="1" stop-color="#F07820" stop-opacity="0"></stop></linearGradient>
+          <filter id="hmGlow" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="6"></feGaussianBlur></filter>
+        </defs>
+        <g class="grid"><line x1="0" x2="1440" y1="100" y2="100"></line><line x1="0" x2="1440" y1="200" y2="200"></line><line x1="0" x2="1440" y1="300" y2="300"></line><line x1="0" x2="1440" y1="400" y2="400"></line><line x1="0" x2="1440" y1="500" y2="500"></line><line x1="0" x2="1440" y1="600" y2="600"></line><line x1="0" x2="1440" y1="700" y2="700"></line><line x1="0" x2="1440" y1="800" y2="800"></line></g>
+        <g class="bars" fill="url(#hmBar)"><rect class="bar" style="--i:0" x="24" y="840" width="26" height="60" rx="3"></rect><rect class="bar" style="--i:1" x="84" y="799" width="26" height="101" rx="3"></rect><rect class="bar" style="--i:2" x="144" y="828" width="26" height="72" rx="3"></rect><rect class="bar" style="--i:3" x="204" y="767" width="26" height="133" rx="3"></rect><rect class="bar" style="--i:4" x="264" y="786" width="26" height="114" rx="3"></rect><rect class="bar" style="--i:5" x="324" y="805" width="26" height="95" rx="3"></rect><rect class="bar" style="--i:6" x="384" y="724" width="26" height="176" rx="3"></rect><rect class="bar" style="--i:7" x="444" y="743" width="26" height="157" rx="3"></rect><rect class="bar" style="--i:8" x="504" y="692" width="26" height="208" rx="3"></rect><rect class="bar" style="--i:9" x="564" y="741" width="26" height="159" rx="3"></rect><rect class="bar" style="--i:10" x="624" y="650" width="26" height="250" rx="3"></rect><rect class="bar" style="--i:11" x="684" y="679" width="26" height="221" rx="3"></rect><rect class="bar" style="--i:12" x="744" y="618" width="26" height="282" rx="3"></rect><rect class="bar" style="--i:13" x="804" y="667" width="26" height="233" rx="3"></rect><rect class="bar" style="--i:14" x="864" y="566" width="26" height="334" rx="3"></rect><rect class="bar" style="--i:15" x="924" y="605" width="26" height="295" rx="3"></rect><rect class="bar" style="--i:16" x="984" y="554" width="26" height="346" rx="3"></rect><rect class="bar" style="--i:17" x="1044" y="503" width="26" height="397" rx="3"></rect><rect class="bar" style="--i:18" x="1104" y="542" width="26" height="358" rx="3"></rect><rect class="bar" style="--i:19" x="1164" y="461" width="26" height="439" rx="3"></rect><rect class="bar" style="--i:20" x="1224" y="480" width="26" height="420" rx="3"></rect><rect class="bar" style="--i:21" x="1284" y="409" width="26" height="491" rx="3"></rect><rect class="bar" style="--i:22" x="1344" y="418" width="26" height="482" rx="3"></rect><rect class="bar" style="--i:23" x="1404" y="357" width="26" height="543" rx="3"></rect></g>
+        <path class="area" d="M0,900 L0,780 L120,752 L240,716 L360,730 L480,664 L600,634 L720,572 L840,590 L960,486 L1080,446 L1200,350 L1320,270 L1440,170 L1440,900 Z" fill="url(#hmArea)"></path>
+        <polyline class="ln dn" points="0,330 160,356 320,348 480,402 640,420 800,470 960,490 1120,548 1280,566 1440,618" pathLength="1"></polyline>
+        <polyline class="ln up glow" points="0,780 120,752 240,716 360,730 480,664 600,634 720,572 840,590 960,486 1080,446 1200,350 1320,270 1440,170" pathLength="1" filter="url(#hmGlow)"></polyline>
+        <polyline class="ln up" points="0,780 120,752 240,716 360,730 480,664 600,634 720,572 840,590 960,486 1080,446 1200,350 1320,270 1440,170" pathLength="1"></polyline>
+        <polyline class="comet" points="0,780 120,752 240,716 360,730 480,664 600,634 720,572 840,590 960,486 1080,446 1200,350 1320,270 1440,170" pathLength="1"></polyline>
+        <g class="dots"><circle class="dot" style="--i:4" cx="480" cy="664" r="5"></circle><circle class="dot" style="--i:6" cx="720" cy="572" r="5"></circle><circle class="dot" style="--i:8" cx="960" cy="486" r="5"></circle><circle class="dot" style="--i:10" cx="1200" cy="350" r="5"></circle><circle class="dot" style="--i:12" cx="1440" cy="170" r="5"></circle></g>
+      </svg>
+    </div>
+    <div class="wrap">
+      <div class="hm-hero-grid">
+        <div class="hm-hero-main">
+          <p class="eyebrow dot hm-pill">Agência brasileira · Mais de 9 anos a transformar marcas</p>
+          <h1 class="h1 hm-h1">A sua marca no topo<br>com estratégia,<br> <em>performance e inteligência.</em></h1>
+          <p class="lead hm-hero-p">Somos uma agência brasileira que entende os dois lados: o seu negócio e o mercado onde está agora. <strong>Fale connosco</strong> e comece o novo capítulo da sua marca.</p>
+          <div class="btns">
+            <a class="btn btn-primary" href="https://wa.me/5582999103246?text=Ol%C3%A1!%20Quero%20agendar%20um%20diagn%C3%B3stico%20gratuito%20com%20a%20Makewell." target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{content_name:'Schedule Free Diagnostic'})">Agendar diagnóstico gratuito</a>
+            <a class="btn btn-ghost" href="#cases">Ver Resultados →</a>
+          </div>
+        </div>
+        <div class="hm-hero-side glass" role="region" aria-label="Resultados comprovados">
+          <p class="hm-card-head"><span>Desempenho Comprovado</span><span>Dados Reais</span></p>
+          <div class="hm-stat"><span class="hm-stat-n">+26x</span><span class="hm-stat-l">Melhor ROI Entregue</span></div><div class="hm-stat"><span class="hm-stat-n">50+</span><span class="hm-stat-l">Clientes Atendidos</span></div><div class="hm-stat"><span class="hm-stat-n">+7 díg.</span><span class="hm-stat-l">Faturação Gerada para Clientes</span></div><div class="hm-stat"><span class="hm-stat-n">9+</span><span class="hm-stat-l">Anos de Experiência</span></div>
+        </div>
+      </div>
+      <ul class="hm-chips" aria-label="Serviços">
+        <li>Branding</li><li>Tráfego</li><li>SEO</li><li>CRM</li><li>IA</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAIXA DE TEMAS (antigo ticker) -->
+  <div class="t-warm2 hm-ticker">
+    <div class="hm-track">
+      <ul><li>Estratégia</li><li>Branding</li><li>Tráfego Pago</li><li>Social Selling</li><li>Automação</li><li>SEO</li><li>SPIN Selling</li><li>CRM</li><li>Funil de Vendas</li><li>Posicionamento</li><li aria-hidden="true">Estratégia</li><li aria-hidden="true">Branding</li><li aria-hidden="true">Tráfego Pago</li><li aria-hidden="true">Social Selling</li><li aria-hidden="true">Automação</li><li aria-hidden="true">SEO</li><li aria-hidden="true">SPIN Selling</li><li aria-hidden="true">CRM</li><li aria-hidden="true">Funil de Vendas</li><li aria-hidden="true">Posicionamento</li><li aria-hidden="true">Estratégia</li><li aria-hidden="true">Branding</li><li aria-hidden="true">Tráfego Pago</li><li aria-hidden="true">Social Selling</li><li aria-hidden="true">Automação</li><li aria-hidden="true">SEO</li><li aria-hidden="true">SPIN Selling</li><li aria-hidden="true">CRM</li><li aria-hidden="true">Funil de Vendas</li><li aria-hidden="true">Posicionamento</li></ul>
+      <ul aria-hidden="true"><li>Estratégia</li><li>Branding</li><li>Tráfego Pago</li><li>Social Selling</li><li>Automação</li><li>SEO</li><li>SPIN Selling</li><li>CRM</li><li>Funil de Vendas</li><li>Posicionamento</li><li>Estratégia</li><li>Branding</li><li>Tráfego Pago</li><li>Social Selling</li><li>Automação</li><li>SEO</li><li>SPIN Selling</li><li>CRM</li><li>Funil de Vendas</li><li>Posicionamento</li><li>Estratégia</li><li>Branding</li><li>Tráfego Pago</li><li>Social Selling</li><li>Automação</li><li>SEO</li><li>SPIN Selling</li><li>CRM</li><li>Funil de Vendas</li><li>Posicionamento</li></ul>
+    </div>
+  </div>
+
+  <!-- LOGOS -->
+  <section class="t-light hm-logos" aria-label="Marcas que confiam na Makewell">
+    <div class="wrap">
+      <p class="eyebrow">Marcas que já confiaram na Makewell</p>
+      <div class="grid hm-logo-grid">
+        <div class="tile"><img src="/images/logo-casa-hunter-t.webp" alt="Casa Hunter" loading="lazy" style="height:61px;width:auto;max-height:none;max-width:100%"></div><div class="tile"><img src="/images/logo-carolina-mergulhao-t.webp" alt="Dra. Carolina Mergulhão" loading="lazy" style="height:56px;width:auto;max-height:none;max-width:100%"></div><div class="tile"><img src="/images/logo-drathielen-t.webp" alt="Dra. Thielen Szczypkowski" loading="lazy" style="height:54px;width:auto;max-height:none;max-width:100%"></div><div class="tile"><img src="/images/logo-anita-t.webp" alt="Dra. Anita Costa" loading="lazy" style="height:40px;width:auto;max-height:none;max-width:100%"></div><div class="tile"><img src="/images/logo-rodrigo-medeiros-t.webp" alt="Dr. Rodrigo Medeiros" loading="lazy" style="height:27px;width:auto;max-height:none;max-width:100%"></div><div class="tile"><img src="/images/logo-amy-farmacia-t.webp" alt="Amy Farmácia de Manipulação" loading="lazy" style="height:68px;width:auto;max-height:none;max-width:100%"></div><div class="tile"><img src="/images/logo-vilela-advogados-t.webp" alt="Vilela Advogados" loading="lazy" style="height:40px;width:auto;max-height:none;max-width:100%"></div><div class="tile"><img src="/images/logo-tcn-advocacia-t.webp" alt="TCN Advocacia" loading="lazy" style="height:44px;width:auto;max-height:none;max-width:100%"></div><div class="tile"><img src="/images/logo-cavalcante-peixoto-t.webp" alt="Cavalcante Peixoto Engenharia" loading="lazy" style="height:43px;width:auto;max-height:none;max-width:100%"></div><div class="tile"><img src="/images/logo-fazenda-brejo-t.webp" alt="Fazenda Brejo" loading="lazy" style="height:48px;width:auto;max-height:none;max-width:100%"></div><div class="tile"><img src="/images/logo-iupi-t.webp" alt="iupi" loading="lazy" style="height:68px;width:auto;max-height:none;max-width:100%"></div><div class="tile"><img src="/images/logo-koinonia-t.webp" alt="Koinonia" loading="lazy" style="height:68px;width:auto;max-height:none;max-width:100%"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VÍDEO INSTITUCIONAL -->
+  <section class="t-warm sec hm-video" id="institucional" aria-labelledby="inst-title">
+    <div class="wrap">
+      <p class="eyebrow">Sobre Nós</p>
+      <h2 class="h2" id="inst-title">Conheça a Makewell</h2>
+      <p class="lead">Veja como transformamos marcas em resultados com estratégia, performance e inteligência.</p>
+      <button type="button" class="video-poster vcover hm-poster" data-yt="A28k_Yxm9cc" data-yt-params="cc_load_policy=1&amp;cc_lang_pref=pt-PT&amp;hl=pt-PT">
+  <span class="vc-text">
+    <span class="vc-kicker">Vídeo institucional · 40s</span>
+    <span class="vc-title">Conheça a Makewell em 40 segundos</span>
+    <span class="vc-cta"><span class="play"><svg width="30" height="30" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#080808"></path></svg></span>Ver a apresentação</span>
+  </span>
+  <svg class="vc-mark" viewBox="4.4 4.4 23.3 23.3" aria-hidden="true" focusable="false"><path d="M23.4,14.7v6.69c0,.26-.25.43-.48.3l-6.83-3.87v4.6l8.36,4.74c1.34.75,2.96-.21,2.96-1.74v-12.98l-4.01,2.26h0Z" fill="#f1ca29"></path><path d="M7.68,4.93c-1.34-.75-3.01.21-3.01,1.74v12.97l4.01-2.26v-6.69c0-.26.3-.43.53-.3l6.88,3.87v-4.6L7.68,4.93Z" fill="#f0c950"></path><path d="M9.22,21.69s-.03,0-.04.01l-4.5,2.54v1.17c0,1.53,1.67,2.5,3.01,1.74l8.41-4.74v-4.6l-6.87,3.87h0Z" fill="#d88d1b"></path><path d="M27.41,7.84v-1.17c0-1.53-1.620-2.5-2.96-1.74l-8.36,4.74v4.6s11.32-6.43,11.32-6.43Z" fill="#d88d1b"></path></svg>
+</button>
+      <div class="grid hm-photos">
+        <img class="photo" src="/images/escritorio-estudio.webp" srcset="/images/escritorio-estudio-480.webp 480w, /images/escritorio-estudio.webp 1210w" sizes="(max-width: 600px) 33vw, 420px" alt="Estúdio da Makewell com poltrona amarela e projetor" loading="lazy">
+        <img class="photo" src="/images/escritorio-campanhas.webp" srcset="/images/escritorio-campanhas-480.webp 480w, /images/escritorio-campanhas.webp 1210w" sizes="(max-width: 600px) 33vw, 420px" alt="Quadros de campanhas criadas pela Makewell" loading="lazy">
+        <img class="photo" src="/images/escritorio-estante.webp" srcset="/images/escritorio-estante-480.webp 480w, /images/escritorio-estante.webp 1210w" sizes="(max-width: 600px) 33vw, 420px" alt="Estante do escritório Makewell" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- PARA QUEM (5 nichos) e POR QUE A MAKEWELL (3 diferenciais): as mesmas duas seções nas 4 línguas -->
+  <section class="t-light sec hm-seg" id="publico" aria-labelledby="publico-title">
+    <div class="wrap">
+      <p class="eyebrow">PARA QUEM</p>
+      <h2 class="h2" id="publico-title">Para quem é a <span class="gold">Makewell</span></h2>
+      <p class="lead">Para quem já investiu em marketing e não viu o resultado refletido na faturação.</p>
+      <div class="hscroll hm-seg-grid">
+        <article class="card">
+            <span class="hm-num" aria-hidden="true">01</span>
+            <h3 class="h3">Escritórios de Advogados</h3>
+            <p>Escritórios com excelência jurídica que dependem de recomendações, não se conseguem diferenciar num mercado saturado e veem concorrentes mais pequenos a crescer mais depressa. Transformamos reputação em autoridade digital que atrai o cliente certo e acelera o crescimento.</p>
+          </article><article class="card">
+            <span class="hm-num" aria-hidden="true">02</span>
+            <h3 class="h3">Clínicas Médicas</h3>
+            <p>Construímos a marca de clínicas que investem em qualidade, mas perdem pacientes para concorrentes com menos estrutura e mais presença digital. Reputação difícil de controlar, dependência de recomendações e dificuldade em comunicar com segurança e autoridade.</p>
+          </article><article class="card">
+            <span class="hm-num" aria-hidden="true">03</span>
+            <h3 class="h3">Construtoras &amp; Promotoras</h3>
+            <p>Investimento elevado no empreendimento, prazo curto para vender e um espaço de vendas cheio de equipa, mas sem procura digital gerada antes do lançamento. Construímos a estratégia que aquece o público, posiciona o produto e entrega leads qualificados antes mesmo de as chaves estarem prontas.</p>
+          </article><article class="card">
+            <span class="hm-num" aria-hidden="true">04</span>
+            <h3 class="h3">Indústrias</h3>
+            <p>Indústrias que competem em mercados onde um bom produto já não é diferencial suficiente. Ciclo de venda longo, decisores difíceis de alcançar e muitos concorrentes. Construímos a presença digital que transforma competência técnica em autoridade e encurta o caminho até à venda.</p>
+          </article><article class="card">
+            <span class="hm-num" aria-hidden="true">05</span>
+            <h3 class="h3">Hospitais &amp; Terceiro Setor</h3>
+            <p>Hospitais e organizações sociais com credibilidade e uma causa forte, mas que ainda não conseguem traduzir isso numa presença digital que gere resultados e impacto real. Trabalhamos com quem faz a diferença e ainda não foi encontrado por quem procura.</p>
+          </article>
+      </div>
+    </div>
+  </section><section class="t-light sec hm-seg line-top hm-why" id="why" aria-labelledby="why-title">
+    <div class="wrap">
+      <p class="eyebrow">OS NOSSOS DIFERENCIAIS</p>
+      <h2 class="h2" id="why-title">Porquê a <span class="gold">Makewell</span>?</h2>
+      <p class="lead">Não somos uma agência típica. Temos um método próprio, entregamos resultados mensuráveis e tratamos cada cliente como único.</p>
+      <div class="hscroll hm-seg-grid slide-in">
+        <article class="card">
+            <span class="hm-num">01</span>
+            <h3 class="h3">O Método <span>FishWell</span></h3>
+            <p>Um processo de 5 etapas desenvolvido ao longo de 9 anos que transforma investimento em faturação mensurável — nada de suposições.</p>
+          </article><article class="card">
+            <span class="hm-num">02</span>
+            <h3 class="h3">Resultados <span>mensuráveis</span></h3>
+            <p>Cada ação tem um número, um objetivo e um responsável. Acompanha o ROI num painel e num relatório mensal — sem relatórios de vaidade, apenas o que importa: crescimento.</p>
+          </article><article class="card">
+            <span class="hm-num">03</span>
+            <h3 class="h3">Atendimento <span>exclusivo</span></h3>
+            <p>Cada cliente tem uma estratégia exclusiva, equipa dedicada e acesso direto à liderança. Sem subcontratação, sem modelos genéricos — só estratégia feita à medida.</p>
+          </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÉTODO FISHWELL -->
+  <section class="t-warm2 sec hm-fish" id="method" aria-labelledby="method-title">
+    <div class="wrap">
+      <p class="eyebrow">O NOSSO MÉTODO</p>
+      <h2 class="h2 hm-fish-h2" id="method-title">O Método <span class="gold">FishWell</span></h2>
+      <p class="lead">Como transformamos investimento em faturação mensurável</p>
+      <ol class="hm-steps">
+        <li>
+            <span class="hm-step-dot" aria-hidden="true"></span>
+            <span class="hm-step-n" aria-hidden="true">01</span>
+            <h3 class="h3">Diagnóstico</h3>
+            <p>Mapeamento de oportunidades reais de crescimento</p>
+          </li><li>
+            <span class="hm-step-dot" aria-hidden="true"></span>
+            <span class="hm-step-n" aria-hidden="true">02</span>
+            <h3 class="h3">Planeamento</h3>
+            <p>Posicionamento preciso junto ao público-alvo ideal</p>
+          </li><li>
+            <span class="hm-step-dot" aria-hidden="true"></span>
+            <span class="hm-step-n" aria-hidden="true">03</span>
+            <h3 class="h3">Comunicação</h3>
+            <p>Criativos, conteúdo e linguagem que convertem</p>
+          </li><li>
+            <span class="hm-step-dot" aria-hidden="true"></span>
+            <span class="hm-step-n" aria-hidden="true">04</span>
+            <h3 class="h3">Investimento</h3>
+            <p>Inteligência de risco, conversão e vendas</p>
+          </li><li>
+            <span class="hm-step-dot" aria-hidden="true"></span>
+            <span class="hm-step-n" aria-hidden="true">05</span>
+            <h3 class="h3">Mensuração</h3>
+            <p>Dados, performance e crescimento contínuo</p>
+          </li>
+      </ol>
+      <a class="link-arrow" href="/pt/method/">Ver método completo →</a>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="t-light sec hm-svc" id="services" aria-labelledby="services-title" aria-description="Serviços: tráfego pago, redes sociais, branding, SEO, automação de marketing e CRM para empresários brasileiros em Portugal">
+    <div class="wrap">
+      <p class="eyebrow">O QUE FAZEMOS</p>
+      <h2 class="h2" id="services-title">Posicionamento + Social + <span class="gold">Tráfego</span></h2>
+      <div class="grid hm-svc-grid">
+        <article class="card">
+            <p class="hm-svc-tag">Branding</p>
+            <h3 class="h3">Torne a sua marca a primeira escolha</h3>
+            <p>Construímos um posicionamento forte, uma identidade visual que transmite autoridade e mensagens que chegam a quem decide.</p>
+            <ul class="hm-check" aria-label="Entregáveis de Branding"><li>Posicionamento estratégico</li><li>Identidade visual de autoridade</li><li>Mensagens que convertem</li></ul>
+          </article><article class="card">
+            <p class="hm-svc-tag">Social + Conteúdo</p>
+            <h3 class="h3">Transforme audiência em clientes reais</h3>
+            <p>Conteúdo magnético, Social Selling estruturado e gestão de tráfego para transformar seguidores em clientes de forma consistente.</p>
+            <ul class="hm-check" aria-label="Entregáveis de Social"><li>Conteúdo magnético</li><li>Social Selling estruturado</li><li>Gestão de tráfego segmentado</li></ul>
+          </article><article class="card">
+            <p class="hm-svc-tag">Tráfego Pago</p>
+            <h3 class="h3">Apareça para quem está pronto para comprar</h3>
+            <p>Google Ads, Meta Ads e LinkedIn Ads com segmentação avançada e otimização contínua para maximizar conversões e ROI.</p>
+            <ul class="hm-check" aria-label="Entregáveis de Tráfego Pago"><li>Google, Meta &amp; LinkedIn Ads</li><li>Segmentação avançada</li><li>Otimização contínua de ROI</li></ul>
+          </article><article class="card">
+            <p class="hm-svc-tag">Vendas + CRM</p>
+            <h3 class="h3">Venda mais com o mesmo volume de leads</h3>
+            <p>Formação em SPIN Selling, processo de vendas estruturado e CRM integrado para um funil de vendas eficiente e mensurável.</p>
+            <ul class="hm-check" aria-label="Entregáveis de Vendas"><li>Formação em SPIN Selling</li><li>Processo de vendas estruturado</li><li>CRM e automação integrados</li></ul>
+          </article><article class="card">
+            <p class="hm-svc-tag">SEO + Website</p>
+            <h3 class="h3">Seja encontrado por quem já quer comprar</h3>
+            <p>Sites estratégicos otimizados para pesquisa orgânica, landing pages que convertem e design que constrói credibilidade e autoridade.</p>
+            <ul class="hm-check" aria-label="Entregáveis de SEO"><li>SEO avançado</li><li>Landing pages que convertem</li><li>Design de autoridade</li></ul>
+          </article><article class="card">
+            <p class="hm-svc-tag">Automação + IA</p>
+            <h3 class="h3">Qualifique e atenda leads 24 horas por dia</h3>
+            <p>Bots e IA para responder, qualificar e nutrir leads com rapidez. Cada oportunidade captada, cada cliente atendido no momento certo.</p>
+            <ul class="hm-check" aria-label="Entregáveis de Automação"><li>Bots e IA 24/7</li><li>Qualificação automática</li><li>Funil de vendas eficiente</li></ul>
+          </article>
+      </div>
+      <a class="link-arrow" href="/pt/services/">Ver todos os serviços →</a>
+    </div>
+  </section>
+
+  <!-- NÚMEROS + CASES (abertura) -->
+  <section class="t-accent sec hm-num-sec" id="cases" aria-labelledby="cases-title">
+    <div class="wrap">
+      <p class="eyebrow">QUANDO O MARKETING FUNCIONA</p>
+      <h2 class="h2 hm-num-h2" id="cases-title">Resultados que os <span class="gold">números provam</span></h2>
+      <div class="grid hm-numbers" role="group" aria-label="Números e resultados">
+        <div class="hm-number"><p class="stat-n">+26x</p><p>Maior ROI já entregue a um único cliente</p></div><div class="hm-number"><p class="stat-n">100+</p><p>Leads captados num único mês (recorde)</p></div><div class="hm-number"><p class="stat-n">R$400k</p><p>Recorde de faturação gerado para um único cliente</p></div><div class="hm-number"><p class="stat-n">9+</p><p>Anos a transformar marcas no Brasil</p></div>
+      </div>
+      <div class="btns">
+        <a class="btn btn-primary" href="https://wa.me/5582999103246?text=Ol%C3%A1!%20Quero%20falar%20sobre%20o%20meu%20case%20com%20a%20Makewell." target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{content_name:'Ver todos os cases'})">Ver todos os cases →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASES -->
+  <section class="t-warm sec hm-cases" aria-label="Case de Impacto">
+    <div class="wrap">
+      <a class="hm-hl" href="/pt/cases/casa-hunter-casa-dos-raros/" aria-label="Case de Impacto: Casa Hunter e Casa dos Raros — ler case completo">
+        <div class="hm-hl-text">
+          <p class="hm-badges"><span class="hm-badge hm-badge-accent">Case de Impacto</span><span class="hm-badge">Voz a 13M de brasileiros</span></p>
+          <h3 class="hm-hl-title">Como a Makewell deu voz a 13 milhões de brasileiros</h3>
+          <p class="hm-hl-sub">Casa Hunter &amp; Casa dos Raros: mais de 4 anos, 50 mil seguidores, série documental em streaming e impacto no Supremo Tribunal Federal.</p>
+          <span class="hm-hl-cta">Ler case completo &rarr;</span>
+        </div>
+        <div class="hm-hl-stats" aria-hidden="true">
+          <div><span>50K+</span><small>seguidores</small></div><div><span>4+ anos</span><small>de parceria</small></div><div><span>Streaming</span><small>série documental</small></div>
+        </div>
+      </a>
+
+      <div class="grid hm-case-grid">
+        <article class="card hm-case">
+            <p class="hm-badges"><span class="hm-badge">Jurídico</span><span class="hm-badge hm-badge-accent">ROI +26x</span></p>
+            <h3 class="h3 hm-case-title">Dr. Felipe Vilela</h3>
+            <p class="hm-case-sub">Posicionamento + Social + Tráfego + CRM</p>
+            <div class="hm-metrics" role="list" aria-label="Métricas do case Jurídico">
+              <div role="listitem"><span class="hm-metric-v accent">+26x</span><span class="hm-metric-l">ROI</span></div><div role="listitem"><span class="hm-metric-v">100+</span><span class="hm-metric-l">Leads/mês</span></div><div role="listitem"><span class="hm-metric-v">R$400k</span><span class="hm-metric-l">Faturação</span></div>
+            </div>
+            <blockquote class="hm-quote"><p>"Sem vocês não teria conseguido. Os ganchos, os textos e a qualidade são incríveis"</p><cite>Felipe Vilela — Advogado</cite></blockquote>
+          </article><article class="card hm-case">
+            <p class="hm-badges"><span class="hm-badge">Saúde</span><span class="hm-badge hm-badge-accent">ROI +20x</span></p>
+            <h3 class="h3 hm-case-title">Dra. Thielen</h3>
+            <p class="hm-case-sub">Posicionamento + Social + Tráfego</p>
+            <div class="hm-metrics" role="list" aria-label="Métricas do case Saúde">
+              <div role="listitem"><span class="hm-metric-v accent">+20x</span><span class="hm-metric-l">ROI</span></div><div role="listitem"><span class="hm-metric-v">39+</span><span class="hm-metric-l">Leads/mês</span></div><div role="listitem"><span class="hm-metric-v">R$100k</span><span class="hm-metric-l">Faturação</span></div>
+            </div>
+            <blockquote class="hm-quote"><p>"Sou muito fã deles! São os especialistas e a atenção é incomparável"</p><cite>Dra. Thielen — Cirurgiã Vascular</cite></blockquote>
+          </article>
+      </div>
+
+      <div class="hm-next">
+        <div>
+          <p class="eyebrow">próximo case</p>
+          <p class="hm-next-text">A próxima história de sucesso <em>pode ser a sua.</em></p>
+        </div>
+        <a class="btn btn-primary" href="https://wa.me/5582999103246?text=Ol%C3%A1!%20Quero%20resultados%20como%20os%20cases%20da%20Makewell." target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{content_name:'I Want Results Like These'})">Quero resultados assim</a>
+      </div>
+      <a class="link-arrow" href="/pt/cases/">Ver todos os cases →</a>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="t-light sec hm-depo" aria-labelledby="depo-title">
+    <div class="wrap">
+      <p class="eyebrow">Resultados Reais</p>
+      <h2 class="h2" id="depo-title">O que os nossos clientes <span>dizem sobre a Makewell</span></h2>
+      <p class="hm-note">* Depoimentos no idioma original (português do Brasil)</p>
+      <div class="reels hscroll hm-reels">
+        <button type="button" class="reel" data-yt="JRrnKGNk-UE" data-vertical>
+            <span class="thumb">
+              <img src="/images/depo-JRrnKGNk-UE.webp" alt="Paola Massari" width="720" height="1280" loading="lazy">
+              <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
+            </span>
+            <span class="hm-reel-q">"A Makewell conseguiu abraçar tudo. São parceiros, são queridos, são muito emotivos com a nossa causa"</span>
+            <span class="hm-reel-name">Paola Massari</span>
+            <span class="hm-reel-role">Marketing · Casa Hunter</span>
+          </button><button type="button" class="reel" data-yt="PoBa9wS9rYM" data-vertical>
+            <span class="thumb">
+              <img src="/images/depo-PoBa9wS9rYM.webp" alt="Dra. Carolina Mergulhão" width="720" height="1280" loading="lazy">
+              <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
+            </span>
+            <span class="hm-reel-q">"Tenho muita vergonha em exposição, e eles foram sempre muito excelentes e carinhosos"</span>
+            <span class="hm-reel-name">Dra. Carolina Mergulhão</span>
+            <span class="hm-reel-role">Endocrinologia | Metabologia</span>
+          </button><button type="button" class="reel" data-yt="SjXs-_mmDxI" data-vertical>
+            <span class="thumb">
+              <img src="/images/depo-SjXs-_mmDxI.webp" alt="Dra. Thielen" width="720" height="1280" loading="lazy">
+              <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
+            </span>
+            <span class="hm-reel-q">"Sou muito fã deles! São os especialistas e a atenção é incomparável"</span>
+            <span class="hm-reel-name">Dra. Thielen</span>
+            <span class="hm-reel-role">Cirurgiã Vascular</span>
+          </button><button type="button" class="reel" data-yt="bJaKzu9WHy0" data-vertical>
+            <span class="thumb">
+              <img src="/images/depo-bJaKzu9WHy0.webp" alt="Tereza Cristina" width="720" height="1280" loading="lazy">
+              <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
+            </span>
+            <span class="hm-reel-q">"Estava com medo de não encontrar uma agência diferenciada"</span>
+            <span class="hm-reel-name">Tereza Cristina</span>
+            <span class="hm-reel-role">Advogada</span>
+          </button><button type="button" class="reel" data-yt="ij42ilGNbrY" data-vertical>
+            <span class="thumb">
+              <img src="/images/depo-ij42ilGNbrY.webp" alt="Felipe Vilela" width="720" height="1280" loading="lazy">
+              <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
+            </span>
+            <span class="hm-reel-q">"Sem vocês não teria conseguido. Os ganchos, os textos e a qualidade são incríveis"</span>
+            <span class="hm-reel-name">Felipe Vilela</span>
+            <span class="hm-reel-role">Advogado</span>
+          </button><button type="button" class="reel" data-yt="8ZsBpSb9Rds" data-vertical>
+            <span class="thumb">
+              <img src="/images/depo-8ZsBpSb9Rds.webp" alt="Dr. Rodrigo Medeiros" width="720" height="1280" loading="lazy">
+              <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
+            </span>
+            <span class="hm-reel-q">"O meu Instagram estava todo desregrado e a Makewell mudou isso cativando o meu público"</span>
+            <span class="hm-reel-name">Dr. Rodrigo Medeiros</span>
+            <span class="hm-reel-role">Médico</span>
+          </button><button type="button" class="reel" data-yt="eefbnVm-VTc" data-vertical>
+            <span class="thumb">
+              <img src="/images/depo-eefbnVm-VTc.webp" alt="Dra. Anita Costa" width="720" height="1280" loading="lazy">
+              <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
+            </span>
+            <span class="hm-reel-q">"Desde 2022, a Makewell ajuda-me com o meu posicionamento de marca no Instagram"</span>
+            <span class="hm-reel-name">Dra. Anita Costa</span>
+            <span class="hm-reel-role">Médica</span>
+          </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUEM LIDERA -->
+  <section class="t-warm sec hm-about" id="about" aria-labelledby="about-title">
+    <div class="wrap split">
+      <div class="main">
+        <p class="eyebrow">QUEM LIDERA</p>
+        <h2 class="h2" id="about-title">Há mais de <span class="gold">9 anos</span> a transformar negócios</h2>
+        <p class="lead">A Makewell nasceu com um propósito claro: transformar negócios em marcas com alma, direção e propósito. Com estratégia, performance e branding de alto nível, impulsionamos empresas no Brasil e empresas brasileiras nos Estados Unidos, e conversamos com empresários brasileiros em Portugal.</p>
+        <blockquote class="hm-manifesto"><p>"Não vendemos posts. Construímos pontes."</p></blockquote>
+        <a class="link-arrow" href="/pt/about/">Ler a tese completa →</a>
+      </div>
+      <div class="side">
+        <div class="hm-team">
+            <img src="/images/giuliana.webp" alt="Giuliana Castela, Diretora de Operações e Estratégia Criativa da Makewell Comunicação" width="110" height="110" loading="lazy">
+            <div><p class="hm-team-name">Giuliana Castela</p><p class="hm-team-role">Diretora de Operações e Estratégia Criativa</p></div>
+          </div><div class="hm-team">
+            <img src="/images/ismael.webp" alt="Ismael Filho, Diretor de Vendas e Administrativo da Makewell Comunicação" width="110" height="110" loading="lazy">
+            <div><p class="hm-team-name">Ismael Filho</p><p class="hm-team-role">Diretor de Vendas e Administrativo</p></div>
+          </div>
+        <div class="hm-about-stats" role="group" aria-label="Estatísticas da empresa">
+          <div><span>9+</span><small>Anos</small></div><div><span>Brasil</span><small>Nacional</small></div><div><span>AL+SP</span><small>Escritórios</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="t-warm2 sec line-top hm-faq" aria-labelledby="faq-title">
+    <div class="wrap split">
+      <div class="side">
+        <p class="eyebrow">PERGUNTAS FREQUENTES</p>
+        <h2 class="h2" id="faq-title">Perguntas <span class="gold">frequentes</span></h2>
+      </div>
+      <div class="main faq" itemscope itemtype="https://schema.org/FAQPage">
+        <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary><span itemprop="name">Quanto custa contratar a Makewell?</span></summary>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">Os nossos planos são personalizados de acordo com a dimensão e os objetivos de cada negócio. O primeiro passo é um diagnóstico gratuito, em que analisamos o seu negócio e apresentamos uma proposta à medida. Contacte-nos via WhatsApp para agendar.</p></div>
+          </details><details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary><span itemprop="name">Quanto tempo demora até ver resultados?</span></summary>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">Os primeiros leads qualificados costumam chegar entre o segundo e o terceiro mês, com as campanhas já calibradas. Entre o quarto e o sexto mês, o custo por lead desce e o ROI consolida-se. Branding e SEO têm efeito cumulativo e ganham força mês a mês. O nosso Método FishWell garante acompanhamento contínuo e objetivos claros em cada etapa.</p></div>
+          </details><details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary><span itemprop="name">A Makewell atende empresários brasileiros em Portugal?</span></summary>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">Sim! Trabalhamos 100% à distância a partir do Brasil, já atendemos empresas brasileiras nos Estados Unidos e conversamos com empresários brasileiros em Portugal. A nossa equipa entende tanto a cultura de negócios brasileira quanto o mercado português, o que nos torna o parceiro ideal para quem quer crescer dos dois lados do Atlântico.</p></div>
+          </details><details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary><span itemprop="name">Que plataformas a Makewell gere?</span></summary>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">Gerimos Google Ads, Meta Ads (Instagram e Facebook), SEO, TikTok, LinkedIn, email marketing e estratégias de CRM. Todas as ações estão integradas dentro do Método FishWell para garantir resultados mensuráveis.</p></div>
+          </details><details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary><span itemprop="name">Como funciona o acompanhamento de resultados?</span></summary>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">Cada cliente tem acesso a relatórios periódicos com métricas reais: ROI, custo por lead, alcance e conversões. Realizamos reuniões de alinhamento regulares e tem contacto direto com a equipa responsável pela sua conta — sem intermediários.</p></div>
+          </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="t-light sec hm-cta" aria-labelledby="cta-title">
+    <div class="wrap">
+      <div class="hm-cta-card">
+        <p class="eyebrow dot">Diagnóstico gratuito</p>
+        <h2 class="h2" id="cta-title">Pronto para um marketing<br>que gera faturação?</h2>
+        <p class="lead">Negócios que investem em estratégia crescem mais rápido. Descubra o verdadeiro potencial do seu negócio.</p>
+        <div class="btns">
+          <a class="btn btn-primary" href="https://wa.me/5582999103246?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20gratuito%20com%20a%20Makewell." target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{content_name:'Schedule Diagnostic'})">Agendar diagnóstico</a>
+          <a class="btn btn-ghost" href="https://wa.me/5582999103246" target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{content_name:'Direct WhatsApp'})">WhatsApp Direto →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a href="/pt/" aria-label="Makewell Comunicação — início"><img class="logo" src="/images/logo-makewell-mi-branca.webp" alt="Makewell Comunicação" width="161" height="52" loading="lazy"></a>
+      <div class="foot-social">
+        <a href="https://www.instagram.com/makewellcomunicacao/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.facebook.com/makewellcomunicacao" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v7h4v-7h3l1-4h-4V8a0 0 0 0 1 0 0Z"/></svg></a><a href="https://www.linkedin.com/company/makewell-comunicacao" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></a><a href="https://www.tiktok.com/@makewellcomunicacao" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5M14 3c.5 2.5 2.5 4.5 5 5"/></svg></a>
+      </div>
+    </div>
+    <div class="foot-col">
+      <p class="foot-title">A Agência</p>
+      <p>A Makewell é uma agência de comunicação e performance especializada em branding, vendas e posicionamento digital.</p>
+    </div>
+    <nav class="foot-col" aria-label="Navegação">
+      <p class="foot-title">Navegação</p>
+      <ul>
+        <li><a href="/pt/about/">Sobre Nós</a></li><li><a href="/pt/services/">Serviços</a></li><li><a href="/pt/framework/">Framework</a></li><li><a href="/pt/method/">Método</a></li><li><a href="/pt/cases/">Cases</a></li>
+        <li><a href="/pt/privacy-policy/">Política de Privacidade</a></li>
+        <li><a href="/pt/terms-of-use/">Termos de Uso</a></li>
+      </ul>
+    </nav>
+    <div class="foot-col">
+      <p class="foot-title">Conteúdo Social</p>
+      <p>Conteúdo estratégico sobre marketing, vendas e posicionamento. Siga a Makewell no Instagram.</p>
+      <a class="foot-link" href="https://www.instagram.com/makewellcomunicacao/" target="_blank" rel="noopener noreferrer">Siga no Instagram →</a>
+    </div>
+    <div class="foot-col">
+      <p class="foot-title">Localização</p>
+      <p>R. Prof. Lourenço Peixoto, 36, Sala 04, Jatiúca, Maceió, AL.</p>
+      <p><a href="mailto:contato@makewell.com.br">contato@makewell.com.br</a></p>
+      <p>CNPJ (Brasil): 27.238.877/0001-71</p>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <p>Copyright © 2026 Makewell | Todos os direitos reservados &middot; Brasil · EUA · makewell.agency</p>
+    <p class="mw-prefs-line"><button type="button" class="mw-cookie-prefs">Preferências de cookies</button></p>
+    <div class="partners">
+      <span>Parceiros e Certificações Oficiais</span>
+      <img src="/images/logo-kommo-partner.webp" alt="Kommo Partner" width="160" height="48" loading="lazy">
+    </div>
+  </div>
+</footer>
+<div class="modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Vídeo">
+  <button class="modal-close" type="button" aria-label="Fechar">&times;</button>
+  <iframe title="YouTube" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen src=""></iframe>
+</div>
+<script>
+(function () {
+  var modal = document.getElementById('videoModal'); if (!modal) return;
+  var frame = modal.querySelector('iframe'), last = null;
+  // aberto, o resto da página fica inerte: o foco fica entre o fechar e o vídeo
+  function inert(o) { document.querySelectorAll('body > *').forEach(function (el) { if (el !== modal && !el.contains(modal) && el.tagName !== 'SCRIPT') el.inert = o; }); }
+  function close() { modal.classList.remove('open', 'vertical'); frame.src = ''; document.body.style.overflow = ''; inert(false); if (last) last.focus(); }
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('[data-yt]'); if (!b) return;
+    e.preventDefault(); last = b;
+    var extra = b.getAttribute('data-yt-params') || '';
+    frame.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(b.getAttribute('data-yt')) + '?autoplay=1&rel=0' + (extra ? '&' + extra : '');
+    modal.classList.toggle('vertical', b.hasAttribute('data-vertical'));
+    modal.classList.add('open'); document.body.style.overflow = 'hidden'; inert(true);
+    modal.querySelector('.modal-close').focus();
+  });
+  modal.addEventListener('click', function (e) { if (e.target === modal || e.target.closest('.modal-close')) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal.classList.contains('open')) close(); });
+})();
+</script>
+<div class="scroll-progress" aria-hidden="true"></div>
+<a href="https://wa.me/5582999103246?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Makewell%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"></path></svg></a>
+<button type="button" class="back-to-top" id="back-to-top" aria-label="Voltar ao topo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></button>
+<script>
+(function () {
+  var lang = document.getElementById('lang-dropdown'), trig = document.getElementById('langDropdownTrigger');
+  if (lang && trig) {
+    trig.addEventListener('click', function (e) { e.stopPropagation(); var o = lang.classList.toggle('open'); trig.setAttribute('aria-expanded', o); });
+    document.addEventListener('click', function (e) { if (!lang.contains(e.target)) { lang.classList.remove('open'); trig.setAttribute('aria-expanded', 'false'); } });
+    var br = lang.querySelector('[data-lang="pt"]');
+    if (br) br.addEventListener('click', function () { try { localStorage.setItem('mw-lang', 'pt'); } catch (e) {} lang.classList.remove('open'); });
+  }
+  var ham = document.getElementById('hamburger'), menu = document.getElementById('mobileMenu');
+  var openLbl = ham && ham.getAttribute('aria-label');
+  function setMenu(o) {
+    menu.classList.toggle('open', o); ham.setAttribute('aria-expanded', o);
+    ham.setAttribute('aria-label', o ? ham.getAttribute('data-close') : openLbl);
+    document.body.style.overflow = o ? 'hidden' : '';
+    // com o menu aberto, o resto da página fica inerte: o Tab não escapa para o conteúdo escondido atrás
+    document.querySelectorAll('main, footer, .wa-float, .back-to-top, .skip-link').forEach(function (el) { el.inert = o; });
+    if (o) { var f = menu.querySelector('a'); if (f) f.focus(); }
+  }
+  if (ham && menu) {
+    ham.addEventListener('click', function () { setMenu(!menu.classList.contains('open')); });
+    menu.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+  }
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    if (lang && lang.classList.contains('open')) { lang.classList.remove('open'); if (trig) { trig.setAttribute('aria-expanded', 'false'); if (lang.contains(document.activeElement)) trig.focus(); } }
+    if (menu && menu.classList.contains('open')) { setMenu(false); ham.focus(); }
+  });
+})();
+</script>
+<script>
+// Movimento: revelação ao rolar e contadores nos números grandes. Sem efeito com prefers-reduced-motion.
+(function () {
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var main = document.getElementById('main-content'); if (!main) return;
+  // blocos da página: seções (diretas, dentro do wrapper da home ou do article) e o header do article (sobre, case).
+  // O primeiro é o topo e não espera rolagem (evita atrasar a primeira pintura); páginas legais não têm blocos.
+  var blocks = main.querySelectorAll('section, article > header');
+  var targets = [];
+  Array.prototype.forEach.call(blocks, function (sec, i) {
+    if (i === 0) return;
+    sec.querySelectorAll('.wrap > *, .grid > *, .card').forEach(function (el) { if (targets.indexOf(el) < 0 && !blocks[0].contains(el)) targets.push(el); });
+  });
+  targets.forEach(function (el) {
+    var p = el.parentElement, k = p ? Array.prototype.indexOf.call(p.children, el) : 0;
+    el.style.setProperty('--rv-d', Math.min(k, 5) * 0.08 + 's');
+    el.classList.add('rv');
+  });
+  // revela tudo que já chegou a 92% da altura da tela, inclusive o que uma rolagem rápida "pulou"
+  // (um IntersectionObserver perde elementos que vão de baixo para cima da tela num único quadro)
+  var pending = targets;
+  function reveal() {
+    var lim = innerHeight * 0.92;
+    pending = pending.filter(function (el) { if (el.getBoundingClientRect().top < lim) { el.classList.add('in'); return false; } return true; });
+  }
+
+  // barra de progresso, cabeçalho compacto e "voltar ao topo"
+  var bar = document.querySelector('.scroll-progress'), head = document.querySelector('.site-header'), top = document.getElementById('back-to-top'), wa = document.querySelector('.wa-float'), ticking = false;
+  function onScroll() {
+    ticking = false;
+    if (pending.length) reveal();
+    var y = window.scrollY, h = document.documentElement.scrollHeight - innerHeight;
+    if (bar) bar.style.setProperty('--p', h > 0 ? (y / h).toFixed(4) : 0);
+    if (head) head.classList.toggle('scrolled', y > 40);
+    if (top) top.classList.toggle('show', y > innerHeight);
+    if (wa) wa.classList.toggle('show', y > innerHeight * .6);
+  }
+  addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  onScroll();
+  if (top) top.addEventListener('click', function () { scrollTo({ top: 0, behavior: 'smooth' }); });
+
+  // contadores: texto curto tipo "+26x", "50+", "R$400k", "13M+", "4 anos" em fonte grande; ignora anos e "01"
+  var nums = [];
+  main.querySelectorAll('p, span, div, strong, dt, dd, b').forEach(function (el) {
+    if (el.children.length) return;
+    var t = el.textContent.trim(), m = t.match(/^([+R$€]*\s?)(\d{1,4})([^\d].{0,8})?$/);
+    if (!m || t.length > 12 || /^0\d/.test(m[2]) || (+m[2] >= 1900 && +m[2] <= 2100)) return;
+    if (parseFloat(getComputedStyle(el).fontSize) < 36) return;
+    nums.push({ el: el, pre: m[1], n: +m[2], suf: m[3] || '' });
+  });
+  var cio = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (!e.isIntersecting) return; cio.unobserve(e.target);
+      var d = e.target.__mwNum, t0 = performance.now();
+      (function step(now) {
+        var k = Math.min(1, (now - t0) / 1400), v = Math.round(d.n * (1 - Math.pow(1 - k, 3)));
+        d.el.textContent = d.pre + v + d.suf;
+        if (k < 1) requestAnimationFrame(step);
+      })(t0);
+    });
+  }, { threshold: 0.6 });
+  nums.forEach(function (d) { d.el.__mwNum = d; cio.observe(d.el); });
+})();
+</script>
+<script type="module" src="/assets/Page.astro_astro_type_script_index_0_lang.CTQbG-ZV.js"></script>
+<script>(function(){const hs = ["Anterior","Seguinte","Pausar movimento","Retomar movimento"];
+
+// Carrossel .hscroll: avanço automático por padrão (6s com mouse, 8s no toque, para dar tempo de ler), com botão
+// play/pausa (WCAG 2.2.2). Mouse em cima, foco ou interação (setas, arrastar, tocar) pausam só por um tempo e o
+// movimento volta sozinho; só a pausa pelo botão para de vez. Setas somem se tudo cabe e ficam aria-disabled no fim.
+// Parado com prefers-reduced-motion.
+document.querySelectorAll('.hscroll').forEach(function (t) {
+  var icon = function (d) { return '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + d + '"/></svg>'; };
+  var PAUSE = icon('M9 6v12M15 6v12'), PLAY = '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>';
+  var nav = document.createElement('div'); nav.className = 'hs-nav';
+  nav.innerHTML = '<button type="button" class="hs-btn hs-pause" hidden aria-label="' + hs[2] + '">' + PAUSE + '</button>'
+    + '<button type="button" class="hs-btn" data-d="-1" aria-label="' + hs[0] + '">' + icon('M15 6l-6 6 6 6') + '</button>'
+    + '<button type="button" class="hs-btn" data-d="1" aria-label="' + hs[1] + '">' + icon('M9 6l6 6-6 6') + '</button>';
+  t.after(nav);
+  var pause = nav.children[0], prev = nav.children[1], next = nav.children[2], paused = false, hover = false, idleUntil = 0;
+  var step = function () { var c = t.children[1] || t.children[0]; return c ? c.offsetLeft - t.children[0].offsetLeft : t.clientWidth * .8; };
+  var max = function () { return t.scrollWidth - t.clientWidth - 2; };
+  var update = function () {
+    nav.hidden = max() <= 0;
+    prev.setAttribute('aria-disabled', t.scrollLeft <= 2); next.setAttribute('aria-disabled', t.scrollLeft >= max());
+  };
+  t.addEventListener('scroll', update, { passive: true }); addEventListener('resize', update); update();
+  var rest = function () { idleUntil = Date.now() + 9000; };  // a pessoa mexeu: espera e depois volta a andar sozinho
+  var setPaused = function (p) { paused = p; pause.innerHTML = p ? PLAY : PAUSE; pause.setAttribute('aria-label', hs[p ? 3 : 2]); };
+  nav.addEventListener('click', function (e) {
+    var b = e.target.closest('.hs-btn'); if (!b) return;
+    if (b === pause) { setPaused(!paused); return; }
+    if (b.getAttribute('aria-disabled') === 'true') return;
+    rest(); t.scrollBy({ left: +b.dataset.d * step() });
+  });
+  t.addEventListener('pointerdown', rest); t.addEventListener('touchstart', rest, { passive: true }); t.addEventListener('keydown', rest);
+  ['pointerenter', 'focusin'].forEach(function (ev) { t.addEventListener(ev, function (e) { if (e.pointerType !== 'touch') hover = true; }); });
+  ['pointerleave', 'focusout'].forEach(function (ev) { t.addEventListener(ev, function () { hover = false; }); });
+  // arrastar com mouse (no toque a rolagem nativa já faz); um arrasto não dispara o clique do card
+  var x0 = 0, s0 = 0, moved = false;
+  t.addEventListener('pointerdown', function (e) { if (e.pointerType !== 'mouse' || e.button) return; x0 = e.clientX; s0 = t.scrollLeft; moved = false; t.classList.add('dragging'); });
+  addEventListener('pointermove', function (e) { if (!t.classList.contains('dragging')) return; if (Math.abs(e.clientX - x0) > 4) moved = true; t.scrollLeft = s0 - (e.clientX - x0); });
+  addEventListener('pointerup', function () { if (!t.classList.contains('dragging')) return; t.classList.remove('dragging'); t.scrollTo({ left: Math.round(t.scrollLeft / step()) * step() }); });
+  t.addEventListener('click', function (e) { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || nav.hidden) return;
+  pause.hidden = false;
+  var vis = false; new IntersectionObserver(function (es) { vis = es[0].isIntersecting; }, { threshold: .5 }).observe(t);
+  var touch = !matchMedia('(hover: hover) and (pointer: fine)').matches;
+  setInterval(function () {
+    if (paused || hover || !vis || document.hidden || Date.now() < idleUntil) return;
+    t.scrollTo({ left: t.scrollLeft >= max() ? 0 : t.scrollLeft + step() });
+  }, touch ? 8000 : 6000);
+});
+})();</script>
+<!-- Consentimento de cookies (LGPD/GDPR): rastreadores (via GTM e Meta Pixel) só carregam depois de "Aceitar" -->
+<div id="mw-consent" role="region" aria-label="Aviso de cookies" tabindex="-1" hidden>
+  <p>Utilizamos cookies analíticos e de marketing apenas se o permitir. Saiba mais na <a href="/pt/privacy-policy/">Política de Privacidade</a>.</p>
+  <div class="mw-consent-btns">
+    <button type="button" data-consent="declined">Recusar</button>
+    <button type="button" data-consent="accepted">Aceitar</button>
+  </div>
+</div>
+<style>
+#mw-consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:9990;max-width:720px;margin:0 auto;background:#141414;color:#ddd;border:1px solid #2a2a2a;border-radius:14px;padding:18px 20px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;box-shadow:0 12px 40px rgba(0,0,0,.5);font:14px/1.5 'Segoe UI',system-ui,-apple-system,sans-serif;cursor:auto}
+#mw-consent[hidden]{display:none}
+#mw-consent:focus{outline:none}
+#mw-consent p{margin:0;flex:1 1 300px}
+#mw-consent a{color:#F5A623;text-decoration:underline;cursor:pointer}
+.mw-consent-btns{display:flex;gap:10px;flex:0 0 auto}
+.mw-consent-btns button{min-height:44px;min-width:110px;padding:0 20px;border-radius:999px;border:1px solid #F07820;background:transparent;color:#F4F1EC;font:700 14px 'Segoe UI',system-ui,-apple-system,sans-serif;cursor:pointer}
+.mw-consent-btns button:hover,.mw-consent-btns button:focus-visible{background:#F07820;color:#080808}
+.mw-cookie-prefs{display:inline-flex;align-items:center;min-height:44px;background:none;border:0;padding:0 4px;color:inherit;font:inherit;text-decoration:underline;cursor:pointer}
 </style>
+<script>
+(function(){
+  // v2: o banner antigo ("ao continuar navegando…") não valia como consentimento; todos respondem de novo.
+  // Mudou a lista de ferramentas no GTM? Suba a versão da chave para perguntar de novo.
+  var KEY='mw-consent-v2', NO_TRACKERS=false;
+  function get(){try{return localStorage.getItem(KEY);}catch(e){return null;}}
+  function set(v){try{localStorage.setItem(KEY,v);}catch(e){}}
+  function clear(){try{localStorage.removeItem(KEY);}catch(e){}}
+  var consentAtLoad=get()==='accepted';
+  // shim do Meta Pixel: só enfileira (nada é enviado) para os onclick de Lead não quebrarem
+  if(!NO_TRACKERS&&typeof window.fbq!=='function'){
+    var n=window.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments);};
+    if(!window._fbq)window._fbq=n;n.push=n;n.loaded=true;n.version='2.0';n.queue=[];
+  }
+  function loadTrackers(){
+    if(NO_TRACKERS||window.__mwTrackers||typeof fbq!=='function')return;
+    window.__mwTrackers=true;
+    // eventos de antes do aceite nesta página são descartados; com aceite prévio, vão depois do init
+    var early=fbq.queue?fbq.queue.splice(0):[];
+    fbq('init','2571294026447618');fbq('track','PageView');
+    if(consentAtLoad)early.forEach(function(a){fbq.apply(null,a);});
+    var t=document.createElement('script');t.async=true;
+    t.src='https://connect.facebook.net/en_US/fbevents.js';document.head.appendChild(t);
+    window.dataLayer=window.dataLayer||[];
+    window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+    var j=document.createElement('script');j.async=true;
+    j.src='https://www.googletagmanager.com/gtm.js?id=GTM-NFGD8X8';document.head.appendChild(j);
+  }
+  function dropTrackerData(){
+    var host=location.hostname.replace(/^www\./,'');
+    document.cookie.split(';').forEach(function(c){
+      var n=c.split('=')[0].trim();
+      if(!/^(_ga|_gid|_gat|_gcl|_fbp|_fbc|_clck|_clsk|_uet|__obref)/.test(n))return;
+      ['', host, '.'+host].forEach(function(d){
+        document.cookie=n+'=; Max-Age=0; path=/'+(d?'; domain='+d:'');
+      });
+    });
+    try{['_gcl_ls','lastExternalReferrer','lastExternalReferrerTime','cookie-consent'].forEach(function(k){localStorage.removeItem(k);});}catch(e){}
+  }
+  var banner=document.getElementById('mw-consent');
+  banner.addEventListener('click',function(e){
+    var v=e.target.getAttribute('data-consent');
+    if(!v)return;
+    set(v);banner.hidden=true;
+    if(v==='accepted')loadTrackers();
+  });
+  document.addEventListener('click',function(e){
+    if(!e.target.closest||!e.target.closest('.mw-cookie-prefs'))return;
+    var was=get();clear();dropTrackerData();
+    if(was==='accepted'){window['ga-disable-G-71YG2WTXNM']=true;location.reload();return;}
+    banner.hidden=false;banner.focus();
+  });
+  if(consentAtLoad){
+    if('requestIdleCallback' in window)requestIdleCallback(loadTrackers,{timeout:4000});
+    else setTimeout(loadTrackers,2000);
+  } else {
+    dropTrackerData();
+    if(get()!=='declined')banner.hidden=false;
+  }
+})();
+</script>
+<!--/email_off-->
+</body>
+</html>

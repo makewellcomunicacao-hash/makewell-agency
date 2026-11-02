@@ -5,10 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>About Makewell | Strategic Communication Agency</title>
 <meta name="description" content="We're not a digital marketing agency. We're the strategic communication arm for professionals and brands that don't settle for mediocrity. Brazil and Florida.">
-<meta name="keywords" content="strategic communication agency Florida, makewell about, brand positioning, agency for doctors, agency for lawyers, integrated marketing, predictable growth, 9 years in business, Maceió São Paulo Florida">
+<meta name="keywords" content="strategic communication agency Florida, makewell about, brand positioning, agency for doctors, agency for lawyers, integrated marketing, consistent growth, 9 years in business, Maceió São Paulo Florida">
 <meta name="author" content="Makewell Communications">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#080808">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="color-scheme" content="dark">
 <meta name="geo.region" content="US-FL">
 <meta name="geo.placename" content="Florida">
@@ -17,16 +18,16 @@
 <link rel="alternate" hreflang="en" href="https://makewell.agency/en/about/">
 <link rel="alternate" hreflang="es" href="https://makewell.agency/es/about/">
 <link rel="alternate" hreflang="pt-PT" href="https://makewell.agency/pt/about/">
-<link rel="alternate" hreflang="x-default" href="https://makewell.com.br/">
+<link rel="alternate" hreflang="x-default" href="https://makewell.com.br/sobre/">
 <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
-<link rel="preload" as="image" href="/images/logo-makewell-mi-branca.webp" type="image/webp">
+<link rel="preload" as="image" href="/images/logo-makewell-mi-branca-en.webp" type="image/webp">
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <link rel="manifest" href="/manifest.json">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="About Makewell | Strategic Communication and Predictable Growth">
+<meta property="og:title" content="About Makewell | Strategic Communication and Consistent Growth">
 <meta property="og:description" content="We're not a digital marketing agency. We're the strategic communication arm for those who don't settle for mediocrity.">
 <meta property="og:url" content="https://makewell.agency/en/about/">
 <meta property="og:image" content="https://makewell.agency/images/og/about-en.jpg">
@@ -39,7 +40,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="About Makewell | Strategic Communication">
-<meta name="twitter:description" content="The strategic communication and predictable growth arm for those who don't settle for mediocrity.">
+<meta name="twitter:description" content="The strategic communication and consistent growth arm for those who don't settle for mediocrity.">
 <meta name="twitter:image" content="https://makewell.agency/images/og/about-en.jpg">
 <meta name="twitter:site" content="@makewellbr">
 
@@ -63,7 +64,7 @@
     "foundingDate": "2017",
     "slogan": "We don't sell posts. We build bridges.",
     "address": [
-      {"@type":"PostalAddress","addressLocality":"Maceió","addressRegion":"AL","addressCountry":"BR"},
+      {"@type":"PostalAddress","streetAddress":"R. Prof. Lourenço Peixoto, 36, Sala 04","postalCode":"57035-640","addressLocality":"Maceió","addressRegion":"AL","addressCountry":"BR"},
       {"@type":"PostalAddress","addressLocality":"São Paulo","addressRegion":"SP","addressCountry":"BR"}
     ]
   },
@@ -127,7 +128,7 @@ a { color: inherit; }
 
 /* ── botões ── */
 .btns { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
-.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 28px; border-radius: 999px; font: 700 16px/1 var(--font); text-decoration: none; border: 1px solid transparent; cursor: pointer; transition: transform .2s ease, background-color .2s ease, color .2s ease; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 28px; text-align: center; line-height: 1.2; border-radius: 999px; font: 700 16px/1 var(--font); text-decoration: none; border: 1px solid transparent; cursor: pointer; transition: transform .2s ease, background-color .2s ease, color .2s ease; }
 .btn:hover { transform: translateY(-1px); }
 .btn-primary { background: var(--accent); color: var(--on-accent); }
 .btn-primary:hover { background: var(--accent-2); }
@@ -170,13 +171,13 @@ a { color: inherit; }
 .nav-right { display: flex; align-items: center; gap: 14px; }
 .btn-nav { min-height: 44px; padding: 0 20px; font-size: 14px; }
 .lang { position: relative; }
-.lang-trigger { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--warm-line); background: none; color: var(--paper); font: 700 12px var(--font); letter-spacing: .08em; cursor: pointer; }
+.lang-trigger { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,.14); background: none; color: var(--paper); font: 700 12px var(--font); letter-spacing: .08em; cursor: pointer; }
 .lang-menu { position: absolute; right: 0; top: calc(100% + 8px); min-width: 140px; background: rgba(23,21,18,.9); -webkit-backdrop-filter: blur(18px) saturate(170%); backdrop-filter: blur(18px) saturate(170%); border: 1px solid rgba(255,255,255,.1); border-radius: 14px; padding: 6px; display: none; box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 16px 40px rgba(0,0,0,.5); }
 .lang.open .lang-menu { display: block; }
 .lang-menu a, .lang-menu button { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 44px; padding: 0 12px; border-radius: 10px; border: 0; background: none; color: var(--paper); font: 600 14px var(--font); text-decoration: none; cursor: pointer; }
 .lang-menu a:hover, .lang-menu button:hover { background: var(--warm-line); }
 .lang-menu [aria-current="true"] { color: var(--accent); }
-.hamburger { display: none; width: 44px; height: 44px; border: 1px solid var(--warm-line); border-radius: 12px; background: none; cursor: pointer; flex-direction: column; justify-content: center; align-items: center; gap: 5px; }
+.hamburger { display: none; width: 44px; height: 44px; border: 1px solid rgba(255,255,255,.14); border-radius: 12px; background: none; cursor: pointer; flex-direction: column; justify-content: center; align-items: center; gap: 5px; }
 .hamburger span { width: 18px; height: 2px; background: var(--paper); border-radius: 2px; }
 .mobile-menu { display: none; position: fixed; inset: 0; z-index: 1; background: var(--warm); padding: calc(96px + env(safe-area-inset-top, 0px)) var(--gutter) 40px; flex-direction: column; gap: 4px; overflow-y: auto; }
 .mobile-menu.open { display: flex; }
@@ -200,7 +201,7 @@ a { color: inherit; }
 .foot-col p { margin: 0 0 10px; }
 .foot-col strong { color: var(--paper); }
 .foot-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
-.foot-col ul a, .foot-col a { color: var(--paper-muted); text-decoration: none; display: inline-block; padding-block: 4px; }
+.foot-col ul a, .foot-col a { color: var(--paper-muted); text-decoration: none; display: inline-block; padding-block: 10px; }
 .foot-col a:hover { color: var(--paper); }
 .foot-col .foot-link { color: var(--accent); font-weight: 700; }
 .foot-bottom { position: relative; display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between; padding-block: 24px 40px; }
@@ -291,8 +292,8 @@ p { text-wrap: pretty; }
 @media (max-width: 600px) { .foot-bottom { padding-bottom: 96px; } }
 
 /* contraste AA: eyebrow laranja em fundo claro usa o laranja escuro */
-.t-light .eyebrow { color: #B4530F; }
-.t-light .card .num, .card p.eyebrow { color: #B4530F; }
+.t-light .eyebrow { color: #A84B0C; }
+.t-light .card .num, .card p.eyebrow { color: #A84B0C; }
 .t-warm .card p.eyebrow, .t-warm2 .card p.eyebrow { color: var(--accent); }
 
 /* GSAP: máscara das linhas dos títulos com folga para acentos e descendentes (g, p, ç) */
@@ -301,7 +302,7 @@ p { text-wrap: pretty; }
 @media (prefers-reduced-motion: reduce) { .ln-mask { padding: 0; margin: 0; } }
 
 /* "liquid glass": vidro com desfoque saturado, borda de luz em degradê e reflexo que segue o mouse (--mx/--my via JS).
-   Só onde há cor atrás para refratar (painel do topo e cases da home); raio e espaçamento vêm do próprio elemento */
+   Só no painel de números do topo da home, sobre o gráfico animado (cabeçalho e menus usam o próprio vidro); raio e espaçamento vêm do elemento */
 .glass { position: relative; isolation: isolate;
   background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.025) 45%, rgba(255,255,255,.06));
   -webkit-backdrop-filter: blur(16px) saturate(170%); backdrop-filter: blur(16px) saturate(170%);
@@ -312,36 +313,26 @@ p { text-wrap: pretty; }
 .glass::after { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit; pointer-events: none;
   background: radial-gradient(circle at var(--mx, 18%) var(--my, 0%), rgba(255,255,255,.14), rgba(255,255,255,0) 42%); transition: background-position .2s; }
 
-/* fundo para blocos de vidro com dados de resultado: brilhos laranja/âmbar que se movem devagar e uma grade fina
- (cases da home e da página Cases, topo da Sobre e do case Casa Hunter); parados no celular */
-.glow-host { position: relative; isolation: isolate; overflow: hidden; }
-.glow-bg { position: absolute; inset: 0; z-index: -1; pointer-events: none; background-image: linear-gradient(rgba(244,241,236,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(244,241,236,.04) 1px, transparent 1px); background-size: 96px 96px; }
-.glow-bg span { position: absolute; border-radius: 50%; filter: blur(60px); opacity: .55; animation: mw-orb 22s ease-in-out infinite alternate; }
-.glow-bg span:nth-child(1) { width: 46vw; height: 46vw; left: -8vw; top: 4%; background: radial-gradient(closest-side, #F07820, rgba(240,120,32,0)); }
-.glow-bg span:nth-child(2) { width: 38vw; height: 38vw; right: -6vw; top: 30%; background: radial-gradient(closest-side, #F5A623, rgba(245,166,35,0)); animation-duration: 28s; animation-direction: alternate-reverse; }
-.glow-bg span:nth-child(3) { width: 30vw; height: 30vw; left: 30%; bottom: -10%; background: radial-gradient(closest-side, #B4530F, rgba(180,83,15,0)); animation-duration: 34s; }
-@keyframes mw-orb { 50% { transform: translate(8vw, 6vh) scale(1.15); } 100% { transform: translate(-4vw, 10vh) scale(.92); } }
-@media (max-width: 900px), (prefers-reduced-motion: reduce) { .glow-bg span { animation: none; } }
-.glow-host .card.glass { background: rgba(23,21,18,.42); }
 
 /* capa do vídeo institucional (componente VideoCover): fundo da marca com brilho atrás da apresentadora,
    título e play à esquerda; no celular, texto em cima e apresentadora embaixo */
 .vcover { display: flex; align-items: center; text-align: left; color: var(--paper); font: inherit; isolation: isolate;
-  background: radial-gradient(42% 70% at 76% 78%, rgba(240,120,32,.5), rgba(240,120,32,0) 70%), radial-gradient(30% 50% at 92% 18%, rgba(245,166,35,.18), rgba(245,166,35,0) 70%),
+  background: radial-gradient(40% 70% at 76% 50%, rgba(240,120,32,.42), rgba(240,120,32,0) 70%), radial-gradient(30% 50% at 92% 18%, rgba(245,166,35,.18), rgba(245,166,35,0) 70%),
     linear-gradient(rgba(244,241,236,.035) 1px, transparent 1px) 0 0 / 72px 72px, linear-gradient(90deg, rgba(244,241,236,.035) 1px, transparent 1px) 0 0 / 72px 72px, linear-gradient(120deg, #1D1915, var(--warm) 60%); }
 .vc-text { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: flex-start; gap: clamp(8px, 1.4vw, 18px); max-width: 54%; padding-left: clamp(22px, 6%, 80px); }
 .vc-kicker { font-size: clamp(11px, 1vw, 13px); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
 .vc-title { font-size: clamp(24px, 4vw, 58px); line-height: 1.04; letter-spacing: -.03em; font-weight: 800; text-wrap: balance; }
 .vc-cta { display: inline-flex; align-items: center; gap: 14px; margin-top: clamp(6px, 1.4vw, 18px); font-size: clamp(14px, 1.3vw, 17px); font-weight: 700; }
 .vcover .play { position: static; inset: auto; margin: 0; flex: none; width: clamp(48px, 5.6vw, 76px); height: clamp(48px, 5.6vw, 76px); }
-.vcover .vc-person { position: absolute; z-index: 1; right: 7%; bottom: 0; width: auto; height: 94%; object-fit: contain; transform-origin: 50% 100%;
-  -webkit-mask-image: linear-gradient(to bottom, #000 76%, transparent); mask-image: linear-gradient(to bottom, #000 76%, transparent); filter: drop-shadow(0 24px 60px rgba(0,0,0,.55)); }
+.vcover .vc-mark { position: absolute; z-index: 1; right: 9%; top: 19%; height: 62%; width: auto; filter: drop-shadow(0 0 48px rgba(240,120,32,.45)) drop-shadow(0 30px 60px rgba(0,0,0,.5)); animation: vc-float 7s ease-in-out infinite alternate; }
+@keyframes vc-float { to { translate: 0 -14px; } }
+@media (prefers-reduced-motion: reduce) { .vcover .vc-mark { animation: none; } }
 @media (max-width: 600px) {
   .vcover { aspect-ratio: 4 / 5; align-items: flex-start; padding-top: 30px;
     background: radial-gradient(75% 45% at 50% 92%, rgba(240,120,32,.5), rgba(240,120,32,0) 70%),
       linear-gradient(rgba(244,241,236,.035) 1px, transparent 1px) 0 0 / 56px 56px, linear-gradient(90deg, rgba(244,241,236,.035) 1px, transparent 1px) 0 0 / 56px 56px, linear-gradient(160deg, #1D1915, var(--warm) 60%); }
   .vc-text { max-width: 100%; padding-inline: 22px; }
-  .vcover .vc-person { right: 0; left: 0; margin-inline: auto; height: 62%; }
+  .vcover .vc-mark { right: 0; left: 0; margin-inline: auto; top: auto; bottom: 12%; height: 40%; }
 }
 
 
@@ -356,476 +347,51 @@ p { text-wrap: pretty; }
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
   .glass { background: var(--warm-card); }
 }
-</style></head>
-<body>
-<script>
-  (function () {
-    var blocked = ['r', 'mod', 'uri', 'elementor_library', 'et_core_page_resource'];
-    var params = new URLSearchParams(window.location.search);
-    var dirty = blocked.some(function (p) { return params.has(p); });
-    if (dirty) { window.location.replace(window.location.pathname); }
-  })();
-</script>
 
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-</script>
-<script>document.documentElement.classList.add('js');</script>
-<a href="#main-content" class="skip-link">Skip to content</a>
-<header class="site-header">
-  <div class="wrap">
-    <nav id="nav" class="nav" aria-label="Main menu">
-      <a href="/en/" class="nav-logo" aria-label="Makewell Communications — home">
-        <img src="/images/logo-makewell-mi-branca.webp" alt="Makewell Communications" width="161" height="52" fetchpriority="high">
-      </a>
-      <div class="nav-links">
-        <a href="/en/about/" aria-current="page">About</a><a href="/en/services/">Services</a><a href="/en/framework/">Framework</a><a href="/en/method/">Method</a><a href="/en/cases/">Cases</a>
-      </div>
-      <div class="nav-right">
-        <div id="lang-dropdown" class="lang">
-          <button class="lang-trigger" id="langDropdownTrigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>EN</span>
-          </button>
-          <div class="lang-menu" id="langDropdownMenu" role="menu" aria-label="Select language">
-            <a href="https://makewell.com.br/sobre/" role="menuitem" hreflang="pt-BR">BR</a><a href="https://makewell.agency/en/about/" role="menuitem" hreflang="en" aria-current="true">EN</a><a href="https://makewell.agency/es/about/" role="menuitem" hreflang="es">ES</a><a href="https://makewell.agency/pt/about/" role="menuitem" hreflang="pt-PT">PT</a>
-          </div>
-        </div>
-        <a href="https://wa.me/5582999103246?text=Hello!%20I%27d%20like%20to%20schedule%20a%20free%20diagnosis%20with%20Makewell." class="btn btn-primary btn-nav" aria-label="Schedule a free diagnosis" target="_blank" rel="noopener noreferrer">Schedule a Diagnosis</a>
-        <button class="hamburger" id="hamburger" aria-label="Open menu" data-close="Close menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
-      </div>
-    </nav>
-  </div>
-  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile menu" aria-modal="true">
-    <a href="/en/about/" class="m-link"><span class="mn">01</span><span>About</span></a><a href="/en/services/" class="m-link"><span class="mn">02</span><span>Services</span></a><a href="/en/framework/" class="m-link"><span class="mn">03</span><span>Framework</span></a><a href="/en/method/" class="m-link"><span class="mn">04</span><span>Method</span></a><a href="/en/cases/" class="m-link"><span class="mn">05</span><span>Cases</span></a>
-    <a href="https://wa.me/5582999103246?text=Hello!%20I%27d%20like%20to%20schedule%20a%20free%20diagnosis%20with%20Makewell." class="btn btn-primary" target="_blank" rel="noopener noreferrer">Schedule a Diagnosis</a>
-  </div>
-</header>
-<main id="main-content">
-  <article class="ab">
-    <header class="t-warm sec ab-hero">
-      <div class="glow-bg" aria-hidden="true"><span></span><span></span><span></span></div>
-      <div class="wrap">
-        <p class="eyebrow dot ab-kicker">Who We Are</p>
-        <h1 class="h1 ab-h1">We&#39;re not a digital marketing agency. <em>We&#39;re a growth arm.</em></h1>
-        <div class="ab-hero-row">
-          <p class="lead ab-lead">We're the <strong>strategic communication and consistent growth arm</strong> for independent professionals and brands that don't settle for mediocrity. For <strong>9 years</strong>, we've been operating with a proprietary method that integrates branding, content, traffic and sales — not as isolated services, but as a single revenue ecosystem.</p>
-          <div class="ab-stats glass" role="group" aria-label="Makewell numbers">
-            <div class="ab-stat"><span class="ab-stat-n">9+</span><span class="ab-stat-l">Years in business</span></div><div class="ab-stat"><span class="ab-stat-n">50+</span><span class="ab-stat-l">Clients served</span></div><div class="ab-stat"><span class="ab-stat-n">+26x</span><span class="ab-stat-l">Best ROI on record</span></div><div class="ab-stat"><span class="ab-stat-n">2</span><span class="ab-stat-l">Offices (Maceió + SP)</span></div>
-          </div>
-        </div>
-        <img class="photo ab-hero-img" src="/images/livros-referencias-publicidade.webp" alt="Advertising reference books on the Makewell bookshelf" width="1210" height="908" fetchpriority="high" decoding="async">
-      </div>
-    </header>
+/* carrossel horizontal (.hscroll): arrasta com mouse ou dedo, encaixa card a card, setas e avanço automático suave
+   (script no Page.astro). Cards de texto com largura padrão; os reels mantêm a largura própria */
+.hscroll { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; overscroll-behavior-x: contain; scrollbar-width: none; padding-bottom: 4px;
+  margin-right: calc((min(100vw, var(--wrap)) - 100vw) / 2 - var(--gutter)); padding-right: var(--gutter); }
+.hscroll::-webkit-scrollbar { display: none; }
+.hscroll > .card { flex: 0 0 min(400px, 82vw); scroll-snap-align: start; }
+.hscroll > * { scroll-snap-align: start; }
+@media (hover: hover) and (pointer: fine) { .hscroll { cursor: grab; } .hscroll.dragging { cursor: grabbing; scroll-snap-type: none; scroll-behavior: auto; user-select: none; } }
+.hs-nav { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+.hs-nav[hidden] { display: none; }
+.hs-btn { width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--line); background: none; color: inherit; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; transition: border-color .2s, opacity .2s; }
+.hs-btn:hover:not([aria-disabled="true"]) { border-color: var(--accent); }
 
-    <section id="story" class="t-light sec">
-      <div class="wrap split">
-        <div class="main">
-          <p class="eyebrow">Our story</p>
-          <h2 class="h2">Content without method is just noise.</h2>
-          <div class="prose ab-story-txt">
-            <p>In the beginning, we were an agency like any other. We produced art, wrote posts, ran traffic. What pulled us out of that category was discovering, year after year, that <strong>content without method is just noise</strong>.</p>
-            <p>Over nearly a decade, we built an ecosystem that brings together what most agencies treat as separate departments: brand positioning, content creation, paid traffic, automation, CRM and sales process.</p>
-          </div>
-          <ol class="ab-miles">
-            <li><span class="ab-year">2017</span><div><h3 class="h3">São Paulo (SP)</h3><p>Makewell was born in <strong>2017</strong>, in São Paulo (SP), with a clear purpose: to turn businesses into brands with soul, direction and purpose.</p></div></li><li><span class="ab-year">2020</span><div><h3 class="h3">Maceió (AL)</h3><p>From <strong>2020</strong> on, we expanded operations to the Northeast and established headquarters in <strong>Maceió (AL)</strong>, keeping São Paulo as a strategic operation.</p></div></li><li><span class="ab-year">Today</span><div><h3 class="h3">Brazil · United States</h3><p>Today we operate from <strong>Maceió and São Paulo</strong>, serving brands across <strong>Brazil</strong> and the <strong>United States</strong>.</p></div></li>
-          </ol>
-        </div>
-        <div class="side ab-story-side">
-          <img class="photo ab-story-img" src="/images/escritorio-campanhas.webp" alt="Wall with framed campaigns created by Makewell" width="1210" height="610" loading="lazy" decoding="async">
-        </div>
-      </div>
-    </section>
-
-    <section class="t-warm sec">
-      <div class="wrap">
-        <p class="eyebrow">About us</p>
-        <h2 class="h2">Meet Makewell</h2>
-        <p class="lead">See how we transform brands into results with strategy, performance and intelligence.</p>
-        <button type="button" class="video-poster vcover ab-video" data-yt="A28k_Yxm9cc" data-yt-params="cc_load_policy=1&amp;cc_lang_pref=en-US&amp;hl=en" aria-label="Watch institutional video">
-  <span class="vc-text" aria-hidden="true">
-    <span class="vc-kicker">Brand video · 40s</span>
-    <span class="vc-title">Meet Makewell in 40 seconds</span>
-    <span class="vc-cta"><span class="play"><svg width="30" height="30" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#080808"></path></svg></span>Watch the presentation</span>
-  </span>
-  <img class="vc-person" src="/images/video-apresentadora.webp" alt="" width="510" height="700" loading="lazy" decoding="async">
-</button>
-      </div>
-    </section>
-
-    <section class="t-accent sec">
-      <div class="wrap">
-        <h2 class="h2 ab-num-title">Our cases carry the numbers that explain why our clients stay:</h2>
-        <p class="ab-num-sub">These results don&#39;t come from luck. They come from process.</p>
-        <div class="grid ab-nums" style="--min: 220px">
-          <div class="ab-num"><p class="stat-n">+26x<span class="ab-unit"> ROI</span></p><p class="ab-num-d">in the legal niche</p></div><div class="ab-num"><p class="stat-n">+20x<span class="ab-unit"> ROI</span></p><p class="ab-num-d">in healthcare</p></div><div class="ab-num"><p class="stat-n">R$400k</p><p class="ab-num-d">in revenue generated by a single client in one year</p></div><div class="ab-num"><p class="stat-n">+13<span class="ab-unit"> million</span></p><p class="ab-num-d">Brazilians reached in a national cause campaign</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="thesis" class="t-light sec">
-      <div class="wrap">
-        <p class="eyebrow">The thesis that drives us</p>
-        <h2 class="h2 ab-thesis-title">There&#39;s a paradox in the Brazilian agency market: nearly all make the same generic promise, and nearly none deliver real integration.</h2>
-        <p class="lead">We exist to close that gap.</p>
-        <div class="grid ab-contrast" style="--min: 300px">
-          <div class="card ab-old">
-            <h3 class="h3"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"></circle><path d="M8 12h8"></path></svg>What 10,000 agencies do</h3>
-            <p>They sell posts, sell reels, sell isolated traffic. They explain how the Instagram algorithm works. They outsource what they don&#39;t know how to do. They charge a monthly retainer and deliver vanity metrics.</p>
-          </div>
-          <div class="card ab-new">
-            <h3 class="h3"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l2.6 2.6L16 9.5"></path></svg>What we do</h3>
-            <p>We deploy a <strong>sales ecosystem</strong>: branding that positions, content that educates, traffic that scales, CRM that converts. All integrated, all measurable, all done in-house, no outsourcing.</p>
-          </div>
-        </div>
-        <div class="ab-quote-row">
-          <blockquote class="ab-quote">“We don&#39;t sell posts. <em>We build bridges.</em>”</blockquote>
-          <div class="ab-quote-side">
-            <p class="muted">The right question isn't <em>"how much does a post cost?"</em> — it's <em>"how much does it cost to keep going without a system that turns investment into revenue?"</em>.</p>
-            <p>Brands that are worth something aren't built with Reels tips. They're built with <strong>method, culture, process and time</strong>.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="audience" class="t-warm2 sec">
-      <div class="wrap">
-        <p class="eyebrow">Who it’s for</p>
-        <h2 class="h2">Who we serve</h2>
-        
-        <div class="grid ab-cards" style="--min: 260px">
-          <div class="card ab-seg"><span class="num">01</span><div><h3 class="h3">Companies</h3><p>Companies in repositioning or expansion phases that treat marketing as strategic investment, not cosmetic expense. People who demand process, not promises.</p></div></div><div class="card ab-seg"><span class="num">02</span><div><h3 class="h3">Independent Professionals</h3><p>Doctors, lawyers, dentists, engineers and high-ticket consultants who rely on built authority and qualified leads, not inflated reach. Our strongest cases are here: +26x ROI in legal, +20x in healthcare.</p></div></div><div class="card ab-seg"><span class="num">03</span><div><h3 class="h3">Industries</h3><p>Industrial companies that need to build B2B brand equity, generate qualified leads and shorten sales cycles with integrated strategic communication, from positioning to CRM.</p></div></div><div class="card ab-seg"><span class="num">04</span><div><h3 class="h3">NGOs &amp; Non-Profits</h3><p>Impact organizations that need to build narrative, engage donors and scale their cause with the same rigor as a market brand. That&#39;s what we did with Casa Hunter.</p></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="team" class="t-light sec">
-      <div class="wrap ab-team">
-        <div class="ab-team-txt">
-          <p class="eyebrow">Team</p>
-          <h2 class="h2">The team behind the method</h2>
-          <p class="lead">We&#39;re a lean, highly specialized team. Every project has dedicated leadership and a multidisciplinary squad — no outsourcing.</p>
-          <p class="muted ab-exec">The execution team includes specialists in copy, design, paid media, CRM and automation — each with more than 3 years of experience on high-complexity projects.</p>
-        </div>
-        <div class="grid ab-people" style="--min: 240px">
-          <div class="card ab-person">
-              <img src="/images/giuliana.webp" alt="Giuliana Castela" width="400" height="400" loading="lazy" decoding="async">
-              <h3 class="h3">Giuliana Castela</h3>
-              <p>Director of Operations &amp; Creative Strategy</p>
-            </div><div class="card ab-person">
-              <img src="/images/ismael.webp" alt="Ismael Filho" width="400" height="400" loading="lazy" decoding="async">
-              <h3 class="h3">Ismael Filho</h3>
-              <p>Director of Sales &amp; Administration</p>
-            </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="principles" class="t-warm2 sec">
-      <div class="wrap">
-        <p class="eyebrow">Principles</p>
-        <h2 class="h2">Our principles</h2>
-        <div class="grid ab-prin" style="--min: 240px">
-          <div class="ab-pr"><span class="ab-pr-n">01</span><h3 class="h3">Generosity</h3><p class="muted">Sharing knowledge, welcoming newcomers, teaching what we know. We grow together or no one grows.</p></div><div class="ab-pr"><span class="ab-pr-n">02</span><h3 class="h3">Honesty</h3><p class="muted">Truth without workarounds, even when uncomfortable. We don&#39;t promise what we won&#39;t deliver, nor deliver less than we promised.</p></div><div class="ab-pr"><span class="ab-pr-n">03</span><h3 class="h3">Continuous Learning</h3><p class="muted">Studying, testing and evolving is routine. What worked yesterday doesn&#39;t guarantee tomorrow.</p></div><div class="ab-pr"><span class="ab-pr-n">04</span><h3 class="h3">Excellence</h3><p class="muted">Care for detail, layered review, quality as the standard. &quot;Good enough&quot; doesn&#39;t exist here.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="t-light sec ab-gal">
-      <div class="wrap">
-        <p class="eyebrow">Our space</p>
-        <h2 class="h2">Inside Makewell</h2>
-        <div class="ab-gal-grid">
-          <img class="photo" src="/images/escritorio-sala.webp" alt="Room with a bookshelf, glass partition, tripods and a yellow sofa" width="850" height="670" loading="lazy" decoding="async"><img class="photo" src="/images/escritorio-estudio.webp" alt="Yellow armchair and a studio light" width="850" height="670" loading="lazy" decoding="async"><img class="photo" src="/images/escritorio-estante.webp" alt="Black bookshelf with books, plants and yellow objects" width="850" height="670" loading="lazy" decoding="async"><img class="photo" src="/images/escritorio-camera-livros.webp" alt="Vintage camera on marketing books next to an astronaut figure" width="850" height="670" loading="lazy" decoding="async">
-        </div>
-      </div>
-    </section>
-
-    <section class="t-light ab-related">
-      <div class="wrap">
-        <div class="ab-related-in">
-          <div class="ab-related-txt">
-            <h2 class="h3 ab-related-title">See the method in action</h2>
-            <p class="muted">Our thesis isn&#39;t declarative. It becomes concrete operation inside the FishWell Method.</p>
-          </div>
-          <div class="btns ab-related-btns">
-            <a class="btn btn-ghost" href="/en/method/">Discover the FishWell Method in 5 stages &rarr;</a>
-            <a class="btn btn-ghost" href="/en/cases/">See the cases that prove this thesis &rarr;</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="t-light ab-cta-sec">
-      <div class="wrap">
-        <div class="ab-cta">
-          <p class="eyebrow">Free diagnosis</p>
-          <h2 class="h2">Ready to leave tip-based marketing behind?</h2>
-          <p class="lead">Schedule a strategic diagnosis and discover what Makewell can build for your brand.</p>
-          <div class="btns">
-            <a class="btn btn-primary" href="https://wa.me/5582999103246?text=Hello!%20I%20read%20the%20About%20page%20and%20want%20a%20strategic%20diagnostic." target="_blank" rel="noopener noreferrer" data-track="lead" onclick="fbq('track','Lead',{content_name:'About EN CTA'})">Schedule diagnosis &rarr;</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </article>
-  
-</main>
-<footer class="site-footer">
-  <div class="wrap foot-grid">
-    <div class="foot-brand">
-      <a href="/en/" aria-label="Makewell Communications — home"><img class="logo" src="/images/logo-makewell-mi-branca.webp" alt="Makewell Communications" width="161" height="52" loading="lazy"></a>
-      <div class="foot-social">
-        <a href="https://www.instagram.com/makewellcomunicacao/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.facebook.com/makewellcomunicacao" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v7h4v-7h3l1-4h-4V8a0 0 0 0 1 0 0Z"/></svg></a><a href="https://www.linkedin.com/company/makewell-comunicacao" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></a><a href="https://www.tiktok.com/@makewellcomunicacao" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5M14 3c.5 2.5 2.5 4.5 5 5"/></svg></a>
-      </div>
-    </div>
-    <div class="foot-col">
-      <p class="foot-title">The Agency</p>
-      <p>Makewell is a communications and performance agency specializing in branding, sales, and digital positioning.</p>
-    </div>
-    <nav class="foot-col" aria-label="Navigation">
-      <p class="foot-title">Navigation</p>
-      <ul>
-        <li><a href="/en/about/">About Us</a></li><li><a href="/en/services/">Services</a></li><li><a href="/en/framework/">Framework</a></li><li><a href="/en/method/">Method</a></li><li><a href="/en/cases/">Cases</a></li>
-        <li><a href="/en/privacy-policy/">Privacy Policy</a></li>
-        <li><a href="/en/terms-of-use/">Terms of Use</a></li>
-      </ul>
-    </nav>
-    <div class="foot-col">
-      <p class="foot-title">Blog &amp; Content</p>
-      <p>Strategic content on marketing, sales and digital positioning. <strong>Coming soon.</strong></p>
-      <a class="foot-link" href="https://www.instagram.com/makewellcomunicacao/" target="_blank" rel="noopener noreferrer">Follow on Instagram →</a>
-    </div>
-    <div class="foot-col">
-      <p class="foot-title">Location</p>
-      <p>R. Prof. Lourenço Peixoto, 36, Sala 04, Jatiúca, Maceió, AL.</p>
-      <p><a href="mailto:contato@makewell.com.br">contato@makewell.com.br</a></p>
-      <p>Tax ID (CNPJ): 27.238.877/0001-71</p>
-    </div>
-  </div>
-  <div class="wrap foot-bottom">
-    <p>Copyright © 2026 Makewell | All Rights Reserved &middot; Brazil · Florida · makewell.agency</p>
-    <p class="mw-prefs-line"><button type="button" class="mw-cookie-prefs">Cookie preferences</button></p>
-    <div class="partners">
-      <span>Official Partners &amp; Certifications</span>
-      <img src="/images/logo-kommo-partner.webp" alt="Kommo Partner" width="160" height="48" loading="lazy">
-    </div>
-  </div>
-</footer>
-<div class="modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Vídeo">
-  <button class="modal-close" type="button" aria-label="Close">&times;</button>
-  <iframe title="YouTube" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen src=""></iframe>
-</div>
-<script>
-(function () {
-  var modal = document.getElementById('videoModal'); if (!modal) return;
-  var frame = modal.querySelector('iframe'), last = null;
-  function close() { modal.classList.remove('open', 'vertical'); frame.src = ''; document.body.style.overflow = ''; if (last) last.focus(); }
-  document.addEventListener('click', function (e) {
-    var b = e.target.closest && e.target.closest('[data-yt]'); if (!b) return;
-    e.preventDefault(); last = b;
-    var extra = b.getAttribute('data-yt-params') || '';
-    frame.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(b.getAttribute('data-yt')) + '?autoplay=1&rel=0' + (extra ? '&' + extra : '');
-    modal.classList.toggle('vertical', b.hasAttribute('data-vertical'));
-    modal.classList.add('open'); document.body.style.overflow = 'hidden';
-    modal.querySelector('.modal-close').focus();
-  });
-  modal.addEventListener('click', function (e) { if (e.target === modal || e.target.closest('.modal-close')) close(); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal.classList.contains('open')) close(); });
-})();
-</script>
-<div class="scroll-progress" aria-hidden="true"></div>
-<a href="https://wa.me/5582999103246?text=Hello!%20I%20came%20through%20Makewell%27s%20website%20and%20would%20like%20more%20information." class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"></path></svg></a>
-<button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></button>
-<script>
-(function () {
-  var lang = document.getElementById('lang-dropdown'), trig = document.getElementById('langDropdownTrigger');
-  if (lang && trig) {
-    trig.addEventListener('click', function (e) { e.stopPropagation(); var o = lang.classList.toggle('open'); trig.setAttribute('aria-expanded', o); });
-    document.addEventListener('click', function (e) { if (!lang.contains(e.target)) { lang.classList.remove('open'); trig.setAttribute('aria-expanded', 'false'); } });
-    var br = lang.querySelector('[data-lang="pt"]');
-    if (br) br.addEventListener('click', function () { try { localStorage.setItem('mw-lang', 'pt'); } catch (e) {} lang.classList.remove('open'); });
-  }
-  var ham = document.getElementById('hamburger'), menu = document.getElementById('mobileMenu');
-  var openLbl = ham && ham.getAttribute('aria-label');
-  function setMenu(o) {
-    menu.classList.toggle('open', o); ham.setAttribute('aria-expanded', o);
-    ham.setAttribute('aria-label', o ? ham.getAttribute('data-close') : openLbl);
-    document.body.style.overflow = o ? 'hidden' : '';
-    if (o) { var f = menu.querySelector('a'); if (f) f.focus(); }
-  }
-  if (ham && menu) {
-    ham.addEventListener('click', function () { setMenu(!menu.classList.contains('open')); });
-    menu.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
-  }
-  document.addEventListener('keydown', function (e) {
-    if (e.key !== 'Escape') return;
-    if (lang) { lang.classList.remove('open'); if (trig) trig.setAttribute('aria-expanded', 'false'); }
-    if (menu && menu.classList.contains('open')) { setMenu(false); ham.focus(); }
-  });
-})();
-</script>
-<script>
-// Movimento: revelação ao rolar e contadores nos números grandes. Sem efeito com prefers-reduced-motion.
-(function () {
-  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var main = document.getElementById('main-content'); if (!main) return;
-  // blocos da página: seções (diretas, dentro do wrapper da home ou do article) e o header do article (sobre, case).
-  // O primeiro é o topo e não espera rolagem (evita atrasar a primeira pintura); páginas legais não têm blocos.
-  var blocks = main.querySelectorAll('section, article > header');
-  var targets = [];
-  Array.prototype.forEach.call(blocks, function (sec, i) {
-    if (i === 0) return;
-    sec.querySelectorAll('.wrap > *, .grid > *, .card').forEach(function (el) { if (targets.indexOf(el) < 0 && !blocks[0].contains(el)) targets.push(el); });
-  });
-  targets.forEach(function (el) {
-    var p = el.parentElement, k = p ? Array.prototype.indexOf.call(p.children, el) : 0;
-    el.style.setProperty('--rv-d', Math.min(k, 5) * 0.08 + 's');
-    el.classList.add('rv');
-  });
-  // revela tudo que já chegou a 92% da altura da tela, inclusive o que uma rolagem rápida "pulou"
-  // (um IntersectionObserver perde elementos que vão de baixo para cima da tela num único quadro)
-  var pending = targets;
-  function reveal() {
-    var lim = innerHeight * 0.92;
-    pending = pending.filter(function (el) { if (el.getBoundingClientRect().top < lim) { el.classList.add('in'); return false; } return true; });
-  }
-
-  // barra de progresso, cabeçalho compacto e "voltar ao topo"
-  var bar = document.querySelector('.scroll-progress'), head = document.querySelector('.site-header'), top = document.getElementById('back-to-top'), ticking = false;
-  function onScroll() {
-    ticking = false;
-    if (pending.length) reveal();
-    var y = window.scrollY, h = document.documentElement.scrollHeight - innerHeight;
-    if (bar) bar.style.setProperty('--p', h > 0 ? (y / h).toFixed(4) : 0);
-    if (head) head.classList.toggle('scrolled', y > 40);
-    if (top) top.classList.toggle('show', y > innerHeight);
-  }
-  addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
-  onScroll();
-  if (top) top.addEventListener('click', function () { scrollTo({ top: 0, behavior: 'smooth' }); });
-
-  // contadores: texto curto tipo "+26x", "50+", "R$400k", "13M+", "4 anos" em fonte grande; ignora anos e "01"
-  var nums = [];
-  main.querySelectorAll('p, span, div, strong, dt, dd, b').forEach(function (el) {
-    if (el.children.length) return;
-    var t = el.textContent.trim(), m = t.match(/^([+R$€]*\s?)(\d{1,4})([^\d].{0,8})?$/);
-    if (!m || t.length > 12 || /^0\d/.test(m[2]) || (+m[2] >= 1900 && +m[2] <= 2100)) return;
-    if (parseFloat(getComputedStyle(el).fontSize) < 36) return;
-    nums.push({ el: el, pre: m[1], n: +m[2], suf: m[3] || '' });
-  });
-  var cio = new IntersectionObserver(function (es) {
-    es.forEach(function (e) {
-      if (!e.isIntersecting) return; cio.unobserve(e.target);
-      var d = e.target.__mwNum, t0 = performance.now();
-      (function step(now) {
-        var k = Math.min(1, (now - t0) / 1400), v = Math.round(d.n * (1 - Math.pow(1 - k, 3)));
-        d.el.textContent = d.pre + v + d.suf;
-        if (k < 1) requestAnimationFrame(step);
-      })(t0);
-    });
-  }, { threshold: 0.6 });
-  nums.forEach(function (d) { d.el.__mwNum = d; cio.observe(d.el); });
-})();
-</script>
-<script type="module" src="/assets/Page.astro_astro_type_script_index_0_lang.COtMMsJ5.js"></script>
-<!-- Consentimento de cookies (LGPD/GDPR): rastreadores (via GTM e Meta Pixel) só carregam depois de "Aceitar" -->
-<div id="mw-consent" role="region" aria-label="Cookie notice" tabindex="-1" hidden>
-  <p>We use analytics and marketing cookies only if you allow them. Learn more in our <a href="/en/privacy-policy/">Privacy Policy</a>.</p>
-  <div class="mw-consent-btns">
-    <button type="button" data-consent="declined">Decline</button>
-    <button type="button" data-consent="accepted">Accept</button>
-  </div>
-</div>
-<style>
-#mw-consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:9990;max-width:720px;margin:0 auto;background:#141414;color:#ddd;border:1px solid #2a2a2a;border-radius:14px;padding:18px 20px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;box-shadow:0 12px 40px rgba(0,0,0,.5);font:14px/1.5 'Segoe UI',system-ui,-apple-system,sans-serif;cursor:auto}
-#mw-consent[hidden]{display:none}
-#mw-consent:focus{outline:none}
-#mw-consent p{margin:0;flex:1 1 300px}
-#mw-consent a{color:#F5A623;text-decoration:underline;cursor:pointer}
-.mw-consent-btns{display:flex;gap:10px;flex:0 0 auto}
-.mw-consent-btns button{min-height:44px;min-width:110px;padding:0 20px;border-radius:999px;border:1px solid #F07820;background:transparent;color:#F4F1EC;font:700 14px 'Segoe UI',system-ui,-apple-system,sans-serif;cursor:pointer}
-.mw-consent-btns button:hover,.mw-consent-btns button:focus-visible{background:#F07820;color:#080808}
-.mw-cookie-prefs{display:inline-flex;align-items:center;min-height:44px;background:none;border:0;padding:0 4px;color:inherit;font:inherit;text-decoration:underline;cursor:pointer}
-</style>
-<script>
-(function(){
-  // v2: o banner antigo ("ao continuar navegando…") não valia como consentimento; todos respondem de novo.
-  // Mudou a lista de ferramentas no GTM? Suba a versão da chave para perguntar de novo.
-  var KEY='mw-consent-v2', NO_TRACKERS=false;
-  function get(){try{return localStorage.getItem(KEY);}catch(e){return null;}}
-  function set(v){try{localStorage.setItem(KEY,v);}catch(e){}}
-  function clear(){try{localStorage.removeItem(KEY);}catch(e){}}
-  var consentAtLoad=get()==='accepted';
-  // shim do Meta Pixel: só enfileira (nada é enviado) para os onclick de Lead não quebrarem
-  if(!NO_TRACKERS&&typeof window.fbq!=='function'){
-    var n=window.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments);};
-    if(!window._fbq)window._fbq=n;n.push=n;n.loaded=true;n.version='2.0';n.queue=[];
-  }
-  function loadTrackers(){
-    if(NO_TRACKERS||window.__mwTrackers||typeof fbq!=='function')return;
-    window.__mwTrackers=true;
-    // eventos de antes do aceite nesta página são descartados; com aceite prévio, vão depois do init
-    var early=fbq.queue?fbq.queue.splice(0):[];
-    fbq('init','2571294026447618');fbq('track','PageView');
-    if(consentAtLoad)early.forEach(function(a){fbq.apply(null,a);});
-    var t=document.createElement('script');t.async=true;
-    t.src='https://connect.facebook.net/en_US/fbevents.js';document.head.appendChild(t);
-    window.dataLayer=window.dataLayer||[];
-    window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
-    var j=document.createElement('script');j.async=true;
-    j.src='https://www.googletagmanager.com/gtm.js?id=GTM-NFGD8X8';document.head.appendChild(j);
-  }
-  function dropTrackerData(){
-    var host=location.hostname.replace(/^www\./,'');
-    document.cookie.split(';').forEach(function(c){
-      var n=c.split('=')[0].trim();
-      if(!/^(_ga|_gid|_gat|_gcl|_fbp|_fbc|_clck|_clsk|_uet|__obref)/.test(n))return;
-      ['', host, '.'+host].forEach(function(d){
-        document.cookie=n+'=; Max-Age=0; path=/'+(d?'; domain='+d:'');
-      });
-    });
-    try{['_gcl_ls','lastExternalReferrer','lastExternalReferrerTime','cookie-consent'].forEach(function(k){localStorage.removeItem(k);});}catch(e){}
-  }
-  var banner=document.getElementById('mw-consent');
-  banner.addEventListener('click',function(e){
-    var v=e.target.getAttribute('data-consent');
-    if(!v)return;
-    set(v);banner.hidden=true;
-    if(v==='accepted')loadTrackers();
-  });
-  document.addEventListener('click',function(e){
-    if(!e.target.closest||!e.target.closest('.mw-cookie-prefs'))return;
-    var was=get();clear();dropTrackerData();
-    if(was==='accepted'){window['ga-disable-G-71YG2WTXNM']=true;location.reload();return;}
-    banner.hidden=false;banner.focus();
-  });
-  if(consentAtLoad){
-    if('requestIdleCallback' in window)requestIdleCallback(loadTrackers,{timeout:4000});
-    else setTimeout(loadTrackers,2000);
-  } else {
-    dropTrackerData();
-    if(get()!=='declined')banner.hidden=false;
-  }
-})();
-</script>
-</body>
-</html>
-
-<style>
+/* acessibilidade e celular (auditoria 02/11/2026) */
+/* anel de foco visível em qualquer fundo: escuro no laranja, laranja escuro no claro */
+.t-accent :focus-visible { outline-color: var(--on-accent); }
+.t-light :focus-visible { outline-color: #A84B0C; }
+/* vidro do topo: texto secundário mais claro para manter AA sobre o gráfico */
+.glass { --muted: #C9C2B7; }
+/* menu mobile: ícone vira X quando aberto */
+.hamburger span { transition: transform .25s ease, opacity .2s ease; }
+.hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+/* carrossel: botão de pausa; setas à esquerda no celular (à direita ficam os flutuantes) */
+.hs-btn[aria-disabled="true"] { opacity: .3; cursor: default; }
+.hs-pause { margin-right: auto; }
+@media (max-width: 600px) { .hs-nav { justify-content: flex-start; } }
+@media (prefers-reduced-motion: reduce) { .hscroll { scroll-behavior: auto; } }
+/* WhatsApp no celular só depois de rolar o topo (no topo ele cobria os botões principais) */
+@media (max-width: 600px) { .wa-float { opacity: 0; pointer-events: none; transform: translateY(8px); transition: opacity .3s, transform .3s; } .wa-float.show { opacity: 1; pointer-events: auto; transform: none; } }
+@media (max-width: 360px) { .foot-bottom { padding-bottom: 150px; } }
+/* banner de cookies não cobre o elemento em foco */
+html:has(#mw-consent:not([hidden])) { scroll-padding-bottom: 220px; }
+/* CTAs finais centralizados: mesmo respiro entre título e texto que o CTA da home */
+:is(.sv-cta, .fw-cta, .me-cta) :is(h2, .h2) + p { margin-top: 20px; }
+</style><style>
   .ab-hero { padding-bottom: clamp(56px, 7vw, 88px); }
   .ab-kicker { color: var(--muted); }
   .ab-h1 { max-width: 1120px; font-size: clamp(40px, 5.6vw, 84px); }
   .ab-hero-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 40px 64px; margin-top: 36px; }
   .ab-lead { flex: 999 1 520px; min-width: 0; margin: 0; max-width: 640px; }
   .ab-lead strong { color: var(--paper); }
-  .ab-stats { border-radius: 28px; padding: clamp(22px, 2.6vw, 32px); flex: 1 1 420px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
-  /* no vidro, a borda do painel já separa: sem linha no topo da primeira fileira */
-  .ab-stats.glass .ab-stat:nth-child(-n+2) { border-top: 0; padding-top: 0; }
+  .ab-stats { flex: 1 1 420px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
   .ab-stat { border-top: 1px solid var(--line); padding-top: 18px; }
   .ab-stat-n { display: block; font-size: 44px; font-weight: 800; letter-spacing: -.03em; line-height: 1; }
   .ab-stat-l { display: block; margin-top: 10px; font-size: 14px; line-height: 1.4; color: var(--muted); }
@@ -911,12 +477,527 @@ n.queue=[];}(window, document,'script',
   .ab-related-txt p { margin: 10px 0 0; font-size: 16px; }
   .ab-related-btns { margin-top: 0; }
   .ab-related-btns .btn { font-weight: 600; font-size: 15px; height: auto; min-height: 48px; padding-block: 12px; line-height: 1.3; text-align: center; text-wrap: balance; }
-  @media (max-width: 600px) { .ab-related-btns { width: 100%; } .ab-related-btns .btn { width: 100%; padding-inline: 18px; font-size: 14px; } }
+  @media (max-width: 600px) { .ab-related-btns { width: 100%; } .ab-related-btns .btn { width: 100%; padding-inline: 18px; } }
 
   /* AA: em fundo claro, laranja escuro para texto e ícones */
-  .ab .t-light .eyebrow, .ab .t-light .ab-year, .ab .t-light .ab-quote em, .ab .t-light .ab-new svg { color: #B4530F; }
+  .ab .t-light .eyebrow, .ab .t-light .ab-year, .ab .t-light .ab-quote em, .ab .t-light .ab-new svg { color: #A84B0C; }
 
   .ab-cta-sec { padding-bottom: clamp(72px, 10vw, 120px); }
   .ab-cta { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-big); padding: clamp(32px, 6vw, 88px); }
   .ab-cta .h2 { max-width: 820px; font-size: clamp(34px, 4.4vw, 64px); }
+</style></head>
+<body>
+
+<!--email_off-->
+<script>
+  (function () {
+    var blocked = ['r', 'mod', 'uri', 'elementor_library', 'et_core_page_resource'];
+    var params = new URLSearchParams(window.location.search);
+    var dirty = blocked.some(function (p) { return params.has(p); });
+    if (dirty) { window.location.replace(window.location.pathname); }
+  })();
+</script>
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+</script>
+<script>document.documentElement.classList.add('js');</script>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <nav id="nav" class="nav" aria-label="Main menu">
+      <a href="/en/" class="nav-logo" aria-label="Makewell Communications — home">
+        <img src="/images/logo-makewell-mi-branca-en.webp" alt="Makewell Communications" width="161" height="52" fetchpriority="high">
+      </a>
+      <div class="nav-links">
+        <a href="/en/about/" aria-current="page">About</a><a href="/en/services/">Services</a><a href="/en/framework/">Framework</a><a href="/en/method/">Method</a><a href="/en/cases/">Cases</a>
+      </div>
+      <div class="nav-right">
+        <div id="lang-dropdown" class="lang">
+          <button class="lang-trigger" id="langDropdownTrigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language (EN)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>EN</span>
+          </button>
+          <div class="lang-menu" id="langDropdownMenu" aria-label="Select language">
+            <a href="https://makewell.com.br/sobre/" hreflang="pt-BR">BR</a><a href="https://makewell.agency/en/about/" hreflang="en" aria-current="true">EN</a><a href="https://makewell.agency/es/about/" hreflang="es">ES</a><a href="https://makewell.agency/pt/about/" hreflang="pt-PT">PT</a>
+          </div>
+        </div>
+        <a href="https://wa.me/5582999103246?text=Hello!%20I%27d%20like%20to%20schedule%20a%20free%20diagnosis%20with%20Makewell." class="btn btn-primary btn-nav" aria-label="Schedule a Diagnosis (free)" target="_blank" rel="noopener noreferrer">Schedule a Diagnosis</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" data-close="Close menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile menu" aria-modal="true">
+    <a href="/en/about/" class="m-link"><span class="mn" aria-hidden="true">01</span><span>About</span></a><a href="/en/services/" class="m-link"><span class="mn" aria-hidden="true">02</span><span>Services</span></a><a href="/en/framework/" class="m-link"><span class="mn" aria-hidden="true">03</span><span>Framework</span></a><a href="/en/method/" class="m-link"><span class="mn" aria-hidden="true">04</span><span>Method</span></a><a href="/en/cases/" class="m-link"><span class="mn" aria-hidden="true">05</span><span>Cases</span></a>
+    <a href="https://wa.me/5582999103246?text=Hello!%20I%27d%20like%20to%20schedule%20a%20free%20diagnosis%20with%20Makewell." class="btn btn-primary" target="_blank" rel="noopener noreferrer">Schedule a Diagnosis</a>
+  </div>
+</header>
+<main id="main-content">
+  <article class="ab">
+    <header class="t-warm sec ab-hero">
+      <div class="wrap">
+        <p class="eyebrow dot ab-kicker">Who We Are</p>
+        <h1 class="h1 ab-h1">We&#39;re not a digital marketing agency. <em>We&#39;re a growth arm.</em></h1>
+        <div class="ab-hero-row">
+          <p class="lead ab-lead">We're the <strong>strategic communication and consistent growth arm</strong> for independent professionals and brands that don't settle for mediocrity. For <strong>9 years</strong>, we've been operating with a proprietary method that integrates branding, content, traffic and sales — not as isolated services, but as a single revenue ecosystem.</p>
+          <div class="ab-stats" role="group" aria-label="Makewell numbers">
+            <div class="ab-stat"><span class="ab-stat-n">9+</span><span class="ab-stat-l">Years in business</span></div><div class="ab-stat"><span class="ab-stat-n">50+</span><span class="ab-stat-l">Clients served</span></div><div class="ab-stat"><span class="ab-stat-n">+26x</span><span class="ab-stat-l">Best ROI on record</span></div><div class="ab-stat"><span class="ab-stat-n">2</span><span class="ab-stat-l">Offices (Maceió + SP)</span></div>
+          </div>
+        </div>
+        <img class="photo ab-hero-img" src="/images/livros-referencias-publicidade.webp" alt="Advertising reference books on the Makewell bookshelf" width="1210" height="908" fetchpriority="high" decoding="async">
+      </div>
+    </header>
+
+    <section id="story" class="t-light sec">
+      <div class="wrap split">
+        <div class="main">
+          <p class="eyebrow">Our story</p>
+          <h2 class="h2">Content without method is just noise.</h2>
+          <div class="prose ab-story-txt">
+            <p>In the beginning, we were an agency like any other. We produced art, wrote posts, ran traffic. What pulled us out of that category was discovering, year after year, that <strong>content without method is just noise</strong>.</p>
+            <p>Over nearly a decade, we built an ecosystem that brings together what most agencies treat as separate departments: brand positioning, content creation, paid traffic, automation, CRM and sales process.</p>
+          </div>
+          <ol class="ab-miles">
+            <li><span class="ab-year">2017</span><div><h3 class="h3">São Paulo (SP)</h3><p>Makewell was born in <strong>2017</strong>, in São Paulo (SP), with a clear purpose: to turn businesses into brands with soul, direction and purpose.</p></div></li><li><span class="ab-year">2020</span><div><h3 class="h3">Maceió (AL)</h3><p>From <strong>2020</strong> on, we expanded operations to the Northeast and established headquarters in <strong>Maceió (AL)</strong>, keeping São Paulo as a strategic operation.</p></div></li><li><span class="ab-year">Today</span><div><h3 class="h3">Brazil · United States</h3><p>Today we operate from <strong>Maceió and São Paulo</strong>, serving brands across <strong>Brazil</strong> and the <strong>United States</strong>.</p></div></li>
+          </ol>
+        </div>
+        <div class="side ab-story-side">
+          <img class="photo ab-story-img" src="/images/escritorio-campanhas.webp" alt="Wall with framed campaigns created by Makewell" width="1210" height="610" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <section class="t-warm sec">
+      <div class="wrap">
+        <p class="eyebrow">About us</p>
+        <h2 class="h2">Meet Makewell</h2>
+        <p class="lead">See how we transform brands into results with strategy, performance and intelligence.</p>
+        <button type="button" class="video-poster vcover ab-video" data-yt="A28k_Yxm9cc" data-yt-params="cc_load_policy=1&amp;cc_lang_pref=en-US&amp;hl=en">
+  <span class="vc-text">
+    <span class="vc-kicker">Brand video · 40s</span>
+    <span class="vc-title">Meet Makewell in 40 seconds</span>
+    <span class="vc-cta"><span class="play"><svg width="30" height="30" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#080808"></path></svg></span>Watch the presentation</span>
+  </span>
+  <svg class="vc-mark" viewBox="4.4 4.4 23.3 23.3" aria-hidden="true" focusable="false"><path d="M23.4,14.7v6.69c0,.26-.25.43-.48.3l-6.83-3.87v4.6l8.36,4.74c1.34.75,2.96-.21,2.96-1.74v-12.98l-4.01,2.26h0Z" fill="#f1ca29"></path><path d="M7.68,4.93c-1.34-.75-3.01.21-3.01,1.74v12.97l4.01-2.26v-6.69c0-.26.3-.43.53-.3l6.88,3.87v-4.6L7.68,4.93Z" fill="#f0c950"></path><path d="M9.22,21.69s-.03,0-.04.01l-4.5,2.54v1.17c0,1.53,1.67,2.5,3.01,1.74l8.41-4.74v-4.6l-6.87,3.87h0Z" fill="#d88d1b"></path><path d="M27.41,7.84v-1.17c0-1.53-1.620-2.5-2.96-1.74l-8.36,4.74v4.6s11.32-6.43,11.32-6.43Z" fill="#d88d1b"></path></svg>
+</button>
+      </div>
+    </section>
+
+    <section class="t-accent sec">
+      <div class="wrap">
+        <h2 class="h2 ab-num-title">Our cases carry the numbers that explain why our clients stay:</h2>
+        <p class="ab-num-sub">These results don&#39;t come from luck. They come from process.</p>
+        <div class="grid ab-nums" style="--min: 220px">
+          <div class="ab-num"><p class="stat-n">+26x<span class="ab-unit"> ROI</span></p><p class="ab-num-d">in the legal niche</p></div><div class="ab-num"><p class="stat-n">+20x<span class="ab-unit"> ROI</span></p><p class="ab-num-d">in healthcare</p></div><div class="ab-num"><p class="stat-n">R$400k</p><p class="ab-num-d">in revenue generated by a single client in one year</p></div><div class="ab-num"><p class="stat-n">+13<span class="ab-unit"> million</span></p><p class="ab-num-d">Brazilians we gave a voice to in a national cause campaign</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="thesis" class="t-light sec">
+      <div class="wrap">
+        <p class="eyebrow">The thesis that drives us</p>
+        <h2 class="h2 ab-thesis-title">There&#39;s a paradox in the Brazilian agency market: nearly all make the same generic promise, and nearly none deliver real integration.</h2>
+        <p class="lead">We exist to close that gap.</p>
+        <div class="grid ab-contrast" style="--min: 300px">
+          <div class="card ab-old">
+            <h3 class="h3"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"></circle><path d="M8 12h8"></path></svg>What 10,000 agencies do</h3>
+            <p>They sell posts, sell reels, sell isolated traffic. They explain how the Instagram algorithm works. They outsource what they don&#39;t know how to do. They charge a monthly retainer and deliver vanity metrics.</p>
+          </div>
+          <div class="card ab-new">
+            <h3 class="h3"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l2.6 2.6L16 9.5"></path></svg>What we do</h3>
+            <p>We deploy a <strong>sales ecosystem</strong>: branding that positions, content that educates, traffic that scales, CRM that converts. All integrated, all measurable, all done in-house, no outsourcing.</p>
+          </div>
+        </div>
+        <div class="ab-quote-row">
+          <blockquote class="ab-quote">“We don&#39;t sell posts. <em>We build bridges.</em>”</blockquote>
+          <div class="ab-quote-side">
+            <p class="muted">The right question isn't <em>"how much does a post cost?"</em> — it's <em>"how much does it cost to keep going without a system that turns investment into revenue?"</em>.</p>
+            <p>Brands that are worth something aren't built with Reels tips. They're built with <strong>method, culture, process and time</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="audience" class="t-warm2 sec">
+      <div class="wrap">
+        <p class="eyebrow">Who it’s for</p>
+        <h2 class="h2">Who we serve</h2>
+        
+        <div class="hscroll ab-cards">
+          <div class="card ab-seg"><span class="num">01</span><div><h3 class="h3">Law Firms</h3><p>Firms with legal excellence that depend on referrals, can&#39;t stand out in a saturated market and watch smaller competitors grow faster. We turn reputation into digital authority that attracts the right client and accelerates growth.</p></div></div><div class="card ab-seg"><span class="num">02</span><div><h3 class="h3">Medical Clinics</h3><p>We build the brand of clinics that invest in quality but lose patients to competitors with less structure and more digital presence. Reputation that&#39;s hard to control, dependence on referrals and difficulty communicating with confidence and authority.</p></div></div><div class="card ab-seg"><span class="num">03</span><div><h3 class="h3">Builders &amp; Developers</h3><p>High investment in the project, a short window to sell and a sales office full of staff, but no digital demand generated before launch. We build the strategy that warms up the audience, positions the product and delivers qualified leads before the keys are even ready.</p></div></div><div class="card ab-seg"><span class="num">04</span><div><h3 class="h3">Industries</h3><p>Industrial companies competing in markets where a good product is no longer enough of a differentiator. Long sales cycles, hard-to-reach decision makers and many competitors. We build the digital presence that turns technical expertise into authority and shortens the path to the sale.</p></div></div><div class="card ab-seg"><span class="num">05</span><div><h3 class="h3">Hospitals &amp; Nonprofits</h3><p>Hospitals and social organizations with credibility and a strong cause that still can&#39;t translate it into a digital presence that drives results and real impact. We work with those who make a difference and haven&#39;t yet been found by those who are looking.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="t-light sec">
+      <div class="wrap ab-team">
+        <div class="ab-team-txt">
+          <p class="eyebrow">Team</p>
+          <h2 class="h2">The team behind the method</h2>
+          <p class="lead">We&#39;re a lean, highly specialized team. Every project has dedicated leadership and a multidisciplinary squad — no outsourcing.</p>
+          <p class="muted ab-exec">The execution team includes specialists in copy, design, paid media, CRM and automation — each with more than 3 years of experience on high-complexity projects.</p>
+        </div>
+        <div class="grid ab-people" style="--min: 240px">
+          <div class="card ab-person">
+              <img src="/images/giuliana.webp" alt="Giuliana Castela" width="400" height="400" loading="lazy" decoding="async">
+              <h3 class="h3">Giuliana Castela</h3>
+              <p>Director of Operations &amp; Creative Strategy</p>
+            </div><div class="card ab-person">
+              <img src="/images/ismael.webp" alt="Ismael Filho" width="400" height="400" loading="lazy" decoding="async">
+              <h3 class="h3">Ismael Filho</h3>
+              <p>Director of Sales &amp; Administration</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="principles" class="t-warm2 sec">
+      <div class="wrap">
+        <p class="eyebrow">Principles</p>
+        <h2 class="h2">Our principles</h2>
+        <div class="grid ab-prin slide-in" style="--min: 240px">
+          <div class="ab-pr"><span class="ab-pr-n">01</span><h3 class="h3">Generosity</h3><p class="muted">Sharing knowledge, welcoming newcomers, teaching what we know. We grow together or no one grows.</p></div><div class="ab-pr"><span class="ab-pr-n">02</span><h3 class="h3">Honesty</h3><p class="muted">Truth without workarounds, even when uncomfortable. We don&#39;t promise what we won&#39;t deliver, nor deliver less than we promised.</p></div><div class="ab-pr"><span class="ab-pr-n">03</span><h3 class="h3">Continuous Learning</h3><p class="muted">Studying, testing and evolving is routine. What worked yesterday doesn&#39;t guarantee tomorrow.</p></div><div class="ab-pr"><span class="ab-pr-n">04</span><h3 class="h3">Excellence</h3><p class="muted">Care for detail, layered review, quality as the standard. &quot;Good enough&quot; doesn&#39;t exist here.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="t-light sec ab-gal">
+      <div class="wrap">
+        <p class="eyebrow">Our space</p>
+        <h2 class="h2">Inside Makewell</h2>
+        <div class="ab-gal-grid">
+          <img class="photo" src="/images/escritorio-sala.webp" srcset="/images/escritorio-sala-480.webp 480w, /images/escritorio-sala.webp 850w" sizes="(max-width: 700px) 50vw, 40vw" alt="Room with a bookshelf, glass partition, tripods and a yellow sofa" width="850" height="670" loading="lazy" decoding="async"><img class="photo" src="/images/escritorio-estudio.webp" srcset="/images/escritorio-estudio-480.webp 480w, /images/escritorio-estudio.webp 1210w" sizes="(max-width: 700px) 50vw, 40vw" alt="Yellow armchair and a studio light" width="850" height="670" loading="lazy" decoding="async"><img class="photo" src="/images/escritorio-estante.webp" srcset="/images/escritorio-estante-480.webp 480w, /images/escritorio-estante.webp 1210w" sizes="(max-width: 700px) 50vw, 40vw" alt="Black bookshelf with books, plants and yellow objects" width="850" height="670" loading="lazy" decoding="async"><img class="photo" src="/images/escritorio-camera-livros.webp" srcset="/images/escritorio-camera-livros-480.webp 480w, /images/escritorio-camera-livros.webp 1210w" sizes="(max-width: 700px) 50vw, 40vw" alt="Vintage camera on marketing books next to an astronaut figure" width="850" height="670" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <section class="t-light ab-related">
+      <div class="wrap">
+        <div class="ab-related-in">
+          <div class="ab-related-txt">
+            <h2 class="h3 ab-related-title">See the method in action</h2>
+            <p class="muted">Our thesis isn&#39;t declarative. It becomes concrete operation inside the FishWell Method.</p>
+          </div>
+          <div class="btns ab-related-btns">
+            <a class="btn btn-ghost" href="/en/method/">Discover the FishWell Method in 5 stages &rarr;</a>
+            <a class="btn btn-ghost" href="/en/cases/">See the cases that prove this thesis &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="t-light ab-cta-sec">
+      <div class="wrap">
+        <div class="ab-cta">
+          <p class="eyebrow">Free diagnosis</p>
+          <h2 class="h2">Ready to leave tip-based marketing behind?</h2>
+          <p class="lead">Schedule a strategic diagnosis and discover what Makewell can build for your brand.</p>
+          <div class="btns">
+            <a class="btn btn-primary" href="https://wa.me/5582999103246?text=Hello!%20I%20read%20the%20About%20page%20and%20want%20a%20strategic%20diagnosis." target="_blank" rel="noopener noreferrer" data-track="lead" onclick="fbq('track','Lead',{content_name:'About EN CTA'})">Schedule a Diagnosis &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+  
+
+</main>
+<footer class="site-footer">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a href="/en/" aria-label="Makewell Communications — home"><img class="logo" src="/images/logo-makewell-mi-branca-en.webp" alt="Makewell Communications" width="161" height="52" loading="lazy"></a>
+      <div class="foot-social">
+        <a href="https://www.instagram.com/makewellcomunicacao/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.facebook.com/makewellcomunicacao" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v7h4v-7h3l1-4h-4V8a0 0 0 0 1 0 0Z"/></svg></a><a href="https://www.linkedin.com/company/makewell-comunicacao" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></a><a href="https://www.tiktok.com/@makewellcomunicacao" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5M14 3c.5 2.5 2.5 4.5 5 5"/></svg></a>
+      </div>
+    </div>
+    <div class="foot-col">
+      <p class="foot-title">The Agency</p>
+      <p>Makewell is a communications and performance agency specializing in branding, sales, and digital positioning.</p>
+    </div>
+    <nav class="foot-col" aria-label="Navigation">
+      <p class="foot-title">Navigation</p>
+      <ul>
+        <li><a href="/en/about/">About Us</a></li><li><a href="/en/services/">Services</a></li><li><a href="/en/framework/">Framework</a></li><li><a href="/en/method/">Method</a></li><li><a href="/en/cases/">Cases</a></li>
+        <li><a href="/en/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="/en/terms-of-use/">Terms of Use</a></li>
+      </ul>
+    </nav>
+    <div class="foot-col">
+      <p class="foot-title">Social Content</p>
+      <p>Strategic content on marketing, sales and positioning. Follow Makewell on Instagram.</p>
+      <a class="foot-link" href="https://www.instagram.com/makewellcomunicacao/" target="_blank" rel="noopener noreferrer">Follow on Instagram →</a>
+    </div>
+    <div class="foot-col">
+      <p class="foot-title">Location</p>
+      <p>R. Prof. Lourenço Peixoto, 36, Sala 04, Jatiúca, Maceió, AL.</p>
+      <p><a href="mailto:contato@makewell.com.br">contato@makewell.com.br</a></p>
+      <p>Tax ID (CNPJ): 27.238.877/0001-71</p>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <p>Copyright © 2026 Makewell | All Rights Reserved &middot; Brazil · Florida · makewell.agency</p>
+    <p class="mw-prefs-line"><button type="button" class="mw-cookie-prefs">Cookie preferences</button></p>
+    <div class="partners">
+      <span>Official Partners &amp; Certifications</span>
+      <img src="/images/logo-kommo-partner.webp" alt="Kommo Partner" width="160" height="48" loading="lazy">
+    </div>
+  </div>
+</footer>
+<div class="modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Video">
+  <button class="modal-close" type="button" aria-label="Close">&times;</button>
+  <iframe title="YouTube" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen src=""></iframe>
+</div>
+<script>
+(function () {
+  var modal = document.getElementById('videoModal'); if (!modal) return;
+  var frame = modal.querySelector('iframe'), last = null;
+  // aberto, o resto da página fica inerte: o foco fica entre o fechar e o vídeo
+  function inert(o) { document.querySelectorAll('body > *').forEach(function (el) { if (el !== modal && !el.contains(modal) && el.tagName !== 'SCRIPT') el.inert = o; }); }
+  function close() { modal.classList.remove('open', 'vertical'); frame.src = ''; document.body.style.overflow = ''; inert(false); if (last) last.focus(); }
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('[data-yt]'); if (!b) return;
+    e.preventDefault(); last = b;
+    var extra = b.getAttribute('data-yt-params') || '';
+    frame.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(b.getAttribute('data-yt')) + '?autoplay=1&rel=0' + (extra ? '&' + extra : '');
+    modal.classList.toggle('vertical', b.hasAttribute('data-vertical'));
+    modal.classList.add('open'); document.body.style.overflow = 'hidden'; inert(true);
+    modal.querySelector('.modal-close').focus();
+  });
+  modal.addEventListener('click', function (e) { if (e.target === modal || e.target.closest('.modal-close')) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal.classList.contains('open')) close(); });
+})();
+</script>
+<div class="scroll-progress" aria-hidden="true"></div>
+<a href="https://wa.me/5582999103246?text=Hello!%20I%20came%20through%20Makewell%27s%20website%20and%20would%20like%20more%20information." class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"></path></svg></a>
+<button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></button>
+<script>
+(function () {
+  var lang = document.getElementById('lang-dropdown'), trig = document.getElementById('langDropdownTrigger');
+  if (lang && trig) {
+    trig.addEventListener('click', function (e) { e.stopPropagation(); var o = lang.classList.toggle('open'); trig.setAttribute('aria-expanded', o); });
+    document.addEventListener('click', function (e) { if (!lang.contains(e.target)) { lang.classList.remove('open'); trig.setAttribute('aria-expanded', 'false'); } });
+    var br = lang.querySelector('[data-lang="pt"]');
+    if (br) br.addEventListener('click', function () { try { localStorage.setItem('mw-lang', 'pt'); } catch (e) {} lang.classList.remove('open'); });
+  }
+  var ham = document.getElementById('hamburger'), menu = document.getElementById('mobileMenu');
+  var openLbl = ham && ham.getAttribute('aria-label');
+  function setMenu(o) {
+    menu.classList.toggle('open', o); ham.setAttribute('aria-expanded', o);
+    ham.setAttribute('aria-label', o ? ham.getAttribute('data-close') : openLbl);
+    document.body.style.overflow = o ? 'hidden' : '';
+    // com o menu aberto, o resto da página fica inerte: o Tab não escapa para o conteúdo escondido atrás
+    document.querySelectorAll('main, footer, .wa-float, .back-to-top, .skip-link').forEach(function (el) { el.inert = o; });
+    if (o) { var f = menu.querySelector('a'); if (f) f.focus(); }
+  }
+  if (ham && menu) {
+    ham.addEventListener('click', function () { setMenu(!menu.classList.contains('open')); });
+    menu.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+  }
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    if (lang && lang.classList.contains('open')) { lang.classList.remove('open'); if (trig) { trig.setAttribute('aria-expanded', 'false'); if (lang.contains(document.activeElement)) trig.focus(); } }
+    if (menu && menu.classList.contains('open')) { setMenu(false); ham.focus(); }
+  });
+})();
+</script>
+<script>
+// Movimento: revelação ao rolar e contadores nos números grandes. Sem efeito com prefers-reduced-motion.
+(function () {
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var main = document.getElementById('main-content'); if (!main) return;
+  // blocos da página: seções (diretas, dentro do wrapper da home ou do article) e o header do article (sobre, case).
+  // O primeiro é o topo e não espera rolagem (evita atrasar a primeira pintura); páginas legais não têm blocos.
+  var blocks = main.querySelectorAll('section, article > header');
+  var targets = [];
+  Array.prototype.forEach.call(blocks, function (sec, i) {
+    if (i === 0) return;
+    sec.querySelectorAll('.wrap > *, .grid > *, .card').forEach(function (el) { if (targets.indexOf(el) < 0 && !blocks[0].contains(el)) targets.push(el); });
+  });
+  targets.forEach(function (el) {
+    var p = el.parentElement, k = p ? Array.prototype.indexOf.call(p.children, el) : 0;
+    el.style.setProperty('--rv-d', Math.min(k, 5) * 0.08 + 's');
+    el.classList.add('rv');
+  });
+  // revela tudo que já chegou a 92% da altura da tela, inclusive o que uma rolagem rápida "pulou"
+  // (um IntersectionObserver perde elementos que vão de baixo para cima da tela num único quadro)
+  var pending = targets;
+  function reveal() {
+    var lim = innerHeight * 0.92;
+    pending = pending.filter(function (el) { if (el.getBoundingClientRect().top < lim) { el.classList.add('in'); return false; } return true; });
+  }
+
+  // barra de progresso, cabeçalho compacto e "voltar ao topo"
+  var bar = document.querySelector('.scroll-progress'), head = document.querySelector('.site-header'), top = document.getElementById('back-to-top'), wa = document.querySelector('.wa-float'), ticking = false;
+  function onScroll() {
+    ticking = false;
+    if (pending.length) reveal();
+    var y = window.scrollY, h = document.documentElement.scrollHeight - innerHeight;
+    if (bar) bar.style.setProperty('--p', h > 0 ? (y / h).toFixed(4) : 0);
+    if (head) head.classList.toggle('scrolled', y > 40);
+    if (top) top.classList.toggle('show', y > innerHeight);
+    if (wa) wa.classList.toggle('show', y > innerHeight * .6);
+  }
+  addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  onScroll();
+  if (top) top.addEventListener('click', function () { scrollTo({ top: 0, behavior: 'smooth' }); });
+
+  // contadores: texto curto tipo "+26x", "50+", "R$400k", "13M+", "4 anos" em fonte grande; ignora anos e "01"
+  var nums = [];
+  main.querySelectorAll('p, span, div, strong, dt, dd, b').forEach(function (el) {
+    if (el.children.length) return;
+    var t = el.textContent.trim(), m = t.match(/^([+R$€]*\s?)(\d{1,4})([^\d].{0,8})?$/);
+    if (!m || t.length > 12 || /^0\d/.test(m[2]) || (+m[2] >= 1900 && +m[2] <= 2100)) return;
+    if (parseFloat(getComputedStyle(el).fontSize) < 36) return;
+    nums.push({ el: el, pre: m[1], n: +m[2], suf: m[3] || '' });
+  });
+  var cio = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (!e.isIntersecting) return; cio.unobserve(e.target);
+      var d = e.target.__mwNum, t0 = performance.now();
+      (function step(now) {
+        var k = Math.min(1, (now - t0) / 1400), v = Math.round(d.n * (1 - Math.pow(1 - k, 3)));
+        d.el.textContent = d.pre + v + d.suf;
+        if (k < 1) requestAnimationFrame(step);
+      })(t0);
+    });
+  }, { threshold: 0.6 });
+  nums.forEach(function (d) { d.el.__mwNum = d; cio.observe(d.el); });
+})();
+</script>
+<script type="module" src="/assets/Page.astro_astro_type_script_index_0_lang.CTQbG-ZV.js"></script>
+<script>(function(){const hs = ["Previous","Next","Pause motion","Resume motion"];
+
+// Carrossel .hscroll: avanço automático por padrão (6s com mouse, 8s no toque, para dar tempo de ler), com botão
+// play/pausa (WCAG 2.2.2). Mouse em cima, foco ou interação (setas, arrastar, tocar) pausam só por um tempo e o
+// movimento volta sozinho; só a pausa pelo botão para de vez. Setas somem se tudo cabe e ficam aria-disabled no fim.
+// Parado com prefers-reduced-motion.
+document.querySelectorAll('.hscroll').forEach(function (t) {
+  var icon = function (d) { return '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + d + '"/></svg>'; };
+  var PAUSE = icon('M9 6v12M15 6v12'), PLAY = '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>';
+  var nav = document.createElement('div'); nav.className = 'hs-nav';
+  nav.innerHTML = '<button type="button" class="hs-btn hs-pause" hidden aria-label="' + hs[2] + '">' + PAUSE + '</button>'
+    + '<button type="button" class="hs-btn" data-d="-1" aria-label="' + hs[0] + '">' + icon('M15 6l-6 6 6 6') + '</button>'
+    + '<button type="button" class="hs-btn" data-d="1" aria-label="' + hs[1] + '">' + icon('M9 6l6 6-6 6') + '</button>';
+  t.after(nav);
+  var pause = nav.children[0], prev = nav.children[1], next = nav.children[2], paused = false, hover = false, idleUntil = 0;
+  var step = function () { var c = t.children[1] || t.children[0]; return c ? c.offsetLeft - t.children[0].offsetLeft : t.clientWidth * .8; };
+  var max = function () { return t.scrollWidth - t.clientWidth - 2; };
+  var update = function () {
+    nav.hidden = max() <= 0;
+    prev.setAttribute('aria-disabled', t.scrollLeft <= 2); next.setAttribute('aria-disabled', t.scrollLeft >= max());
+  };
+  t.addEventListener('scroll', update, { passive: true }); addEventListener('resize', update); update();
+  var rest = function () { idleUntil = Date.now() + 9000; };  // a pessoa mexeu: espera e depois volta a andar sozinho
+  var setPaused = function (p) { paused = p; pause.innerHTML = p ? PLAY : PAUSE; pause.setAttribute('aria-label', hs[p ? 3 : 2]); };
+  nav.addEventListener('click', function (e) {
+    var b = e.target.closest('.hs-btn'); if (!b) return;
+    if (b === pause) { setPaused(!paused); return; }
+    if (b.getAttribute('aria-disabled') === 'true') return;
+    rest(); t.scrollBy({ left: +b.dataset.d * step() });
+  });
+  t.addEventListener('pointerdown', rest); t.addEventListener('touchstart', rest, { passive: true }); t.addEventListener('keydown', rest);
+  ['pointerenter', 'focusin'].forEach(function (ev) { t.addEventListener(ev, function (e) { if (e.pointerType !== 'touch') hover = true; }); });
+  ['pointerleave', 'focusout'].forEach(function (ev) { t.addEventListener(ev, function () { hover = false; }); });
+  // arrastar com mouse (no toque a rolagem nativa já faz); um arrasto não dispara o clique do card
+  var x0 = 0, s0 = 0, moved = false;
+  t.addEventListener('pointerdown', function (e) { if (e.pointerType !== 'mouse' || e.button) return; x0 = e.clientX; s0 = t.scrollLeft; moved = false; t.classList.add('dragging'); });
+  addEventListener('pointermove', function (e) { if (!t.classList.contains('dragging')) return; if (Math.abs(e.clientX - x0) > 4) moved = true; t.scrollLeft = s0 - (e.clientX - x0); });
+  addEventListener('pointerup', function () { if (!t.classList.contains('dragging')) return; t.classList.remove('dragging'); t.scrollTo({ left: Math.round(t.scrollLeft / step()) * step() }); });
+  t.addEventListener('click', function (e) { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || nav.hidden) return;
+  pause.hidden = false;
+  var vis = false; new IntersectionObserver(function (es) { vis = es[0].isIntersecting; }, { threshold: .5 }).observe(t);
+  var touch = !matchMedia('(hover: hover) and (pointer: fine)').matches;
+  setInterval(function () {
+    if (paused || hover || !vis || document.hidden || Date.now() < idleUntil) return;
+    t.scrollTo({ left: t.scrollLeft >= max() ? 0 : t.scrollLeft + step() });
+  }, touch ? 8000 : 6000);
+});
+})();</script>
+<!-- Consentimento de cookies (LGPD/GDPR): rastreadores (via GTM e Meta Pixel) só carregam depois de "Aceitar" -->
+<div id="mw-consent" role="region" aria-label="Cookie notice" tabindex="-1" hidden>
+  <p>We use analytics and marketing cookies only if you allow them. Learn more in our <a href="/en/privacy-policy/">Privacy Policy</a>.</p>
+  <div class="mw-consent-btns">
+    <button type="button" data-consent="declined">Decline</button>
+    <button type="button" data-consent="accepted">Accept</button>
+  </div>
+</div>
+<style>
+#mw-consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:9990;max-width:720px;margin:0 auto;background:#141414;color:#ddd;border:1px solid #2a2a2a;border-radius:14px;padding:18px 20px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;box-shadow:0 12px 40px rgba(0,0,0,.5);font:14px/1.5 'Segoe UI',system-ui,-apple-system,sans-serif;cursor:auto}
+#mw-consent[hidden]{display:none}
+#mw-consent:focus{outline:none}
+#mw-consent p{margin:0;flex:1 1 300px}
+#mw-consent a{color:#F5A623;text-decoration:underline;cursor:pointer}
+.mw-consent-btns{display:flex;gap:10px;flex:0 0 auto}
+.mw-consent-btns button{min-height:44px;min-width:110px;padding:0 20px;border-radius:999px;border:1px solid #F07820;background:transparent;color:#F4F1EC;font:700 14px 'Segoe UI',system-ui,-apple-system,sans-serif;cursor:pointer}
+.mw-consent-btns button:hover,.mw-consent-btns button:focus-visible{background:#F07820;color:#080808}
+.mw-cookie-prefs{display:inline-flex;align-items:center;min-height:44px;background:none;border:0;padding:0 4px;color:inherit;font:inherit;text-decoration:underline;cursor:pointer}
 </style>
+<script>
+(function(){
+  // v2: o banner antigo ("ao continuar navegando…") não valia como consentimento; todos respondem de novo.
+  // Mudou a lista de ferramentas no GTM? Suba a versão da chave para perguntar de novo.
+  var KEY='mw-consent-v2', NO_TRACKERS=false;
+  function get(){try{return localStorage.getItem(KEY);}catch(e){return null;}}
+  function set(v){try{localStorage.setItem(KEY,v);}catch(e){}}
+  function clear(){try{localStorage.removeItem(KEY);}catch(e){}}
+  var consentAtLoad=get()==='accepted';
+  // shim do Meta Pixel: só enfileira (nada é enviado) para os onclick de Lead não quebrarem
+  if(!NO_TRACKERS&&typeof window.fbq!=='function'){
+    var n=window.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments);};
+    if(!window._fbq)window._fbq=n;n.push=n;n.loaded=true;n.version='2.0';n.queue=[];
+  }
+  function loadTrackers(){
+    if(NO_TRACKERS||window.__mwTrackers||typeof fbq!=='function')return;
+    window.__mwTrackers=true;
+    // eventos de antes do aceite nesta página são descartados; com aceite prévio, vão depois do init
+    var early=fbq.queue?fbq.queue.splice(0):[];
+    fbq('init','2571294026447618');fbq('track','PageView');
+    if(consentAtLoad)early.forEach(function(a){fbq.apply(null,a);});
+    var t=document.createElement('script');t.async=true;
+    t.src='https://connect.facebook.net/en_US/fbevents.js';document.head.appendChild(t);
+    window.dataLayer=window.dataLayer||[];
+    window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+    var j=document.createElement('script');j.async=true;
+    j.src='https://www.googletagmanager.com/gtm.js?id=GTM-NFGD8X8';document.head.appendChild(j);
+  }
+  function dropTrackerData(){
+    var host=location.hostname.replace(/^www\./,'');
+    document.cookie.split(';').forEach(function(c){
+      var n=c.split('=')[0].trim();
+      if(!/^(_ga|_gid|_gat|_gcl|_fbp|_fbc|_clck|_clsk|_uet|__obref)/.test(n))return;
+      ['', host, '.'+host].forEach(function(d){
+        document.cookie=n+'=; Max-Age=0; path=/'+(d?'; domain='+d:'');
+      });
+    });
+    try{['_gcl_ls','lastExternalReferrer','lastExternalReferrerTime','cookie-consent'].forEach(function(k){localStorage.removeItem(k);});}catch(e){}
+  }
+  var banner=document.getElementById('mw-consent');
+  banner.addEventListener('click',function(e){
+    var v=e.target.getAttribute('data-consent');
+    if(!v)return;
+    set(v);banner.hidden=true;
+    if(v==='accepted')loadTrackers();
+  });
+  document.addEventListener('click',function(e){
+    if(!e.target.closest||!e.target.closest('.mw-cookie-prefs'))return;
+    var was=get();clear();dropTrackerData();
+    if(was==='accepted'){window['ga-disable-G-71YG2WTXNM']=true;location.reload();return;}
+    banner.hidden=false;banner.focus();
+  });
+  if(consentAtLoad){
+    if('requestIdleCallback' in window)requestIdleCallback(loadTrackers,{timeout:4000});
+    else setTimeout(loadTrackers,2000);
+  } else {
+    dropTrackerData();
+    if(get()!=='declined')banner.hidden=false;
+  }
+})();
+</script>
+<!--/email_off-->
+</body>
+</html>
