@@ -368,7 +368,9 @@ html:has(#mw-consent:not([hidden])) { scroll-padding-bottom: 220px; }
 @media (min-width: 900px) { .hscroll.slide-in { display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); overflow: visible; margin-right: 0; padding-right: 0; } .hscroll.slide-in > .card { flex: none; } }
 
 /* chat de vendas (componente ChatWidget): painel flutuante em vidro, tela cheia no celular */
-.mw-chat-btn { border: 0; cursor: pointer; }
+.mw-chat-btn { border: 0; cursor: pointer; padding: 0; overflow: hidden; background: #F4F8FC; } /* avatar da Maia (Maia Connect) com o pulso laranja da marca */
+.mw-chat-btn img { width: 100%; height: 100%; display: block; }
+.mw-chat-btn:hover { background: #F4F8FC; }
 .mw-chat { position: fixed; z-index: 1100; right: 20px; bottom: 88px; width: min(390px, calc(100vw - 32px)); height: min(600px, calc(100vh - 120px)); display: flex; flex-direction: column;
   border-radius: 22px; overflow: hidden; color: var(--paper); background: rgba(20,18,16,.9); -webkit-backdrop-filter: blur(20px) saturate(170%); backdrop-filter: blur(20px) saturate(170%);
   border: 1px solid rgba(255,255,255,.12); box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 30px 80px rgba(0,0,0,.5); }
@@ -398,6 +400,15 @@ html:has(#mw-consent:not([hidden])) { scroll-padding-bottom: 220px; }
 }
 @media (prefers-reduced-transparency: reduce) { .mw-chat { -webkit-backdrop-filter: none; backdrop-filter: none; background: var(--warm-card); } }
 .mw-chat-mark { object-fit: contain; } /* avatar da Maia no topo do chat */
+/* balão de iniciativa do chat, ao lado do botão (acima dele fica o "voltar ao topo") */
+.mw-chat-teaser { position: fixed; z-index: 950; right: 88px; bottom: 20px; max-width: min(300px, calc(100vw - 108px)); display: flex; align-items: flex-start; gap: 4px;
+  padding: 12px 6px 12px 16px; border-radius: 18px 18px 4px 18px; /* a ponta aponta para o botão do chat */ color: var(--paper); background: rgba(20,18,16,.94); border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 18px 50px rgba(0,0,0,.45); animation: mw-teaser-in .5s cubic-bezier(.2,.8,.2,1); }
+.mw-chat-teaser[hidden] { display: none; }
+.mw-teaser-open { flex: 1; padding: 0; border: 0; background: none; color: inherit; font: 15px/1.45 var(--font); text-align: left; cursor: pointer; }
+.mw-teaser-x { width: 32px; height: 32px; flex: none; margin-top: -6px; border: 0; border-radius: 50%; background: none; color: var(--paper-muted); font-size: 20px; cursor: pointer; }
+@keyframes mw-teaser-in { from { opacity: 0; transform: translateY(10px) scale(.96); } }
+@media (prefers-reduced-motion: reduce) { .mw-chat-teaser { animation: none; } }
 </style><style>
     /* coluna de leitura de ~70 caracteres, centralizada na largura do site */
   .legal-body { max-width: 70ch; margin-inline: auto; font-size: 17px; }
@@ -487,6 +498,7 @@ html:has(#mw-consent:not([hidden])) { scroll-padding-bottom: 220px; }
       <li><strong>Browsing data, only with your consent:</strong> pages visited, time on site, traffic source, and interactions, collected through analytics and marketing cookies.</li>
       <li><strong>Technical data:</strong> IP address, browser, and device, recorded in the hosting server logs for security purposes.</li>
       <li><strong>Client data:</strong> information needed to provide the contracted services, as set out in the contract (see our <a href="/en/terms-of-use/">Terms of Use</a>).</li>
+    <li><strong>Conversations with the AI assistant:</strong> what you write in the website chat, stored with a conversation ID. The chat does not use cookies and does not ask for documents or sensitive data.</li>
     </ul>
     <p>We do not process sensitive personal data through this website.</p>
 
@@ -502,10 +514,12 @@ html:has(#mw-consent:not([hidden])) { scroll-padding-bottom: 220px; }
           <tr><td>Providing the contracted services</td><td>Performance of a contract (Art. 7, V)</td><td>Performance of a contract (Art. 6(1)(b))</td></tr>
           <tr><td>Complying with legal, tax, and regulatory obligations</td><td>Legal obligation (Art. 7, II)</td><td>Legal obligation (Art. 6(1)(c))</td></tr>
           <tr><td>Keeping the website secure and running</td><td>Legitimate interest (Art. 7, IX)</td><td>Legitimate interests (Art. 6(1)(f))</td></tr>
+          <tr><td>Replying through the AI assistant chat and referring you to our team</td><td>Preliminary contractual procedures (Art. 7, V)</td><td>Pre-contractual steps (Art. 6(1)(b))</td></tr>
         </tbody>
       </table>
     </div>
     <p>We do not make automated decisions or carry out profiling that produces legal effects concerning you.</p>
+    <p>In the chat, the AI assistant summarizes the conversation for our team and notes where each contact stands. Decisions about proposals and service are always made by people.</p>
 
     <h2>5. Cookies</h2>
     <p>Analytics and marketing cookies are only activated after you click "Accept" on the cookie notice. If you decline or do not respond, none of them are loaded, and the website does not even connect to these tools' servers.</p>
@@ -532,12 +546,14 @@ html:has(#mw-consent:not([hidden])) { scroll-padding-bottom: 220px; }
       <li><strong>OpenAI</strong> (ads measurement pixel), if you accept cookies;</li>
       <li><strong>Meta</strong> (Meta Pixel, if you accept cookies; and WhatsApp, if you choose to talk to us there);</li>
       <li><strong>GitHub</strong> (GitHub Pages), which hosts the website and records technical logs;</li>
+      <li><strong>Cloudflare</strong>, which hosts the chat and stores the conversations, and <strong>kie.ai</strong> and <strong>xAI</strong>, which provide the AI model that generates the replies, if you use the chat;</li>
+      <li><strong>Meta</strong> (WhatsApp) and our email, when the chat refers you to our team: a summary of the conversation (name, company, industry, location, goal, interest, and the assistant's assessment) is sent to Makewell's WhatsApp and email;</li>
       <li><strong>YouTube (Google)</strong>: video thumbnails are loaded from YouTube's servers, which reveals your IP address to them; the video itself only loads when you click, in privacy-enhanced mode (youtube-nocookie.com);</li>
       <li>public authorities, when required by law or court order.</li>
     </ul>
 
     <h2>7. International transfers</h2>
-    <p>Google, Meta, Microsoft, OpenAI, and GitHub may process data in the United States and other countries. These transfers rely on the safeguards provided for in Article 33 of the LGPD and Chapter V of the GDPR, such as standard contractual clauses and, where applicable, these companies' certification under the EU-U.S. Data Privacy Framework.</p>
+    <p>Google, Meta, Microsoft, OpenAI, and GitHub may process data in the United States and other countries. These transfers rely on the safeguards provided for in Article 33 of the LGPD and Chapter V of the GDPR, such as standard contractual clauses and, where applicable, these companies' certification under the EU-U.S. Data Privacy Framework.</p> <p>Chat conversations are processed by Cloudflare, kie.ai, and xAI, which may process data in the United States and other countries. These transfers rely on Article 33 of the LGPD and Chapter V of the GDPR, under each provider's terms.</p>
 <p>Data from visitors located in the European Economic Area is processed by Makewell in Brazil on the basis of the European Commission’s adequacy decision for Brazil (Commission Implementing Decision (EU) 2026/179 of 26 January 2026), which recognises the level of protection under the LGPD as essentially equivalent to the GDPR. Brazil’s data protection authority (ANPD) has likewise recognised the adequacy of the European Union (Resolution CD/ANPD No. 32/2026).</p>
 
     <h2>8. How long we keep data</h2>
@@ -546,6 +562,8 @@ html:has(#mw-consent:not([hidden])) { scroll-padding-bottom: 220px; }
       <li><strong>Clients:</strong> for the duration of the contract and 5 years thereafter, to comply with legal and tax obligations.</li>
       <li><strong>Cookies:</strong> for the periods listed in the table in section 5.</li>
       <li><strong>Hosting logs:</strong> for the period set by the provider.</li>
+    <li><strong>AI assistant chat conversations:</strong> 90 days, then deleted automatically.</li>
+    <li><strong>Summary of conversations referred to our team:</strong> up to 2 years, like other contacts.</li>
     </ul>
     <p>After these periods, data is deleted or anonymized, unless the law requires us to keep it longer.</p>
 
@@ -614,7 +632,83 @@ html:has(#mw-consent:not([hidden])) { scroll-padding-bottom: 220px; }
 </footer>
 
 <div class="scroll-progress" aria-hidden="true"></div>
-<a href="https://wa.me/5582999103246?text=Hello!%20I%20came%20through%20Makewell%27s%20website%20and%20would%20like%20more%20information." class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"></path></svg></a>
+<button type="button" class="wa-float mw-chat-btn" id="mwChatBtn" aria-label="Chat with Makewell" aria-expanded="false" aria-controls="mwChat">
+  <img src="/images/maia-botao.webp" alt="" width="56" height="56">
+</button>
+<div class="mw-chat-teaser" id="mwChatTeaser" hidden>
+  <button type="button" class="mw-teaser-open">Hi! I&#39;m Maia. Can I help you see what makes sense for your business?</button>
+  <button type="button" class="mw-teaser-x" aria-label="Close chat">&times;</button>
+</div>
+<section class="mw-chat" id="mwChat" role="dialog" aria-label="Maia · Makewell" hidden data-lang="en" data-endpoint="https://chat.makewell.agency/chat" data-wa="https://wa.me/5582999103246?text=Hello!%20I%20came%20through%20Makewell%27s%20website%20and%20would%20like%20more%20information." data-t-typing="Typing…" data-t-error="I couldn't reply just now. Please reach the team on WhatsApp." data-t-cta="Continue on WhatsApp">
+  <header class="mw-chat-head">
+    <img class="mw-chat-mark" src="/images/maia-avatar.webp" alt="" width="96" height="96">
+    <p class="mw-chat-title">Maia · Makewell <span class="mw-chat-badge">IA</span></p>
+    <button type="button" class="mw-chat-close" aria-label="Close chat">&times;</button>
+  </header>
+  <p class="mw-chat-notice">You&#39;re chatting with an AI. The conversation is kept for 90 days, and if you continue on WhatsApp, a summary goes to our team. <a href="/en/privacy-policy/">Privacy policy</a></p>
+  <div class="mw-chat-log" aria-live="polite"><p class="mw-msg mw-ai">Hi! I&#39;m Maia, Makewell&#39;s AI assistant. Tell me a bit about your business: what would you like to improve in your marketing right now?</p></div>
+  <form class="mw-chat-form">
+    <textarea rows="1" maxlength="1200" placeholder="Type your message…" aria-label="Type your message…" required></textarea>
+    <button type="submit" class="mw-chat-send" aria-label="Send"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+  </form>
+  <a class="mw-chat-wa" href="https://wa.me/5582999103246?text=Hello!%20I%20came%20through%20Makewell%27s%20website%20and%20would%20like%20more%20information." target="_blank" rel="noopener noreferrer">I&#39;d rather use WhatsApp</a>
+</section>
+<script>
+(function () {
+  var box = document.getElementById('mwChat'), btn = document.getElementById('mwChatBtn'); if (!box || !btn) return;
+  var log = box.querySelector('.mw-chat-log'), form = box.querySelector('.mw-chat-form'), input = form.querySelector('textarea');
+  var KEY = 'mw-chat-' + box.dataset.lang, state = { sid: '', msgs: [] }, busy = false;
+  try { state = JSON.parse(sessionStorage.getItem(KEY)) || state; } catch (e) {}
+  var save = function () { try { sessionStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} };
+  function bubble(who, text) { var p = document.createElement('p'); p.className = 'mw-msg ' + (who === 'me' ? 'mw-me' : 'mw-ai'); p.textContent = text; log.appendChild(p); log.scrollTop = log.scrollHeight; return p; }
+  function cta(url) {
+    var a = document.createElement('a'); a.className = 'btn btn-primary mw-chat-cta'; a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.textContent = box.dataset.tCta;
+    a.addEventListener('click', function () { try { fbq('track', 'Lead', { content_name: 'Chat IA' }); } catch (e) {} });
+    log.appendChild(a); log.scrollTop = log.scrollHeight;
+  }
+  state.msgs.forEach(function (m) { if (m.who === 'cta') cta(m.text); else bubble(m.who, m.text); });
+  function toggle(o) {
+    box.hidden = !o; btn.setAttribute('aria-expanded', o); document.documentElement.classList.toggle('mw-chat-open', o);
+    if (o) { input.focus(); log.scrollTop = log.scrollHeight; } else btn.focus();
+  }
+  btn.addEventListener('click', function () { toggle(box.hidden); });
+  // iniciativa: depois de 30s navegando no site (contados entre páginas), um balão chama para a conversa, uma vez por
+  // visita; espera o aviso de cookies sair e o botão aparecer (no celular, só depois de rolar)
+  var teaser = document.getElementById('mwChatTeaser'), ss = window.sessionStorage, t0;
+  try { t0 = +ss.getItem('mw-chat-t0') || Date.now(); ss.setItem('mw-chat-t0', t0); } catch (e) { t0 = Date.now(); }
+  function seen() { try { return ss.getItem('mw-chat-teased'); } catch (e) { return 1; } }
+  function hideTeaser() { teaser.hidden = true; try { ss.setItem('mw-chat-teased', 1); } catch (e) {} }
+  function tease() {
+    if (seen() || state.msgs.length || !box.hidden) return;
+    var c = document.getElementById('mw-consent');
+    if ((c && !c.hidden) || getComputedStyle(btn).opacity < 0.5) return setTimeout(tease, 4000);
+    teaser.hidden = false; try { ss.setItem('mw-chat-teased', 1); } catch (e) {}
+  }
+  if (!seen() && !state.msgs.length) setTimeout(tease, Math.max(5000, 30000 - (Date.now() - t0))); // 5s no mínimo: o aviso de cookies aparece depois do carregamento
+  teaser.querySelector('.mw-teaser-open').addEventListener('click', function () { hideTeaser(); toggle(true); });
+  teaser.querySelector('.mw-teaser-x').addEventListener('click', hideTeaser);
+  btn.addEventListener('click', hideTeaser);
+  box.querySelector('.mw-chat-close').addEventListener('click', function () { toggle(false); });
+  box.addEventListener('keydown', function (e) { if (e.key === 'Escape') toggle(false); });
+  input.addEventListener('keydown', function (e) { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); form.requestSubmit(); } });
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); var text = input.value.trim(); if (!text || busy) return;
+    busy = true; input.value = ''; bubble('me', text); state.msgs.push({ who: 'me', text: text }); save();
+    var dots = bubble('ai', box.dataset.tTyping); dots.classList.add('mw-typing');
+    fetch(box.dataset.endpoint, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ sid: state.sid, lang: box.dataset.lang, text: text, page: location.pathname }) })
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        dots.remove(); if (d.sid) state.sid = d.sid;
+        var reply = d.reply || (d.error ? box.dataset.tError : '');
+        if (reply) { bubble('ai', reply); state.msgs.push({ who: 'ai', text: reply }); }
+        if (d.whatsapp) { cta(d.whatsapp); state.msgs.push({ who: 'cta', text: d.whatsapp }); }
+        save();
+      })
+      .catch(function () { dots.remove(); bubble('ai', box.dataset.tError); cta(box.dataset.wa); })
+      .finally(function () { busy = false; input.focus(); });
+  });
+})();
+</script>
 <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></button>
 <script>
 (function () {
