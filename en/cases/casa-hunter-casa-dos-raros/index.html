@@ -310,6 +310,18 @@ p { text-wrap: pretty; }
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0); }
 .glass::after { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit; pointer-events: none;
   background: radial-gradient(circle at var(--mx, 18%) var(--my, 0%), rgba(255,255,255,.14), rgba(255,255,255,0) 42%); transition: background-position .2s; }
+
+/* fundo para blocos de vidro com dados de resultado: brilhos laranja/âmbar que se movem devagar e uma grade fina
+ (cases da home e da página Cases, topo da Sobre e do case Casa Hunter); parados no celular */
+.glow-host { position: relative; isolation: isolate; overflow: hidden; }
+.glow-bg { position: absolute; inset: 0; z-index: -1; pointer-events: none; background-image: linear-gradient(rgba(244,241,236,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(244,241,236,.04) 1px, transparent 1px); background-size: 96px 96px; }
+.glow-bg span { position: absolute; border-radius: 50%; filter: blur(60px); opacity: .55; animation: mw-orb 22s ease-in-out infinite alternate; }
+.glow-bg span:nth-child(1) { width: 46vw; height: 46vw; left: -8vw; top: 4%; background: radial-gradient(closest-side, #F07820, rgba(240,120,32,0)); }
+.glow-bg span:nth-child(2) { width: 38vw; height: 38vw; right: -6vw; top: 30%; background: radial-gradient(closest-side, #F5A623, rgba(245,166,35,0)); animation-duration: 28s; animation-direction: alternate-reverse; }
+.glow-bg span:nth-child(3) { width: 30vw; height: 30vw; left: 30%; bottom: -10%; background: radial-gradient(closest-side, #B4530F, rgba(180,83,15,0)); animation-duration: 34s; }
+@keyframes mw-orb { 50% { transform: translate(8vw, 6vh) scale(1.15); } 100% { transform: translate(-4vw, 10vh) scale(.92); } }
+@media (max-width: 900px), (prefers-reduced-motion: reduce) { .glow-bg span { animation: none; } }
+.glow-host .card.glass { background: rgba(23,21,18,.42); }
 </style></head>
 <body>
 <script>
@@ -362,6 +374,7 @@ n.queue=[];}(window, document,'script',
 <main id="main-content">
   <article>
     <header class="t-warm ch-hero">
+      <div class="glow-bg" aria-hidden="true"><span></span><span></span><span></span></div>
       <div class="wrap">
         <nav aria-label="Breadcrumb" class="ch-crumb">
           <a href="/en/cases/">Cases</a>
@@ -379,7 +392,7 @@ n.queue=[];}(window, document,'script',
             <div class="ch-logo"><img src="/images/logo-casa-dos-raros.webp" alt="Casa dos Raros" width="2838" height="2246"></div>
           </div>
         </div>
-        <dl class="ch-facts">
+        <dl class="ch-facts glass">
           <div><dt>Client</dt><dd>Casa Hunter and Casa dos Raros</dd></div><div><dt>Sector</dt><dd>Nonprofit · Rare diseases</dd></div><div><dt>Period</dt><dd>More than 4 years of continuous partnership</dd></div><div><dt>Services</dt><dd>Content planning, national campaigns, visual strategy and tone of voice, documentary series launch</dd></div>
         </dl>
       </div>
@@ -733,8 +746,8 @@ n.queue=[];}(window, document,'script',
   .ch-logos { display: grid; gap: 12px; }
   .ch-logo { background: var(--tile); border-radius: 24px; height: 170px; display: flex; align-items: center; justify-content: center; }
   .ch-logo img { max-height: 92px; max-width: 64%; width: auto; object-fit: contain; }
-  .ch-facts { margin: 72px 0 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px 24px; }
-  .ch-facts > div { border-top: 1px solid var(--line); padding-top: 20px; }
+  .ch-facts { border-radius: 28px; padding: clamp(24px, 3vw, 36px); margin: 72px 0 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px 24px; }
+  .ch-facts > div { padding-top: 4px; } /* no painel de vidro, sem as linhas no topo de cada fato */
   .ch-facts dt { font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
   .ch-facts dd { margin: 12px 0 0; font-size: 17px; line-height: 1.5; }
 

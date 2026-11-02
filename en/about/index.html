@@ -311,6 +311,18 @@ p { text-wrap: pretty; }
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0); }
 .glass::after { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit; pointer-events: none;
   background: radial-gradient(circle at var(--mx, 18%) var(--my, 0%), rgba(255,255,255,.14), rgba(255,255,255,0) 42%); transition: background-position .2s; }
+
+/* fundo para blocos de vidro com dados de resultado: brilhos laranja/âmbar que se movem devagar e uma grade fina
+ (cases da home e da página Cases, topo da Sobre e do case Casa Hunter); parados no celular */
+.glow-host { position: relative; isolation: isolate; overflow: hidden; }
+.glow-bg { position: absolute; inset: 0; z-index: -1; pointer-events: none; background-image: linear-gradient(rgba(244,241,236,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(244,241,236,.04) 1px, transparent 1px); background-size: 96px 96px; }
+.glow-bg span { position: absolute; border-radius: 50%; filter: blur(60px); opacity: .55; animation: mw-orb 22s ease-in-out infinite alternate; }
+.glow-bg span:nth-child(1) { width: 46vw; height: 46vw; left: -8vw; top: 4%; background: radial-gradient(closest-side, #F07820, rgba(240,120,32,0)); }
+.glow-bg span:nth-child(2) { width: 38vw; height: 38vw; right: -6vw; top: 30%; background: radial-gradient(closest-side, #F5A623, rgba(245,166,35,0)); animation-duration: 28s; animation-direction: alternate-reverse; }
+.glow-bg span:nth-child(3) { width: 30vw; height: 30vw; left: 30%; bottom: -10%; background: radial-gradient(closest-side, #B4530F, rgba(180,83,15,0)); animation-duration: 34s; }
+@keyframes mw-orb { 50% { transform: translate(8vw, 6vh) scale(1.15); } 100% { transform: translate(-4vw, 10vh) scale(.92); } }
+@media (max-width: 900px), (prefers-reduced-motion: reduce) { .glow-bg span { animation: none; } }
+.glow-host .card.glass { background: rgba(23,21,18,.42); }
 </style></head>
 <body>
 <script>
@@ -363,12 +375,13 @@ n.queue=[];}(window, document,'script',
 <main id="main-content">
   <article class="ab">
     <header class="t-warm sec ab-hero">
+      <div class="glow-bg" aria-hidden="true"><span></span><span></span><span></span></div>
       <div class="wrap">
         <p class="eyebrow dot ab-kicker">Who We Are</p>
         <h1 class="h1 ab-h1">We&#39;re not a digital marketing agency. <em>We&#39;re a growth arm.</em></h1>
         <div class="ab-hero-row">
           <p class="lead ab-lead">We're the <strong>strategic communication and consistent growth arm</strong> for independent professionals and brands that don't settle for mediocrity. For <strong>9 years</strong>, we've been operating with a proprietary method that integrates branding, content, traffic and sales — not as isolated services, but as a single revenue ecosystem.</p>
-          <div class="ab-stats" role="group" aria-label="Makewell numbers">
+          <div class="ab-stats glass" role="group" aria-label="Makewell numbers">
             <div class="ab-stat"><span class="ab-stat-n">9+</span><span class="ab-stat-l">Years in business</span></div><div class="ab-stat"><span class="ab-stat-n">50+</span><span class="ab-stat-l">Clients served</span></div><div class="ab-stat"><span class="ab-stat-n">+26x</span><span class="ab-stat-l">Best ROI on record</span></div><div class="ab-stat"><span class="ab-stat-n">2</span><span class="ab-stat-l">Offices (Maceió + SP)</span></div>
           </div>
         </div>
@@ -774,7 +787,9 @@ n.queue=[];}(window, document,'script',
   .ab-hero-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 40px 64px; margin-top: 36px; }
   .ab-lead { flex: 999 1 520px; min-width: 0; margin: 0; max-width: 640px; }
   .ab-lead strong { color: var(--paper); }
-  .ab-stats { flex: 1 1 420px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .ab-stats { border-radius: 28px; padding: clamp(22px, 2.6vw, 32px); flex: 1 1 420px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  /* no vidro, a borda do painel já separa: sem linha no topo da primeira fileira */
+  .ab-stats.glass .ab-stat:nth-child(-n+2) { border-top: 0; padding-top: 0; }
   .ab-stat { border-top: 1px solid var(--line); padding-top: 18px; }
   .ab-stat-n { display: block; font-size: 44px; font-weight: 800; letter-spacing: -.03em; line-height: 1; }
   .ab-stat-l { display: block; margin-top: 10px; font-size: 14px; line-height: 1.4; color: var(--muted); }
