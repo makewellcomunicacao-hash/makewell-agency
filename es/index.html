@@ -703,7 +703,19 @@ html:has(#mw-consent:not([hidden])) { scroll-padding-bottom: 220px; }
 
   /* depoimentos */
   .hm-note { margin: 16px 0 0; font-size: 14px; color: var(--muted); }
+  /* depoimentos maiores: dão destaque e percurso para a rolagem lateral travada (como "Para quem") */
+  @media (min-width: 1100px) { .hm-reels .reel { flex-basis: clamp(200px, min(23vw, (100vh - 450px) * .8), 320px); } } /* também pela altura: em notebook baixo a seção inteira cabe na tela; no celular segue o tamanho do carrossel */
   .hm-reels { margin-top: 48px; align-items: flex-start; margin-right: calc((min(100vw, var(--wrap)) - 100vw) / 2 - var(--gutter)); padding-right: var(--gutter); scroll-padding-inline: 0; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+  /* capas dos depoimentos: mesmo tratamento de cor em todas, degradê para leitura, segmento/resultado e duração */
+  .hm-reels .thumb img { filter: saturate(.9) contrast(1.06); }
+  .hm-reels .thumb::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(to top, rgba(14,13,11,.5), rgba(14,13,11,0) 40%), linear-gradient(to bottom, rgba(14,13,11,.4), rgba(14,13,11,0) 32%); }
+  .hm-reels .play { z-index: 2; inset: auto; left: 12px; bottom: 12px; margin: 0; width: 44px; height: 44px; } /* rosto livre: play no canto, em frente à duração */
+  .reel-tag { position: absolute; z-index: 2; left: 12px; top: 12px; max-width: calc(100% - 24px); padding: 5px 11px; border-radius: 999px;
+    background: rgba(14,13,11,.72); color: #F4F1EC; font-size: 12px; font-weight: 700; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .reel-tag-roi { background: var(--accent); color: var(--on-accent); }
+  .reel-dur { position: absolute; z-index: 2; right: 12px; bottom: 12px; padding: 3px 8px; border-radius: 6px; background: rgba(14,13,11,.72);
+    color: #F4F1EC; font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; }
   .hm-reel-q { display: block; margin-top: 16px; font-size: 15px; line-height: 1.5; }
   .hm-reel-name { display: block; margin-top: 12px; font-size: 14px; font-weight: 700; }
   .hm-reel-role { display: block; margin-top: 2px; font-size: 13px; color: var(--muted); }
@@ -1001,7 +1013,7 @@ n.queue=[];}(window, document,'script',
       <p class="eyebrow">CUANDO EL MARKETING FUNCIONA</p>
       <h2 class="h2 hm-num-h2" id="cases-title">Resultados que <span class="gold">los números comprueban</span></h2>
       <div class="grid hm-numbers" role="group" aria-label="Números y resultados">
-        <div class="hm-number"><p class="stat-n">+26x</p><p>El mejor ROI que ya entregamos a un solo cliente</p></div><div class="hm-number"><p class="stat-n">100+</p><p>Leads captados en un solo mes (récord)</p></div><div class="hm-number"><p class="stat-n">R$400k</p><p>Récord de ingresos generados para un solo cliente</p></div><div class="hm-number"><p class="stat-n">9+</p><p>Años transformando marcas brasileñas</p></div>
+        <div class="hm-number"><p class="stat-n">+26x</p><p>El mejor ROI que ya entregamos a un solo cliente</p></div><div class="hm-number"><p class="stat-n">1.000+</p><p>Leads captados en un solo mes (récord)</p></div><div class="hm-number"><p class="stat-n">R$400k</p><p>Récord de ingresos generados para un solo cliente</p></div><div class="hm-number"><p class="stat-n">9+</p><p>Años transformando marcas brasileñas</p></div>
       </div>
       <div class="btns">
         <a class="btn btn-primary" href="https://wa.me/5582999103246?text=Hola!%20Quiero%20hablar%20sobre%20mi%20caso%20con%20Makewell." target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{content_name:'Ver todos los casos'})">Ver todos los casos →</a>
@@ -1030,7 +1042,7 @@ n.queue=[];}(window, document,'script',
             <h3 class="h3 hm-case-title">Dr. Felipe Vilela</h3>
             <p class="hm-case-sub">Posicionamiento + Redes + Tráfico + CRM</p>
             <div class="hm-metrics" role="list" aria-label="Métricas del caso legal">
-              <div role="listitem"><span class="hm-metric-v accent">+26x</span><span class="hm-metric-l">ROI</span></div><div role="listitem"><span class="hm-metric-v">100+</span><span class="hm-metric-l">Leads/mes</span></div><div role="listitem"><span class="hm-metric-v">R$400k</span><span class="hm-metric-l">Ingresos</span></div>
+              <div role="listitem"><span class="hm-metric-v accent">+26x</span><span class="hm-metric-l">ROI</span></div><div role="listitem"><span class="hm-metric-v">1.000+</span><span class="hm-metric-l">Leads/mes</span></div><div role="listitem"><span class="hm-metric-v">R$400k</span><span class="hm-metric-l">Ingresos</span></div>
             </div>
             <blockquote class="hm-quote"><p>"Sin ustedes no lo hubiera logrado. Los ganchos, los textos y la calidad son increíbles"</p><cite>Felipe Vilela — Abogado</cite></blockquote>
           </article><article class="card hm-case">
@@ -1061,10 +1073,12 @@ n.queue=[];}(window, document,'script',
       <p class="eyebrow">Resultados Reales</p>
       <h2 class="h2" id="depo-title">Lo que nuestros clientes <span>dicen sobre Makewell</span></h2>
       <p class="hm-note">* Testimonios en el idioma original (portugués)</p>
-      <div class="reels hscroll hm-reels no-pin">
+      <div class="reels hscroll hm-reels">
         <button type="button" class="reel" data-yt="JRrnKGNk-UE" data-vertical>
             <span class="thumb">
               <img src="/images/depo-JRrnKGNk-UE.webp" alt="Paola Massari" width="720" height="900" loading="lazy">
+              <span class="reel-tag">Tercer sector · 4+ años</span>
+              <span class="reel-dur" aria-hidden="true">0:56</span>
               <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
             </span>
             <span class="hm-reel-q">"Makewell logró abrazarlo todo. Son socios, son queridos, están muy comprometidos emocionalmente con nuestra causa"</span>
@@ -1073,6 +1087,8 @@ n.queue=[];}(window, document,'script',
           </button><button type="button" class="reel" data-yt="PoBa9wS9rYM" data-vertical>
             <span class="thumb">
               <img src="/images/depo-PoBa9wS9rYM.webp" alt="Dra. Carolina Mergulhão" width="720" height="900" loading="lazy">
+              <span class="reel-tag">Endocrinología</span>
+              <span class="reel-dur" aria-hidden="true">0:47</span>
               <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
             </span>
             <span class="hm-reel-q">"Tengo mucha vergüenza con la exposición, y ellos siempre fueron excelentes y cariñosos conmigo"</span>
@@ -1081,6 +1097,8 @@ n.queue=[];}(window, document,'script',
           </button><button type="button" class="reel" data-yt="SjXs-_mmDxI" data-vertical>
             <span class="thumb">
               <img src="/images/depo-SjXs-_mmDxI.webp" alt="Dra. Thielen" width="720" height="900" loading="lazy">
+              <span class="reel-tag reel-tag-roi">Cirugía vascular · +20x ROI</span>
+              <span class="reel-dur" aria-hidden="true">0:30</span>
               <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
             </span>
             <span class="hm-reel-q">"¡Soy muy fan de ellos! Son los especialistas y la atención es incomparable"</span>
@@ -1089,6 +1107,8 @@ n.queue=[];}(window, document,'script',
           </button><button type="button" class="reel" data-yt="bJaKzu9WHy0" data-vertical>
             <span class="thumb">
               <img src="/images/depo-bJaKzu9WHy0.webp" alt="Tereza Cristina" width="720" height="900" loading="lazy">
+              <span class="reel-tag">Abogacía</span>
+              <span class="reel-dur" aria-hidden="true">0:49</span>
               <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
             </span>
             <span class="hm-reel-q">"Tenía miedo de no encontrar una agencia diferenciada"</span>
@@ -1097,6 +1117,8 @@ n.queue=[];}(window, document,'script',
           </button><button type="button" class="reel" data-yt="ij42ilGNbrY" data-vertical>
             <span class="thumb">
               <img src="/images/depo-ij42ilGNbrY.webp" alt="Felipe Vilela" width="720" height="900" loading="lazy">
+              <span class="reel-tag reel-tag-roi">Abogacía · +26x ROI</span>
+              <span class="reel-dur" aria-hidden="true">1:10</span>
               <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
             </span>
             <span class="hm-reel-q">"Sin ustedes no lo hubiera logrado. Los ganchos, los textos y la calidad son increíbles"</span>
@@ -1105,6 +1127,8 @@ n.queue=[];}(window, document,'script',
           </button><button type="button" class="reel" data-yt="8ZsBpSb9Rds" data-vertical>
             <span class="thumb">
               <img src="/images/depo-8ZsBpSb9Rds.webp" alt="Dr. Rodrigo Medeiros" width="720" height="900" loading="lazy">
+              <span class="reel-tag">Medicina</span>
+              <span class="reel-dur" aria-hidden="true">0:22</span>
               <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
             </span>
             <span class="hm-reel-q">"Mi Instagram estaba todo desordenado y Makewell cambió eso conquistando a mi público"</span>
@@ -1113,6 +1137,8 @@ n.queue=[];}(window, document,'script',
           </button><button type="button" class="reel" data-yt="eefbnVm-VTc" data-vertical>
             <span class="thumb">
               <img src="/images/depo-eefbnVm-VTc.webp" alt="Dra. Anita Costa" width="720" height="900" loading="lazy">
+              <span class="reel-tag">Medicina</span>
+              <span class="reel-dur" aria-hidden="true">0:39</span>
               <span class="play sm"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#F4F1EC"/></svg></span>
             </span>
             <span class="hm-reel-q">"Desde 2022, Makewell me ayuda con mi posicionamiento de marca en Instagram"</span>
