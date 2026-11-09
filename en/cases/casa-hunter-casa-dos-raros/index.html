@@ -76,7 +76,7 @@
   "keywords": "rare diseases, strategic communication, cause marketing, NGO, documentary series, NGO case study"
 }
 </script>
-<link rel="icon" type="image/svg+xml" href="/icons/favicon.svg"><style>/* Design system Makewell (redesign nov/2026, paleta "editorial" aprovada).
+<link rel="icon" type="image/svg+xml" href="/icons/favicon.svg"><link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png"><style>/* Design system Makewell (redesign nov/2026, paleta "editorial" aprovada).
    Escuro quente nos blocos de impacto, off-white quente nos de prova e leitura, laranja só como destaque.
    Fontes do sistema (regra do projeto: sem Google Fonts). */
 :root {
@@ -96,6 +96,12 @@ a { color: inherit; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 .skip-link { position: absolute; left: 16px; top: -100px; background: var(--accent); color: var(--on-accent); padding: 10px 16px; border-radius: 0 0 8px 8px; font-weight: 700; z-index: 10001; text-decoration: none; }
 .skip-link:focus { top: 0; }
+.en-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px 12px; padding: 8px 52px; position: relative; background: var(--warm-2); border-bottom: 1px solid var(--warm-line); color: var(--paper-muted); font-size: 14px; line-height: 1.4; text-align: center; }
+.en-bar[hidden] { display: none; }
+.en-bar a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.en-bar a:hover { text-decoration: underline; }
+.en-bar button { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border: 0; background: none; color: var(--paper-muted); font-size: 22px; line-height: 1; cursor: pointer; }
+.en-bar button:hover { color: var(--paper); }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 /* ── seções e temas ── */
@@ -543,7 +549,6 @@ html:has(#mw-consent:not([hidden])) { scroll-padding-bottom: 220px; }
     if (dirty) { window.location.replace(window.location.pathname); }
   })();
 </script>
-
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -554,6 +559,9 @@ n.queue=[];}(window, document,'script',
 </script>
 <script>document.documentElement.classList.add('js');</script>
 <a href="#main-content" class="skip-link">Skip to content</a>
+
+
+
 <header class="site-header">
   <div class="wrap">
     <nav id="nav" class="nav" aria-label="Main menu">
